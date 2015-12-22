@@ -85,12 +85,7 @@ ln -s   /home/$login/.scripts/mountiso.sh /usr/local/bin/mountiso
 ln -s   /home/$login/.scripts/umountiso.sh  /usr/local/bin/umountiso
 
 
-#livestreamerrc
-
-cp  $CURRENTDIRECTORY/livestreamerrc     /home/$login/.livestreamerrc
-
-
-chown  -R      $login:wheel             /home/$login/.livestreamerrc                         
+                        
 
 #create  aliases.db
  make -C /etc/mail aliases
@@ -99,5 +94,5 @@ chown  -R      $login:wheel             /home/$login/.livestreamerrc
 
 cp  $CURRENTDIRECTORY/set_wallpaper.sh  /usr/local/bin/
 
-cp  $CURRENTDIRECTORY/ydcmd.py  /usr/local/bin/ydcmd
+
                       
