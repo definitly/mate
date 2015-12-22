@@ -1,6 +1,18 @@
 #!/usr/local/bin/bash
 
- sudo tcpdump -w file.tcpdump -s 0 -i ale0
+ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
+
+
+while   [ -z "$rt" ]  ; do
+
+ rt=$( tshark -r file.tcpdump -T fields -e http.host -e tcp.port -e http.request.uri "http&&http.request.uri"  | grep m3u8  )
+
+ sleep 1;
+
+done 
+
+
+
 
 array=( m3u8 m3u8? )
 
