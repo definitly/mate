@@ -21,6 +21,16 @@ sudo ${FwCMD} add allow ip from any to any via ale0
 
  rtmpsrv >  /tmp/rtmp1
 
+
+while   [ -z "$rt" ]  ; do
+
+ rt=$(cat /tmp/rtmp1 | grep rtmp://)
+echo $rt
+ sleep 1;
+
+done 
+
+
 sudo  kldunload ipfw
 
 sed -r 's/-o.+//' /tmp/rtmp1 >  /tmp/rtmp2
