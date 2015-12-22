@@ -28,7 +28,7 @@ while   [ -z "$rt" ]  ; do
  sleep 1;
 
 done 
-
+killall -9 rtmpsrv
 
 sudo  kldunload ipfw
 
