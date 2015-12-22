@@ -1,0 +1,27 @@
+cd /usr/src/release
+make memstick NODOC=YES NOPORTS=YES NOSRC=YES
+svnlite co svn://svn.freebsd.org/base/head /usr/src
+cd /usr/src && make -j4 buildworld && make -j4 buildkernel && cd release && make memstick NODOC=YES NOPORTS=YES NOSRC=YES 
+make install DESTDIR=/usr/freebsd-snapshot clean
+cp /mnt/usr/freebsd-dist/pkg.txz ~/
+
+cp /home/definitly/pkg.txz /usr/src/release/disc1/usr/freebsd-dist && \
+rm disc1/etc/resolv.conf && \
+cp /home/definitly/mate/scripts/freebsd-custom/rc.local /usr/src/release/disc1/etc && \ 
+cp /home/definitly/mate/scripts/freebsd-custom/resolv.conf /usr/src/release/disc1/etc && \
+cp /home/definitly/mate/scripts/freebsd-custom/zfs_install /usr/src/release/disc1 && \
+echo 'autoboot_delay="-1"' >> /usr/src/release/disc1/boot/defaults/loader.conf && \
+sh /usr/src/release/amd64/make-memstick.sh disc1 1.img
+
+#в pkg.tar.gz  в файле pkg исправить cd /pkg вместо cd /root/pkg
+
+
+gzip -cd pkg.tar.gz | xz -c9 > pkg.txz
+
+ 
+
+
+
+284245
+284289
+285113

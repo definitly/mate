@@ -1,0 +1,15 @@
+#!/bin/sh
+
+app="rr2?auth=vh&cast_id=3465"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://player.rutv.ru/flash2v/osmf.swf?i=27"
+tcUrl="rtmp://vgtrk.cdnvideo.ru:1935/rr2?auth=vh&cast_id=2961"
+pageUrl="http://player.rutv.ru/iframe/live/id/21/showZoomBtn/false/isPlay/true/"
+play="rtp_r2_sq"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mpv -
+

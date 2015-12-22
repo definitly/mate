@@ -1,0 +1,2 @@
+player=mpv -cache 8192 
+# player=mplayer            -cache 64 -really-quiet

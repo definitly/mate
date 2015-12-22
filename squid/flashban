@@ -1,0 +1,7 @@
+^http://static.rutracker.org/.*\.swf(\?.*)?$
+^http://ad.ddestiny.ru/.*\.swf(\?.*)?$
+^http://www.opennet.ru/img/.*\.swf(\?.*)?$
+^https://r.mradx.net/img/.*\.swf(\?.*)?$
+^http://static.rutracker.org/004/tionline/3/.*\.swf(\?.*)?$
+^https://adserver.itsfogo.com/images/bwin/ru/sportsbook/.*\.swf(\?.*)?$
+^http://kiks.yandex.ru/system/.*\.swf(\?.*)?$

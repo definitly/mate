@@ -1,0 +1,19 @@
+#!/bin/sh
+#eurosport 2
+
+
+
+app="spull/"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://files.leton.tv/jwplayer.flash.swf"
+tcUrl="rtmp://31.220.0.187/spull/"
+pageUrl="http://leton.tv/player.php?streampage=dfhgfdgfdgfd33&width=600&height=450"
+play="dfhgfdgfdgfd33?keys=DR8uACjNQ8KyFuWzQGT9Lg&keyt=1397332140"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -cache 2048 -really-quiet -
+
+

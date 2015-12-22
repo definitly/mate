@@ -1,0 +1,19 @@
+#!/bin/sh
+#eurosport 2
+
+
+
+app="liveedge/"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://micast.tv/jwplayer/jwplayer.flash.swf"
+tcUrl="rtmp://93.174.93.50/liveedge/"
+pageUrl="http://micast.tv/gen5.php?ch=ai3133&width=100%&height=100%"
+play="ai3133"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -
+
+

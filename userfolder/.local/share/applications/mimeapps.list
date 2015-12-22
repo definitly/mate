@@ -1,0 +1,45 @@
+[Added Associations]
+video/x-msvideo=userapp-mplayer-C2XB6W.desktop;
+application/x-deb=userapp-undeb-H0NJBX.desktop;userapp-undeb-65UQ9W.desktop;
+application/x-ms-dos-executable=userapp-wine-0240AX.desktop;userapp-wine -WLJEAX.desktop;userapp-wine-1IIH9W.desktop;
+x-scheme-handler/http=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+x-scheme-handler/https=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+x-scheme-handler/ftp=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+x-scheme-handler/chrome=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+text/html=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+application/x-extension-htm=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+application/x-extension-html=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+application/x-extension-shtml=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+application/xhtml+xml=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+application/x-extension-xhtml=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+application/x-extension-xht=userapp-Firefox-SNO39W.desktop;userapp-Firefox-XIRGBX.desktop;
+video/mp4=userapp-mplayer-APXHAX.desktop;
+application/x-gmc-link=userapp-leafpad-S85CCX.desktop;
+video/x-matroska=userapp-mplayer-D41HCX.desktop;
+application/x-rpm=userapp-unrpm-ZEPGCX.desktop;
+application/x-compressed-tar=userapp-tarxf-ZVS3DX.desktop;
+video/x-flv=userapp-mplayer-7JZ7FX.desktop;userapp-mplayer-VOAUFX.desktop;
+application/x-java=userapp-leafpad-O1YRIX.desktop;
+image/vnd.djvu=userapp-djview-6J07HX.desktop;
+application/x-pdf=userapp-xpdf-01YRII.desktop;
+image/jpeg=userapp-set_wallpaper-02YRII.desktop;
+
+[Default Applications]
+video/x-msvideo=userapp-mplayer-C2XB6W.desktop
+application/x-deb=userapp-undeb-H0NJBX.desktop
+application/x-ms-dos-executable=userapp-wine-0240AX.desktop
+x-scheme-handler/http=userapp-Firefox-XIRGBX.desktop
+x-scheme-handler/https=userapp-Firefox-XIRGBX.desktop
+x-scheme-handler/ftp=userapp-Firefox-XIRGBX.desktop
+x-scheme-handler/chrome=userapp-Firefox-XIRGBX.desktop
+text/html=userapp-Firefox-XIRGBX.desktop
+application/x-extension-htm=userapp-Firefox-XIRGBX.desktop
+application/x-extension-html=userapp-Firefox-XIRGBX.desktop
+application/x-extension-shtml=userapp-Firefox-XIRGBX.desktop
+application/xhtml+xml=userapp-Firefox-XIRGBX.desktop
+application/x-extension-xhtml=userapp-Firefox-XIRGBX.desktop
+application/x-extension-xht=userapp-Firefox-XIRGBX.desktop
+application/x-gmc-link=userapp-leafpad-S85CCX.desktop
+video/x-matroska=userapp-mplayer-D41HCX.desktop
+application/x-rpm=userapp-unrpm-ZEPGCX.desktop
+image/jpeg=userapp-set_wallpaper-02YRII.desktop

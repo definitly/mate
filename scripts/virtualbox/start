@@ -1,0 +1,7 @@
+X :1 &
+
+
+export DISPLAY=:1
+sleep 3
+
+vncviewer  -fullscreen -passwd ~/.vnc/passwd localhost:5900

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=
+Exec=djvu %f
+Categories=Other;
+NoDisplay=true
+MimeType=image/vnd.djvu
+Terminal=false

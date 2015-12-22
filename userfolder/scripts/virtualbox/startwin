@@ -1,0 +1,10 @@
+ VBoxHeadless --startvm win &
+
+sleep 5
+
+
+VBoxManage controlvm win setvideomodehint 1680 1050 32
+
+VBoxManage sharedfolder add "io" --name share-name --hostpath ~/share --automount
+VBoxManage modifyvm  win2000  --nictype1 Am79C973
+%VBoxManage storageattach "your VM name" --storagectl 'IDE Controller' --port 1 --device 0 --type dvddrive --medium /usr/local/lib/virtualbox/additions/VBoxGuestAdditions_4.3.26.iso

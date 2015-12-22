@@ -1,0 +1,5 @@
+#!/usr/local/bin/bash
+
+cd /home/definitly/wine/l4d/drive_c/Program\ Files/Left\ 4\ Dead\ 2
+
+env WINEPREFIX=/home/definitly/wine/l4d   wine Launcher.exe

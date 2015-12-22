@@ -1,0 +1,53 @@
+#!/bin/sh
+
+
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+
+
+
+CURRENTDIRECTORY=$(pwd)
+
+             mkdir pkg
+             cd pkg
+             pkg_cutleaves -l >> pkg_leaves
+             pkg info > /tmp/allpkg
+             awk '{ print $1  }' /tmp/allpkg > /tmp/allpkg2
+                 for path in $(cat /tmp/allpkg2); do
+             echo "${path%-*}" >> allpkg
+             done
+                  for i in $(cat allpkg); do
+             pkg create $i
+             done
+             touch pkg
+             echo '#!/bin/sh' >> pkg 
+             echo 'kldload linux' >> pkg
+             echo 'cd /pkg' >> pkg 
+             echo 'tar -xf git-lite-2.6.4.txz /usr/local/bin/git' >>   pkg 
+             echo 'tar xf ./pkg-1.6.2.txz -s ",/.*/,,g" "*/pkg-static"' >> pkg
+             echo 'tar xf ./indexinfo-0.2.4.txz -s ",/.*/,,g" "*/indexinfo"' >> pkg
+             echo 'tar xf ./shared-mime-info-1.5.txz -s ",/.*/,,g" "*/update-mime-database"' >> pkg
+             echo 'tar xf ./desktop-file-utils-0.22_3.txz  -s ",/.*/,,g" "*/update-desktop-database"' >> pkg
+             echo 'cp indexinfo /bin' >> pkg
+             echo 'cp update-mime-database /bin' >> pkg 
+             echo 'cp update-desktop-database /bin' >> pkg
+             echo './pkg-static add ./pkg-1.6.2.txz' >> pkg
+             echo '#for i in $(ls *txz); do' >> pkg
+             echo 'for i in $(cat pkg_leaves); do' >> pkg
+             echo 'date >> log' >> pkg
+             echo 'pkg   add $i.txz >> log' >> pkg
+             echo 'date >> log' >> pkg
+             echo 'done' >> pkg
+             echo 'rm /bin/indexinfo /bin/update-mime-database /bin/update-desktop-database' >> pkg
+             echo './usr/local/bin/git clone git://github.com/definitly/mate.git' >> pkg 
+             echo 'cd mate' >> pkg 
+             echo './install.sh' >> pkg 
+             chmod +x pkg
+             cd ..
+             tar -czf pkg.txz pkg
+             
+             
+             

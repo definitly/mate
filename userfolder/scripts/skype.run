@@ -1,0 +1,4 @@
+#!/bin/sh
+export LD_PRELOAD=/compat/linux/usr/lib/libv4l/v4l2convert.so
+export LIBV4LCONTROL_FLAGS=6
+skype &

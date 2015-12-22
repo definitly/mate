@@ -1,0 +1,21 @@
+#!/usr/local/bin/bash
+
+fold=/home/definitly/pic
+
+PROG="feh"
+ARGS="--bg-scale"
+
+
+
+# make sure path is absolute
+folder="$(cd ${fold}; pwd)"
+
+# Build images array
+images=($(find ${folder} -name *.jpg -o -name *.png -o -name *.gif))
+
+# Generating a random number from 0 to ${#images[@]}
+rand="$(expr $RANDOM % ${#images[@]})"
+
+# Setting wallpaper
+${PROG} ${ARGS} ${images[$rand]}
+exit $?

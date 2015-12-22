@@ -1,0 +1,3 @@
+     linsys   /jailz/deb-master/sys         linsysfs  rw          0 0
+    linproc  /jailz/deb-master/proc        linprocfs rw          0 0
+    tmpfs    /jailz/deb-master/run/rw tmpfs     rw,mode=777 0 0

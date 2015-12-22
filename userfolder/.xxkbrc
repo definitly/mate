@@ -1,0 +1,21 @@
+
+
+
+XXkb.image.path: /usr/local/share/xxkb/
+XXkb.mainwindow.type:tray
+XXkb.group.base: 1
+XXkb.group.alt: 2
+XXkb.mainwindow.enable: yes
+XXkb.mainwindow.image.1: en15.xpm
+XXkb.mainwindow.image.2: ru15.xpm
+XXkb.mainwindow.image.3:
+XXkb.mainwindow.image.4:
+XXkb.mainwindow.appicon: yes
+XXkb.mainwindow.geometry: 20x20+2+2
+XXkb.mainwindow.in_tray: true
+XXkb.button.enable: no
+XXkb.controls.add_when_start: yes
+XXkb.controls.add_when_create: yes
+XXkb.controls.add_when_change: no
+XXkb.controls.focusout: no
+XXkb.mainwindow.label.enable: no

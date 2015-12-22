@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FwCMD="/sbin/ipfw"
+
+${FwCMD} -q  -f flush
+${FwCMD} add allow ip from any to any via lo0
+${FwCMD} add deny ip from any to 127.0.0.0/8
+${FwCMD} add deny ip from 127.0.0.0/8 to any
+
+${FwCMD} add allow tcp from me to any out via ale0 keep-state uid squid
+${FwCMD} add  fwd 127.0.0.1,3129 tcp from 192.168.1.33 to any 80-83,8080-8088 out via ale0
+${FwCMD} add allow ip from any to any via ale0

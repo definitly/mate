@@ -1,0 +1,14 @@
+X :1 &
+
+
+export DISPLAY=:1
+sleep 3
+vncviewer   localhost:3390
+vncviewer  -fullscreen -passwd ~/.vnc/passwd localhost:3390
+#VBoxHeadless --startvm win &
+#sleep 5
+#VBoxManage controlvm win setvideomodehint 1680 1050 32
+
+#VBoxManage modifyvm <vmname> --macaddress1 000027226F23
+
+#VBoxManage sharedfolder add NAMEMACHINE --name share --hostpath ~/share --automount

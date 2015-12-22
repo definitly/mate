@@ -1,0 +1,70 @@
+#####################
+# Settings
+#####################
+background yes
+use_xft yes
+xftfont DroidSans:size=8
+font -xos4-terminus-bold-r-normal--14-140-72-72-c-80-koi8-r
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type window
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 250 250
+maximum_width 250
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color black
+default_outline_color white
+alignment top_right
+gap_x 12
+gap_y 12
+uppercase no
+cpu_avg_samples 2
+#override_utf8_locale no
+#####################
+#  Output
+#####################
+TEXT
+Москва             ${color}${execi 600 ~/weather/weather.sh UUDD}
+Лондон             ${color}${execi 600 ~/weather/weather.sh EGLL}
+Париж              ${color}${execi 600 ~/weather/weather.sh LFPG}
+Нью-Йорк           ${color}${execi 600 ~/weather/weather.sh KJFK}
+Лос-Анджелес       ${color}${execi 600 ~/weather/weather.sh KLAX}
+Гоналулу           ${color}${execi 600 ~/weather/weather.sh PHNL}
+Владивосток        ${color}${execi 600 ~/weather/weather.sh UHWW}
+Токио              ${color}${execi 600 ~/weather/weather.sh RJTT}
+Наха               ${color}${execi 600 ~/weather/weather.sh ROAH}
+Пекин              ${color}${execi 600 ~/weather/weather.sh ZBAA}
+Дели               ${color}${execi 600 ~/weather/weather.sh VIDP}
+Рим                ${color}${execi 600 ~/weather/weather.sh LIRF}
+Мадрид             ${color}${execi 600 ~/weather/weather.sh LEMD}
+Бермуды            ${color}${execi 600 ~/weather/weather.sh TXKF}
+Гавана             ${color}${execi 600 ~/weather/weather.sh MUHA}
+Майами             ${color}${execi 600 ~/weather/weather.sh KMIA}
+Варшава            ${color}${execi 600 ~/weather/weather.sh EPWA}
+Перт               ${color}${execi 600 ~/weather/weather.sh YPPH}
+Гибралтар          ${color}${execi 600 ~/weather/weather.sh LXGB}
+Ки-Уэст            ${color}${execi 600 ~/weather/weather.sh KEYW} 
+Саппоро            ${color}${execi 600 ~/weather/weather.sh RJCC}
+Палермо            ${color}${execi 600 ~/weather/weather.sh LICJ}
+Джорджтаун         ${color}${execi 600 ~/weather/weather.sh MWCR}
+Анкоридж           ${color}${execi 600 ~/weather/weather.sh PANC}
+Богота             ${color}${execi 600 ~/weather/weather.sh SKBO}
+Мехико             ${color}${execi 600 ~/weather/weather.sh MMMX}
+Адак               ${color}${execi 600 ~/weather/weather.sh PADK}
+Окленд             ${color}${execi 600 ~/weather/weather.sh NZAA}
+Ванкувер           ${color}${execi 600 ~/weather/weather.sh CYVR}
+Омск               ${color}${execi 600 ~/weather/weather.sh UNOO}
+Понта-Делгада      ${color}${execi 600 ~/weather/weather.sh LPPD}
+Longyear           ${color}${execi 600 ~/weather/weather.sh ENSB}
+Гонконг            ${color}${execi 600 ~/weather/weather.sh VHHH}
+Дубаи              ${color}${execi 600 ~/weather/weather.sh OMDB}
+Белград            ${color}${execi 600 ~/weather/weather.sh LYBE}
+Barcelona          ${color}${execi 600 ~/weather/weather.sh LEBL}

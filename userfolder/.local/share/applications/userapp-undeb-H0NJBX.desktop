@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=undeb
+Exec=undeb %f
+Categories=Other;
+NoDisplay=true
+MimeType=application/x-deb

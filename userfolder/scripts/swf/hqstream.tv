@@ -1,0 +1,21 @@
+#!/bin/sh
+
+
+
+
+app="shqstream/"
+
+flashVer="LNX 11,2,202,451"
+swfUrl="http://filo.hqstream.tv/jwp6/jwplayer.flash.swf"
+tcUrl=
+pageUrl="http://hqstream.tv/player.php?streampage=bernli&height=480&width=728"
+play=
+
+ play=$(sed -n '1p' play_tcUrl) 
+        tcUrl=$(sed -n '2p' play_tcUrl)
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -cache 2048 -cache-min 30 -noautosub -
+
+

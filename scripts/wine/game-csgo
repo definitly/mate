@@ -1,0 +1,5 @@
+#!/usr/local/bin/bash
+
+cd /home/definitly/wine/csgo/drive_c/Program\ Files/Counter-Strike\ Global\ Offensive
+
+env WINEPREFIX=/home/definitly/wine/csgo   wine csgo_launcher.exe

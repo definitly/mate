@@ -1,0 +1,3 @@
+[Default Applications]
+application/gzip=tarxf.desktop
+application/x-compressed-tar=tarxf.desktop

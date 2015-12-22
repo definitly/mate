@@ -1,0 +1,13 @@
+#!/bin/sh
+
+ for i in $(ls *txz); do
+       pkg add $i
+     done
+
+git clone git://github.com/definitly/mate.git
+
+   cd mate/user
+  sh 1
+
+shutdown now
+

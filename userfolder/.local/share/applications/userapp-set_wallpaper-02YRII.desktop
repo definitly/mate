@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=set_wallpaper
+Exec=set_wallpaper.sh  %f
+Categories=Other;
+NoDisplay=true
+MimeType=image/jpeg

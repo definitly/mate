@@ -1,0 +1,4 @@
+jail -f /jailz/etc/jail.conf -c deb-master
+jls
+jexec 1 /bin/bash
+/etc/rc.d/jail stop

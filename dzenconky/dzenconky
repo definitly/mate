@@ -1,0 +1,4 @@
+#!/bin/sh
+fg="white"
+bg="#898a79"
+conky -d -c ~/.dzenconkyrc | dzen2 -h 15   -fg $fg -bg $bg   -fn -misc-liberation-serif-r-normal--12-120-75-75-p-0-koi8-r

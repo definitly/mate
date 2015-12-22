@@ -1,0 +1,12 @@
+#!/usr/local/bin/bash
+cd ~/downloads
+mkdir  "${1%.*}"
+cd "${1%.*}"
+deb2targz $1 
+
+name=${1%.*}
+
+deb=$name.tar.gz
+deb2=$name.tar.lzma
+tar -zxvf  $deb
+tar -zxvf $deb2  

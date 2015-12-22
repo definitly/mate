@@ -1,0 +1,6 @@
+#!/usr/local/bin/bash
+
+cd /home/definitly/wine/rainbow/drive_c/Program\ Files/\ Rainbow/system
+
+
+env WINEPREFIX=/home/definitly/wine/rainbow  wine ravenshield.exe

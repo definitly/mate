@@ -1,0 +1,57 @@
+#####################
+# Settings
+#####################
+background yes
+use_xft yes
+xftfont DroidSans:size=8
+font -*-terminus-medium-r-normal-*-18-*-*-*-*-80-koi8-r
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type window
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 500 500
+maximum_width 1000
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color black
+default_outline_color white
+alignment top_left
+gap_x 12
+gap_y 12
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+#####################
+#  Output
+#####################
+TEXT
+
+setenv  SSL_NO_VERIFY_PEER 1
+
+
+
+VBoxManage modifyvm win --accelerate3d off
+
+занести в конфиг mlbviewer
+#video_player=cvlc -vvv input_stream --sout '#standard{access=http,mux=ts,dst=192.168.1.4:8902/tv.asf}'
+
+
+
+команды 
+
+cdd     перейти в каталог downloads
+cds     перейти в каталог scripts
+vwin    запустить windows в virualbox
+WIN+d   спрятать показать dzen
+WIN+t   спрятать показать tint
+
+
+
+

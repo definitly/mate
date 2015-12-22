@@ -1,0 +1,20 @@
+#!/bin/sh
+#eurosport 2
+
+
+
+app="lives"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://jjcast.com/jw5/5.10.swf"
+tcUrl=""
+pageUrl="http://jjcast.com/player.php?stream=2mfkyf2zmh9n10&width=728&height=540"
+play=""
+
+ play=$(sed -n '1p' play_tcUrl) 
+        tcUrl=$(sed -n '2p' play_tcUrl)
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -
+
+

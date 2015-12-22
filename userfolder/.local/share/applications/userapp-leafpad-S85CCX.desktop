@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=leafpad
+Exec=leafpad %f
+Categories=Other;
+NoDisplay=true
+MimeType=application/x-gmc-link

@@ -1,0 +1,18 @@
+#!/bin/sh
+# Openbox wallpaper changer using feh
+#  
+pic=$1
+fullname=$(pwd)/$1
+dir=~/.config/openbox/wallpaper/
+ cd $dir 
+
+rm *.jpg
+cp $fullname $dir
+
+
+feh --bg-scale $(pwd)/$pic
+
+
+
+
+ 

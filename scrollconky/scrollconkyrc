@@ -1,0 +1,11 @@
+out_to_console yes
+gap_x 5
+out_to_x no
+update_interval 2
+total_run_times 0
+use_spacer none
+#use_xft                 yes
+#override_utf8_locale    yes
+
+TEXT
+${scroll 100 20 ${exec cat ~/note  }}

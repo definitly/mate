@@ -1,0 +1,54 @@
+#!/usr/local/bin/bash
+
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+ cat <<End-of-message
+-------------------------------------
+для видеокарты ati в файле pid напишите ati
+для видеокарты nvidia в файле pid напишите nvidia
+-------------------------------------
+End-of-message
+  
+
+read -n 1 -p "нажмите любую клавишу для продолжения" AMSURE 
+
+
+echo "" 1>&2 
+
+
+
+if [ -z "$1" ]
+then
+  echo "Порядок использования: `basename $0` img  "
+  exit 0
+fi
+
+read -n 1 -p "нажмите любую клавишу для продолжения" AMSURE 
+
+
+echo "" 1>&2 
+
+
+
+
+mdconfig -a -t vnode -u0 -f $1  
+mount /dev/md0a /mnt
+echo 'autoboot_delay="-1"' >> /mnt/boot/defaults/loader.conf
+rm /mnt/etc/resolv.conf 
+cp resolv.conf /mnt/etc
+rm /mnt/etc/rc.local
+cp rc.local /mnt/etc
+cp zfs_install /mnt
+cp pkg.txz /mnt/usr/freebsd-dist
+cp pid /mnt 
+
+
+umount /mnt
+mdconfig -d -u 0
+
+
+
+dd if=$1  of=/dev/da0 bs=64k

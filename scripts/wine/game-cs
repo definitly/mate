@@ -1,0 +1,7 @@
+#!/usr/local/bin/bash
+
+cd /home/definitly/wine/cs/drive_c/Games/Counter-Strike\ 1.6\ NoSteam\ Original
+
+
+
+env WINEPREFIX=/home/definitly/wine/cs wine hl.exe  -game cstrike

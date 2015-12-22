@@ -1,0 +1,80 @@
+Global {
+    edge = top
+    allign = right
+    margin = 0
+    widthtype = percent
+    width = 0
+    height = 0
+    transparent = false
+    tintcolor = #ffffff
+    alpha = 37
+    setdocktype = true
+    setpartialstrut = true
+    autohide = true
+    heightWhenHidden = 2
+}
+
+Plugin {
+    type = icons
+    config {
+        DefaultIcon = /usr/share/fbpanel/images/default.xpm
+        application {
+            icon = gnome-terminal
+            Image = /usr/share/fbpanel/images/gnome_terminal.svg
+            ClassName = XTerm
+        }
+        application {
+            icon = gnome-terminal
+            Image = /usr/share/fbpanel/images/gnome_terminal.svg
+            ClassName = URxvt
+        }
+        application {
+            icon = gnome-emacs
+            Image = /usr/share/fbpanel/images/emacs.svg
+            ClassName = Emacs
+        }
+        application {
+            icon = mozilla-firefox
+            ClassName = Firefox-bin
+        }
+        application {
+            icon = mozilla-firefox
+            ClassName = Firefox
+        }
+        application {
+           icon = gnome-mplayer
+            Image = /usr/local/share/icons/hicolor/48x48/apps/mplayer.png
+             AppName = xv
+            ClassName = MPlayer
+        }
+        application {
+            Image = /home/maxim/.icons/my_icons/xpdf.svg
+            ClassName = Xpdf
+        }
+        application {
+            icon = opera
+            Image = /home/maxim/.icons/my_icons/opera.svg
+            ClassName = Opera
+        }
+        application {
+            icon = firefox
+            Image = /home/maxim/.icons/my_icons/firefox.png
+            ClassName = Conkeror
+        }
+        application {
+            Image = /home/maxim/.icons/my_icons/media-player-banshee.png
+            AppName = ncmpc
+            ClassName = XTerm
+        }
+        application {
+            Image = /home/maxim/.icons/my_icons/email.png
+            AppName = mymail
+            ClassName = XTerm
+        }
+        application {
+            icon = mc
+            AppName = mc
+            ClassName = XTerm
+        }
+    }
+}

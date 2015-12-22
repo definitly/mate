@@ -1,0 +1,126 @@
+#!/bin/sh
+# Vars
+mount -rw /
+dhclient ale0
+dev=ada0
+pool_name=rpool
+swap_size=4G
+umount /dev/md1
+mdmfs -s 512M md1 /tmp
+sysctl kern.geom.debugflags=0x10
+# gpart
+gpart destroy -F $dev
+gpart create -s GPT $dev
+gpart add -s 64K -t freebsd-boot $dev
+gpart add -s $swap_size -t freebsd-swap -l swap0 $dev
+gpart add -t freebsd-zfs -l disk0 $dev
+gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 $dev
+# install ZFS
+kldload /boot/kernel/opensolaris.ko
+kldload /boot/kernel/zfs.ko
+mkdir /boot/zfs
+# Óreate ZFS pool
+zpool create -f $pool_name /dev/gpt/disk0
+zfs set mountpoint=/mnt $pool_name
+zpool set bootfs=$pool_name $pool_name
+zfs create $pool_name/usr
+zfs create $pool_name/usr/home
+zfs create $pool_name/var
+zfs create $pool_name/tmp
+zpool export $pool_name
+zpool import -o cachefile=/tmp/zpool.cache $pool_name
+chmod 1777 /mnt/tmp
+cd /mnt ; ln -s usr/home home
+mkdir /mnt/var/tmp
+chmod 1777 /mnt/var/tmp
+cd /usr/freebsd-dist
+export DESTDIR=/mnt
+for file in base.txz lib32.txz kernel.txz  ;
+do (cat $file | tar --unlink -xpJf - -C ${DESTDIR:-/}); done
+cp /tmp/zpool.cache /mnt/boot/zfs/zpool.cache
+echo 'zfs_enable="YES"' >> /mnt/etc/rc.conf
+echo 'zfs_load="YES"' >> /mnt/boot/loader.conf
+echo 'autoboot_delay="0"' >> /mnt/boot/loader.conf
+echo  'loader_logo="none"'  >> /mnt/boot/loader.conf
+
+echo 'opensolaris_load="YES"' >> /mnt/boot/loader.conf
+echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
+
+echo "# enable networking"
+echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
+echo 'ifconfig_ale0="DHCP"' >> /mnt/etc/rc.conf
+echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
+echo 'dumpdev="NO"' >> /mnt/etc/rc.conf
+sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
+
+touch /mnt/root/1
+echo './1' >> /mnt/root/.login
+echo 'cd pkg' >> /mnt/root/1
+echo 'git clone git://github.com/definitly/mate.git' >> /mnt/root/1
+echo 'cd mate' >> /mnt/root/1
+echo './start.sh' >> /mnt/root/1
+chmod +x /mnt/root/1
+
+
+cd /mnt/root
+
+
+
+
+
+MAC=`ifconfig -a | grep ether | awk '{print $2}'| sed s/://g | sed 's/.\{1\}/& /g'`
+
+a=`echo $MAC | awk '{print $9}'`
+b=`echo $MAC | awk '{print $6}'`
+c=`echo $MAC | awk '{print $3}'`
+d=$(($c+4))
+e=`echo $MAC | awk '{print $11}'`
+f=$(($e-4))
+g=`echo $MAC | awk '{print $1}'`
+h=`echo $MAC | awk '{print $7}'`
+i=`echo $MAC | awk '{print $2}'`
+j=$(($i+1))
+k=`echo $MAC | awk '{print $5}'`
+l=$a$b$d$f$g$h$j$k
+echo $l
+
+
+
+
+a=$(cat /pid | grep  nvidia)
+
+
+    if ! [ -z $a ] ; 
+       then  
+fetch --no-verify-peer http://dl.dropbox.com/u/$l/pkg.tar.gz ;
+tar -zxvf  pkg.tar.gz -C /;   
+      
+       else 
+fetch --no-verify-peer  http://dl.dropbox.com/u/$l/pkg_ati.tar.gz ;
+tar -zxvf  pkg_ati.tar.gz -C /;         
+    
+               fi
+
+
+cp /pid  /mnt/root/pid
+cp /etc/resolv.conf /mnt/etc/
+
+chroot /mnt  /pkg/pkg
+
+#cd pkg
+#./pkg
+
+
+
+
+# Device Mountpoint FStype Options Dump Pass#
+echo '/dev/gpt/swap0 none swap sw 0 0'  >>  /mnt/etc/fstab
+
+zfs set readonly=on $pool_name/var/empty
+zfs umount -a
+zfs set mountpoint=legacy $pool_name
+zfs set mountpoint=/tmp $pool_name/tmp
+zfs set mountpoint=/usr $pool_name/usr
+zfs set mountpoint=/var $pool_name/var
+echo "Finished"
+

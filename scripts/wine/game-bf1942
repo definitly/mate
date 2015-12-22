@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd  /home/definitly/wine/bf1942/drive_c/Program\ Files/EA\ Games/Battlefield\ 1942 &&
+
+ 
+
+
+env WINEPREFIX=/home/definitly/wine/bf1942 wine BF1942.exe 

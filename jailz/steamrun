@@ -1,0 +1,11 @@
+
+#!/bin/sh
+       export LD_LIBRARY_PATH=/home/definitly/.local/share/Steam/ubuntu12_32
+       sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
+       sudo mount -t linprocfs linproc /compat/linux/proc
+       mkdir -p  /home/definitly/.steam/sdk32/
+       sudo chmod 1777 /compat/linux/tmp
+       ln -s    /home/definitly/.steam/steam/linux32/steamclient.so       /home/definitly/.steam/sdk32/steamclient.so
+       /home/definitly/.local/share/Steam/ubuntu12_32/steam
+       sudo umount /compat/linux/proc
+       sudo umount /compat/linux/

@@ -1,0 +1,122 @@
+
+style "default"
+{
+GtkButton	::default_border	= {1,1,1,1}
+GtkButton	::default_spacing 	= 10
+GtkButton	::focus-line-width 	= 1
+GtkButton	::focus-padding 	= 0
+#GtkSpinButton	::shadow_type = GTK_SHADOW_NONE
+GtkSpinButton	::inner_border = {1, 1, 1, 1}
+
+GtkRange	::trough_border		= 1
+GtkPaned	::handle_size		= 6
+GtkRange	::slider_width		= 15
+GtkRange	::stepper_size		= 15
+GtkScrollbar	::min_slider_length	= 30
+GtkScrollbar	::trough-border 	= 1
+GtkScrollbar	::activate-slider	= 1
+GtkScrollbar	::slider_width		= 15
+GtkCheckButton	::indicator_size	= 14
+GtkMenuBar	::internal-padding	= 1
+GtkMenuBar	::window-dragging 	= 1
+GtkMenuItem	::arrow-scaling		= 0.7
+GtkMenuItem	::horizontal-padding	= 6
+GtkMenuItem	::selected_shadow_type	= etched-in
+GtkTreeView	::expander_size		= 14
+GtkExpander	::expander_size		= 16
+GtkScale	::slider-length		= 16
+GtkScale	::trough-side-details	= 1  
+GtkWidget	::link-color		= "#f6f6f6"
+GtkWidget	::visited-link-color	= "#777777"
+GtkHScale	::slider-length		= 16
+GtkHScale	::slider_width		= 8
+GtkVScale	::slider-length		= 16
+GtkVScale	::slider_width		= 8
+GtkProgressBar	::min-horizontal-bar-height = 10
+GtkProgressBar	::min-vertical-bar-width = 10
+GtkTreeView	::expander_size		= 14
+GtkTreeView	::vertical-separator	= 1
+GtkTreeView	::indent-expanders	= 1
+
+GtkEntry	::inner-border = { 1, 1, 1, 1 }
+GtkEntry	::honors-transparent-bg-hint	= 0
+GtkEntry	::state-hint			= 1
+GtkEntry	::progress-border		= { 2, 2, 2, 2 }
+
+xthickness = 2
+ythickness = 2
+   
+  bg[NORMAL]      = "#999"
+  bg[PRELIGHT]    = "#996"
+  bg[ACTIVE]      = "#aaa"
+  bg[SELECTED]    = "#797"
+  bg[INSENSITIVE] = "#888"
+
+  base[NORMAL]    = shade (1.1, "#999")
+  base[SELECTED]  = mix (1.0 , "#abc", "#bca") #"#abc"
+  base[ACTIVE]    = "#bbb"
+  base[INSENSITIVE] = "#ccc"
+  base[PRELIGHT]  = "#aaa"
+
+  text[SELECTED]  = "#231"
+  text[PRELIGHT]  = "#600"
+  text[ACTIVE]    = "#353"
+  text[NORMAL]    = "#000"
+  text[INSENSITIVE] = "#444"		#darker ("#456")
+  
+  fg[NORMAL]      = shade (0.5, "#456")
+  fg[ACTIVE]      = "#232"
+  fg[PRELIGHT]    = "#000"
+  fg[SELECTED]    = "#fff"
+  fg[INSENSITIVE] = "#565"
+
+engine "murrine" 
+{
+animation = TRUE
+arrowstyle = 1
+border_shades		= {1.0, 0.8}		# gradient to draw on border
+cellstyle = 1
+colorize_scrollbar  	= TRUE
+contrast 		= 0.8		# 0.8 for less contrast, more than 1.0 for more contrast on borders
+comboboxstyle 		= 1
+expanderstyle 		= 2
+glazestyle 		= 3		# 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
+glow_shade          	= 1.2
+glowstyle           	= 0     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = horizontal, 4 = centered glow
+gradient_shades    	= {1.1, 1.1, 1.1, 1.1}
+#gradients           	= TRUE  # FALSE = disabled, TRUE = enabled
+handlestyle = 0
+highlight_shade = 1.1 	# set highlight amount for buttons or widgets
+#hilight_ratio 		= 1.0
+lightborder_shade   	= 1.3   # sets lightborder amount for buttons or widgets
+lightborderstyle    	= 1     # 0 = lightborder on top side, 1 = lightborder on all sides
+listviewheaderstyle 	= 1	# 0 = flat, 1 = glassy, 2 = raised	
+listviewstyle 		= 1	# 0 = nothing, 1 = dotted
+menubaritemstyle 	= 1	# 0 = menuitem look, 1 = button look
+menubarstyle 		= 1	# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+menuitemstyle 		= 1	# 0 = flat, 1 = glassy, 2 = striped
+menustyle           	= 1     # 0 = no vertical menu stripe, 1 = display vertical menu stripe
+progressbarstyle    	= 1     # 0 = flat, 1 = striped, 2 = blocks
+prelight_shade =1.0 
+roundness 		= 2		# 0 = squared, 1 = old default, more will increase roundness
+reliefstyle = 0			# 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
+scrollbarstyle 		= 4	# 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
+sliderstyle         	= 2     # 0 = nothing added, 1 = handles
+stepperstyle        	= 0     # 0 = standard, 1 = integrated stepper handles, 2 = unknown
+toolbarstyle        	= 0     # 0 = flat, 1 = glassy, 2 = gradient
+spinbuttonstyle 	= 1
+rgba            = TRUE  # FALSE = disabled, TRUE = enabled
+#shadow_shades		= {0.5, 0.0}		# gradient for shadows.
+text_shade = 1.2
+textstyle		= 0			# 0 = normal text, 1 = inset. Very resource heavy!
+trough_shades = { 1.0, 1.0 }
+}}
+
+style "murrine-entry"		= "default"	{ 
+	base[NORMAL] = "#aaa"
+	base[ACTIVE]    = "#ccc"
+	xthickness = 4 
+	ythickness = 4 }
+
+class "GtkWidget" style "default"
+class "GtkEntry"	style "murrine-entry"

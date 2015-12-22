@@ -1,0 +1,15 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document url(http://www.sports.ru/) {
+
+.c-user-tags__edit-panel {
+    position: relative;
+    margin-top: -40px;
+    opacity: 0;
+    clear: both;
+    min-height: 40px;
+    background-color: #000000;
+    padding: 9px 0px;
+    transition: margin 300ms ease-in-out 0s, opacity 200ms ease-in-out 0s;
+    box-sizing: border-box;
+}
+}

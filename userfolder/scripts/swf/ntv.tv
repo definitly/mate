@@ -1,0 +1,17 @@
+#!/bin/sh
+
+
+#!/bin/sh
+
+app="ntv"
+
+flashVer="LNX 11,2,202,451"
+swfUrl="http://www.ntv.ru/swf/rtmplayer01_cdn.swf?v=20140306"
+tcUrl="rtmp://ntv.cdnvideo.ru/ntv"
+pageUrl="http://www.ntv.ru/tv/"
+play="airstream001?e=1429508808&md5=2wsB2UY5BjsVSva071s53w"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -

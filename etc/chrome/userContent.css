@@ -1,0 +1,701 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain(sports.ru) {
+
+
+
+
+/* Запретить Flash */
+embed[type="application/x-shockwave-flash"] {
+display: none !important;
+} 
+
+.c-inline-search__input  {
+
+display: none !important; 
+
+}
+
+
+.sports-apps-promo {
+display: none !important; 
+    position: relative;
+    color: #FFF;
+}
+
+.main-footer {
+display: none !important; 
+    background: #000 none repeat scroll 0% 0%;
+}
+
+
+
+.main-header__promo-block {
+
+display: none !important; 
+    float: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
+.main-menu_link.william-lawson__button
+
+{
+
+display: none !important; 
+    float: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ .green-but.corners-3px.create-blog-but {
+
+
+display: none !important;
+
+}
+
+#thirdBanner {
+
+display: none !important;
+   
+}
+
+
+.c-read-also.c-read-also-news {
+
+display: none !important;
+}
+
+
+.news.news-in-this-day  {
+
+display: none !important;
+}
+
+
+.anons   {
+
+display: none !important;
+}
+
+.c-user-tags__edit-panel {
+    position: relative;
+    margin-top: -40px;
+    opacity: 0;
+    clear: both;
+    min-height: 40px;
+    background-color: #000000 !important; 
+    padding: 9px 0px;
+    transition: margin 300ms ease-in-out 0s, opacity 200ms ease-in-out 0s;
+    box-sizing: border-box;
+    display: none !important; 
+}
+
+
+#topBanner {
+display: none !important; 
+
+}
+
+
+
+#yandex_rtb_R-28471-3    {
+
+display: none !important; 
+
+}
+
+#yandex_rtb_R-28471-2    {
+
+display: none !important; 
+
+}
+
+
+#yap-directRightBanner-posterVertical  {
+
+display: none !important; 
+
+}
+
+#directHorizontalBanner  {
+
+display: none !important; 
+}
+
+
+.b-banner-smi2  {
+
+display: none !important; 
+}
+
+.video-previews {
+display: none !important; 
+
+}
+
+
+.rec-block {
+    overflow: hidden;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 0px 0px 20px;
+    margin: 0px 0px 17px;
+   display: none !important;
+}
+
+
+
+.filter-comments {
+    text-align: center;
+    border-bottom: 1px solid #D8D8D8;
+    line-height: 24px;
+display: none !important; 
+}
+
+
+ .P {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 15px 0px 0px;
+display: none !important; 
+}
+
+
+.green-but.corners-3px.mc-but  {
+	display: none !important; 
+	
+	}
+
+#.but.corners-3px {
+	display: none !important; 
+	
+	}
+
+.read-news-block {
+	display: none !important; 
+	}
+
+
+
+
+.my-team-news {
+	
+	 display: none !important; 
+	}
+
+
+.c-favorite-team {
+    position: relative;
+    padding: 45px 42px 31px;
+    margin: 10px 0px 17px;
+    border: 1px solid #D8D8D8;
+display: none !important; 
+}
+
+.c-app-suggest {
+    position: relative;
+    margin: 10px 0px 17px;
+    border: 1px solid #D8D8D8;
+display: none !important; 
+}
+
+
+.important {
+    overflow: hidden;
+    max-width: 460px;
+    line-height: 16px;
+    padding-left: 2px;
+    display: none !important; 
+}
+
+#.my-team-news {
+    line-height: 15px;
+    padding: 0px 0px 17px;
+    display: none !important; 
+}
+
+#.overBox {
+    overflow: hidden;
+  display: none !important; 
+}
+
+.footerLayout {
+    background: none repeat scroll 0% 0% #000;
+    padding: 15px 0px;
+    color: #7F7F7F;
+    line-height: 18px;
+display: none !important; 
+}
+
+
+.more {
+    border-top: 1px solid #D8D8D8;
+    padding: 7px 0px 15px;
+    font-size: 11px;
+display: none !important; 
+}
+.small-pink-but {
+    font-size: 11px;
+    text-transform: none;
+    height: 22px;
+    line-height: 22px;
+display: none !important;
+}
+
+.bordered {
+    border-bottom: 2px solid #7F7F7F;
+    margin: 0px 0px 15px;
+   display: none !important; 
+}
+
+.social-icons, .social-icons-big {
+    padding: 3px 0px 0px;
+display: none !important; 
+}
+
+
+.b-subscribe-block {
+    font-family: Arial,Helvetica,sans-serif;
+    border: 1px solid #D8D8D8;
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 40px;
+    width: 588px;
+    margin: 10px 0px 17px;
+    display: none !important; 
+
+}
+
+.sports-apps-promo {
+    color: #FFF;
+    line-height: 1.3;
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    right: 338px;
+    display: none !important; 
+
+}
+
+.promo-clear-scores-video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    margin-left: 310px;
+    width: 360px;
+    height: 36px;
+    background: url('i/promo/clear-scores-video.png') no-repeat scroll 0% 0% transparent;
+     display: none !important; 
+}
+
+.c-news-item__panel-left {
+    float: left;
+ display: none !important; 
+}
+.c-user-panel__top-menu {
+    padding-top: 10px;
+display: none !important; 
+
+}
+.g-float-left {
+    float: left;
+display: none !important; 
+}
+
+.help-text {
+    font-size: 10px;
+    color: #7F7F7F;
+    line-height: 10px;
+    display: none !important; 
+
+}
+
+
+
+
+}
+
+@-moz-document domain(echo.msk.ru) {
+.netLinks {
+    position: relative;
+    margin: 0px 0px 10px;
+    font-size: 20px;
+    line-height: 41px;
+    overflow: visible;
+    z-index: 10;
+    border-radius: 2px;
+display: none !important; 
+}
+
+
+mainsidebar.sidebar.narrow.right  {
+	
+display: none !important;	
+	
+	}
+
+
+
+#vk_groups  {
+	
+display: none !important;	
+	
+	}
+.ad.iblock.ad-silverrain  {
+	
+display: none !important;	
+	
+	}
+
+.ad.iblock.ad-silverrain.ad-svoboda {
+	
+display: none !important;	
+	
+	}
+
+
+
+
+
+
+
+#OA_show_16   {
+	
+display: none !important;	
+	
+	}
+
+
+.otv_widget  {
+	
+display: none !important;	
+	
+	}
+
+.mm-body.mm-body__fontsize--small.mm-body__fontface--roboto.mm-body__border--false  {
+	
+display: none !important;	
+	
+	}
+
+
+
+
+
+
+
+.descr.red {
+	
+display: none !important;	
+	
+	}
+
+#.sidebar.narrow.right{
+	
+display: none !important;	
+	
+	}
+
+.socmenu.iblock {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    display: none !important; 
+}
+
+.iblock.image {
+    
+    display: none !important; 
+}
+.title {
+   
+ display: none !important; 
+}
+
+
+
+
+.partnerList {
+    margin-top: 10px;
+    border-top: 1px solid #363B3F;
+    background: url('../i/bg09.png') repeat-x scroll 0px 0px #303338;
+  display: none !important; 
+}
+
+footer {
+    position: relative;
+    margin: 25px auto 0px;
+    width: 990px;
+    min-height: 125px;
+    color: #A3A3A4;
+display: none !important; 
+}
+
+.bannerBlock {
+    margin-bottom: 0.625em;
+display: none !important; 
+}
+
+
+
+}
+
+@-moz-document domain(marathonsportsbook.com) {
+
+#footer .footer-main {
+    clear: both;
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 9px 0px 0px;
+    overflow: hidden;
+    display: none !important; 
+}
+
+.banners-padding-top {
+    padding-top: 67px;
+    display: none !important; 
+}
+
+}
+
+
+@-moz-document domain(rutracker.org) {
+
+#page_footer {
+    clear: both;
+    margin: 12px 0px 3px;
+display: none !important; 
+}
+
+/* Запретить Flash */
+embed[type="application/x-shockwave-flash"] {
+display: none !important;
+} 
+
+
+}
+
+
+@-moz-document domain(youtube.com){
+
+.premium-yva-unexpanded {
+    margin: 0px auto;
+    padding: 0px;
+    width: 760px;
+    height: 150px;
+display: none !important;
+}
+
+
+
+#google_companion_ad_div{
+display: none !important;
+}
+
+
+}
+
+
+@-moz-document domain(livetv.sx){
+
+
+/* Запретить Flash */
+embed[type="application/x-shockwave-flash"] {
+display: none !important;
+} 
+ 
+}
+
+@-moz-document domain(yandex.ru){
+
+
+/* Запретить Flash */
+embed[type="application/x-shockwave-flash"] {
+display: none !important;
+} 
+ 
+ .b-banner__content {
+    border: 0px none;
+display: none !important;
+}
+ 
+.b-foot {
+	
+	display: none !important;
+	
+	}
+ 
+  .b-inline_widget.l-widgets-holder.b-inline_promo {
+	
+	display: none !important;
+	
+	}
+ 
+ 
+}
+
+
+@-moz-document domain(opennet.ru){
+
+
+html > body >  table >  tbody >  tr > td  > table > tbody > tr {
+
+
+}
+
+
+div#adv {padding-top: 0px;
+position:absolute;
+left:50%;
+margin-left:-235px;
+width:470px;
+display: none !important;
+}
+div#adv2 {padding-top: 0px;
+position:absolute;
+left:50%;
+margin-left:-235px;
+width:470px;
+display: none !important;
+}
+
+div#adv3 {padding-top: 0px;
+position:absolute;
+left:50%;
+margin-left:-235px;
+width:470px;
+display: none !important;
+}
+}
+
+
+
+@-moz-document domain(vk.com){
+
+.ads_ads_box2 {
+    display: table-cell;
+  display: none !important;
+}
+
+}
+
+
+@-moz-document domain(nnm-club.me){
+
+
+body {
+    margin: 0px;
+    padding-top: 355px;
+    background: none repeat scroll 0% 0% #fff !important ;
+}
+
+
+.spaceRow  {
+    
+  display: none !important;
+}
+
+.pb_left_banner {
+    
+  display: none !important;
+}
+
+.pb_right_banner {
+    
+  display: none !important;
+}
+
+/* Запретить Flash */
+embed[type="application/x-shockwave-flash"] {
+display: none !important;
+} 
+ 
+
+
+.pb_link {
+    
+  display: none !important;
+}
+#b-logo {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    display: block;
+    width: 380px;
+    height: 335px;
+    margin-left: -190px;
+display: none !important;
+}
+.copyright {
+    font-size: 8pt;
+    font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
+    color: #2B4157;
+    letter-spacing: -1px;
+display: none !important;
+}
+
+ .pb_top_img {
+    background: url('/usr/local/www/nginx/null.gif') no-repeat scroll 50% 0px transparent;
+    height: 520px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+display: none !important;
+}
+
+
+}
+
+@-moz-document domain(linux.org.ru){
+
+#interpage-adv  {
+
+display: none !important;
+}
+
+
+}
+
+@-moz-document domain(mlb.com){
+
+
+
+#gameday-footer-container {
+
+display: none !important;
+}
+
+}
+
+@-moz-document domain(flightradar24.com){
+#apppage_badge {
+    right: 3px;
+    bottom: 180px;
+    width: 127px;
+    height: 98px;
+    border: 0px none;
+    background: url('../images/apppage_promo2.png') no-repeat scroll 0px 0px transparent;
+    display: none !important;
+}
+
+#noads_badge {
+    width: 127px;
+    border-top: 0px none;
+    right: 3px;
+    bottom: 0px;
+    background: url('../images/noads_promo.png') no-repeat scroll 0px 0px transparent;
+    display: none !important;
+}
+#.jspPane {
+    position: absolute;
+    display: none !important;
+
+}
+
+}

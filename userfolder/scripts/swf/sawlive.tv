@@ -1,0 +1,20 @@
+#!/bin/sh
+
+
+
+app="flash"
+
+flashVer="LNX 11,2,202,460"
+swfUrl="http://static3.sawlive.tv/player.swf"
+#tcUrl=$2
+pageUrl="http://www3.sawlive.tv/embed/watch/diNWQzNTdhYzU1Y2M0NGMzOGZhMjI5Nw__/bGFnODRqYTo1Mjc4YzZlMzE3NGJhYmZlOGI3ZjJiNGQwNmE1YTQyNDpjMTdjNzA1ZT"
+#play=$1 
+
+        play=$(sed -n '1p' play_tcUrl) 
+        tcUrl=$(sed -n '2p' play_tcUrl)
+
+          
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -cache 2048 -cache-min 30 -noautosub -

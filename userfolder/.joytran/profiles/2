@@ -1,0 +1,18 @@
+button joy_id: 0, button: 0, key: 52
+button joy_id: 0, button: 1, key: 54
+button joy_id: 0, button: 2, key: 39
+button joy_id: 0, button: 3, key: 41
+button joy_id: 0, button: 4, key: 25
+button joy_id: 0, button: 5, key: 27
+button joy_id: 0, button: 6, key: 50
+button joy_id: 0, button: 7, key: 53
+button joy_id: 0, button: 8, key: 9
+button joy_id: 0, button: 9, key: 65
+button joy_id: 0, button: 10, key: 52
+button joy_id: 0, button: 11, key: 55
+axis joy_id: 0, axis_id: 0, axis: x, min: -1, max: 1, threshold: 10000, keylow: 100, keyhigh: 102
+axis joy_id: 0, axis_id: 1, axis: y, min: -1, max: 1, threshold: 10000, keylow: 98, keyhigh: 104
+axis joy_id: 0, axis_id: 2, axis: y, min: -1, max: 1, threshold: 10000, keylow: 44, keyhigh: 45
+axis joy_id: 0, axis_id: 3, axis: x, min: -1, max: 1, threshold: 10000, keylow: 43, keyhigh: 46
+hat joy_id: 0, axis_id: 0, axis: x, min: -1, max: 1, threshold: 10000, keylow: 29, keyhigh: 32
+hat joy_id: 0, axis_id: 1, axis: y, min: -1, max: 1, threshold: 10000, keylow: 30, keyhigh: 31

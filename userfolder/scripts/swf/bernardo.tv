@@ -1,0 +1,25 @@
+#!/bin/sh
+
+
+
+
+app="liverepeater"
+
+flashVer="LNX 11,2,202,457"
+swfUrl="http://bernardotv.club/gofuckyourself.swf"
+tcUrl="rtmp://178.18.31.62:443/liverepeater"
+pageUrl="http://biggestplayer.me/streamcr.php?id=192055&width=620&height=490"
+play='192055'
+token='#atd%#$ZH'
+
+
+  
+        play=$(sed -n '1p' play_tcUrl) 
+        tcUrl=$(sed -n '2p' play_tcUrl)
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play   -T  $token    --live -V    | mplayer -
+
+

@@ -1,0 +1,44 @@
+#!/usr/local/bin/bash
+login=definitly
+rrd="/var/db/"
+
+#определение загрузки для процесса VBoxHeadless
+a="$(top | grep VBoxHeadless | awk ' {print $11} ' )"
+
+#частота процессора
+
+f="$(/sbin/sysctl dev.cpu.0.freq   | /usr/bin/awk '{print $2}' )"
+
+#определение самого загруженного процесса из программы top
+b="$(top | awk ' {print $12} ' | sed -n 10p )"
+#определение значение самого загруженого процесса
+b2="$(top | awk ' {print $11} ' | sed -n 10p )"
+
+#вывод температуры 
+core0="$(/sbin/sysctl dev.cpu.0.temperature | /usr/bin/awk '{print $2}' | /usr/bin/awk '{split($1,a,"."); print a[1] }')"
+core1="$(/sbin/sysctl dev.cpu.1.temperature | /usr/bin/awk '{print $2}' | /usr/bin/awk '{split($1,a,"."); print a[1] }')"
+`/usr/local/bin/rrdtool update $rrd/cputemp.rrd N:$core0:$core1`
+
+#вывод заргрузки idle (бездействие системы)
+idle="$(top -SIt | grep idle | awk ' {print $11} '| sed 's/.$//' )"
+user=`  /usr/local/bin/cpuload | tail +2 | awk '{ print $1; }'`
+`/usr/local/bin/rrdtool update $rrd/cpuload.rrd N:$idle:$user`
+
+#вывод времени 
+e="$(date | awk ' {print $4} ')"
+echo $user
+
+# вывод памяти
+
+wired="$(/usr/local/bin/free | grep Wired | awk ' {print $4} ' |  sed 's/.$//' | sed 's/.$//' | sed 's/.$//' )"
+active="$(/usr/local/bin/free | grep Active | awk ' {print $5} ' | sed 's/.$//' | sed 's/.$//' | sed 's/.$//' )"
+inactive="$(/usr/local/bin/free | grep Inactive | awk ' {print $4} ' | sed 's/.$//'| sed 's/.$//' | sed 's/.$//'  )"
+free="$(/usr/local/bin/free | grep Free | awk ' {print $5} ' | sed 's/.$//' | sed 's/.$//' | sed 's/.$//'  )"
+`/usr/local/bin/rrdtool update $rrd/memory.rrd N:$wired:$active:$inactive:$free`
+
+ 
+echo -en  "VBoxHeadless:$a     $b:$b2     $core0    $f     $idle     $e\n"      >>  /tmp/monitoring.log
+cat /tmp/monitoring.log | column -c 3 -t                   >  /home/$login/monitoring.log
+ 
+
+

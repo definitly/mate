@@ -1,0 +1,6 @@
+#!/bin/sh
+user=
+pass=
+
+umount ~/Yandex.Disk 
+wdfs https://webdav.yandex.ru ~/Yandex.Disk  -o ,username=$user@yandex.ru,password=$pass

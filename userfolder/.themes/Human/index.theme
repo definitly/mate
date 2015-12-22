@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Human
+Comment=Ubuntu default theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Human
+IconTheme=gnome
+MetacityTheme=Human

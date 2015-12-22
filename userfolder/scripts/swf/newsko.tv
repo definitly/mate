@@ -1,0 +1,20 @@
+#!/bin/sh
+
+
+
+
+app="live"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://www.aadvertismentt.com/player.swf"
+tcUrl="rtmp://46.246.124.5/live"
+#tcUrl="rtmp://46.246.124.46/live"
+pageUrl="http://www.newsko.co.uk/channel/last8"
+play="last3"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -cache 2048 -cache-min 30 -noautosub -
+
+

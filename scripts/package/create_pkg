@@ -1,0 +1,37 @@
+#!/bin/sh
+
+
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+
+
+
+CURRENTDIRECTORY=$(pwd)
+
+             mkdir pkg
+             cd pkg
+             pkg_cutleaves -l >> pkg_leaves
+             pkg create -a
+             touch pkg
+             echo '#!/bin/sh' >> pkg 
+             echo 'kldload linux' >> pkg 
+             echo 'cd /pkg' >> pkg 
+             echo 'tar xf ./pkg-1.5.6.txz -s ",/.*/,,g" "*/pkg-static"' >> pkg
+             echo  './pkg-static add ./pkg-1.5.6.txz' >> pkg
+             echo '#for i in $(ls *txz); do' >> pkg
+             echo  'for i in $(cat pkg_leaves); do' >> pkg
+             echo  'pkg   add $i.txz' >> pkg
+             echo 'done' >> pkg
+             echo './git clone git://github.com/definitly/mate.git' >> pkg 
+             echo 'cd mate' >> pkg 
+             echo './install.sh' >> pkg 
+             chmod +x pkg
+             cd ..
+             cp /usr/local/bin/git   $CURRENTDIRECTORY/pkg
+             tar -czf pkg.txz pkg
+             
+             
+             

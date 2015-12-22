@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=unrpm
+Exec=unrpm %f
+Categories=Other;
+NoDisplay=true
+MimeType=application/x-rpm

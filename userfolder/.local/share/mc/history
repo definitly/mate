@@ -1,0 +1,16 @@
+[input-def]
+0=*
+
+[input2]
+0=/usr/home/definitly/
+
+[cmdline]
+0=
+
+[Dir Hist New Right Panel]
+0=/usr/home/definitly
+
+[Dir Hist New Left Panel]
+0=/usr/home/definitly
+1=/usr/home/definitly/downloads
+2=/usr/home/definitly/downloads/skype.tar.gz/utar://

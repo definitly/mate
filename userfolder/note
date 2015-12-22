@@ -1,0 +1,70 @@
+setenv  SSL_NO_VERIFY_PEER 1
+
+https://addons.mozilla.org/ru/firefox/addon/adblock-plus/
+
+VBoxManage modifyvm win --accelerate3d off
+VBoxManage hostonlyif ipconfig vboxnet0 --ip 192.168.56.101
+
+занести в конфиг mlbviewer
+#video_player=cvlc -vvv input_stream --sout '#standard{access=http,mux=ts,dst=192.168.1.4:8902/tv.asf}'
+xset s off & xset -dpms &
+sudo cp ~/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
+pkg delete -y leafpad && pkg install -y leafpad
+VBoxManage  modifyvm android44  --mouse usbtablet
+sudo update-mime-database /usr/local/share/mime
+mount /dev/ada1s1a /mnt
+pkg install devel/gsettings-desktop-schemas
+
+pkg install libao && pkg install devel/sdl20
+
+pkg install -y twm
+
+
+mplayer -cache 1000 -cache-min 99 ffmpeg://http://149.5.6.6/hls/l275B_GUrwWt1N-IBpIO5A/1429447779/sport1ru/index.m3u8
+http.request.uri contains "m3u8"
+
+pkg install autoconf automake findutils gmake cmake libtool gettext gsed gtar
+
+sudo ntpdate 1.ru.pool.ntp.org
+команды 
+
+cdd     перейти в каталог downloads
+cds     перейти в каталог scripts
+vwin    запустить windows в virualbox
+WIN+d   спрятать показать dzen
+WIN+t   спрятать показать tint
+
+cсоздание jail с помощью ezjail
+
+
+
+ezjail-admin install -pm
+ezjail-admin create name ip
+ifconfig ale0 ip/24 alias
+
+подключение
+
+jexec name  csh
+
+ Xephyr 
+
+
+# футбольные каналы
+http://www.ustream.tv/channel/radiotrance-54
+http://livetv.ninja/
+xhost localhost
+sudo -u ff -H firefox
+echo 639639 | pw useradd ff -m -g wheel -s /bin/csh -h 0
+
+
+
+liberation-fonts-ttf
+
+
+
+
+sed -e "s/4.2.0.13/4.3.0.37/g" ./skype > ./skype_new
+  
+xwininfo | grep -e Width -e Height -e Absolute
+wmctrl -r Kodi -e 0,0,0,1020,720
+

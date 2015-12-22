@@ -1,0 +1,7 @@
+alarm.sh             будильник
+createvm.sh          создание виртуальной машины
+icons.sh             установка иконок
+encoded.sh           шифрование файлов
+x2.sh                запуск openbox на втором мониторе
+delete_linux-f10.sh  удаление linux_base-f10 и linux-f10* пакаджей
+linux-c6-flash.sh   установка флеша и skype4

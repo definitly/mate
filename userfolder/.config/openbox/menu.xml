@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<menu id="1" label="Development">
+			<item label="GDB"> <action name="Execute">
+				<execute>xterm -e gdb</execute>
+			</action> </item>
+			<item label="IDLE"> <action name="Execute">
+				<execute>idle</execute>
+			</action> </item>
+			<item label="Python"> <action name="Execute">
+				<execute>xterm -e python</execute>
+			</action> </item>
+			<item label="Qt 5 Assistant"> <action name="Execute">
+				<execute>/usr/local/lib/qt5/bin/assistant</execute>
+			</action> </item>
+			<item label="Qt 5 Linguist"> <action name="Execute">
+				<execute>/usr/local/lib/qt5/bin/linguist</execute>
+			</action> </item>
+		</menu>
+		<menu id="2" label="Editors">
+			<item label="AA Fire"> <action name="Execute">
+				<execute>xterm -e aafire -driver slang</execute>
+			</action> </item>
+			<item label="Easy Editor"> <action name="Execute">
+				<execute>xterm -e ee</execute>
+			</action> </item>
+			<item label="Leafpad"> <action name="Execute">
+				<execute>leafpad</execute>
+			</action> </item>
+			<item label="Pathetic Writer"> <action name="Execute">
+				<execute>pw</execute>
+			</action> </item>
+			<item label="Vi"> <action name="Execute">
+				<execute>xterm -e vi</execute>
+			</action> </item>
+		</menu>
+		<menu id="18" label="Games">
+			<item label="Snes9x"> <action name="Execute">
+				<execute>snes9x-gtk</execute>
+			</action> </item>
+		</menu>
+		<menu id="6" label="Graphics">
+			<item label="Feh"> <action name="Execute">
+				<execute>feh</execute>
+			</action> </item>
+		</menu>
+
+          <menu id="7" label="Multimedia">
+			<item label="SM"> <action name="Execute">
+				<execute>mpv http://localhost:8908/tv.asf</execute>
+			</action> </item> 
+</menu>
+		<menu id="5" label="Network">
+                         
+<item label="FireFox-Tor"> <action name="Execute">
+				<execute>~/.scripts/firefox_tor.sh</execute>
+			</action> </item>
+
+
+ <item label="Chrome-Tor"> <action name="Execute">
+				<execute>chrome --proxy-server="127.0.0.1:8118"  </execute>
+			</action> </item>
+
+
+                          <item label="Tor Browser Bundle"> <action name="Execute">
+				<execute>linux-tor-browser</execute>
+			</action> </item>
+
+
+
+
+			<item label="FireFox"> <action name="Execute">
+				<execute>firefox</execute>
+			</action> </item>
+			<item label="FTP"> <action name="Execute">
+				<execute>xterm -e ftp</execute>
+			</action> </item>
+			<item label="Mail"> <action name="Execute">
+				<execute>xterm -e mail</execute>
+			</action> </item>
+			<item label="Skype"> <action name="Execute">
+				<execute>~/.scripts/skype</execute>
+			</action> </item>
+			<item label="Talk"> <action name="Execute">
+				<execute>xterm -e talk</execute>
+			</action> </item>
+			<item label="Telnet"> <action name="Execute">
+				<execute>xterm -e telnet</execute>
+			</action> </item>
+			<item label="TkVNC"> <action name="Execute">
+				<execute>xterm -e tkvnc</execute>
+			</action> </item>
+			<item label="Transmission"> <action name="Execute">
+				<execute>transmission-gtk</execute>
+			</action> </item>
+			<item label="Zwrite"> <action name="Execute">
+				<execute>xterm -e read -p 'Zwrite to users: ' u ; zwrite $u</execute>
+			</action> </item>
+		</menu>
+		<menu id="4" label="Science">
+			<item label="bc"> <action name="Execute">
+				<execute>xterm -e bc</execute>
+			</action> </item>
+			<item label="dc"> <action name="Execute">
+				<execute>xterm -e dc</execute>
+			</action> </item>
+		</menu>
+		<menu id="19" label="Shells">
+			<item label="File Manager PCManFM"> <action name="Execute">
+				<execute>pcmanfm</execute>
+			</action> </item>
+			<item label="GIT"> <action name="Execute">
+				<execute>xterm -e git</execute>
+			</action> </item>
+			<item label="MC"> <action name="Execute">
+				<execute>xterm -e mc</execute>
+			</action> </item>
+                        <item label="Oracle VM VirtualBox"> <action name="Execute">
+				<execute>VirtualBox</execute>
+			</action> </item>
+			<item label="Xterm"> <action name="Execute">
+				<execute>xterm</execute>
+			</action> </item>
+			<item label="XTerm (Unicode)"> <action name="Execute">
+				<execute>uxterm</execute>
+			</action> </item>
+		</menu>
+		<menu id="37" label="System">
+			<menu id="36" label="Settings">
+				<menu id="21" label="GNOME">
+					<item label="Adobe Flash Player"> <action name="Execute">
+						<execute>flash-player-properties</execute>
+					</action> </item>
+				</menu>
+				<item label="Customize Look and Feel"> <action name="Execute">
+					<execute>lxappearance</execute>
+				</action> </item>
+				<item label="Desktop Preferences"> <action name="Execute">
+					<execute>pcmanfm --desktop-pref</execute>
+				</action> </item>
+				<item label="Openbox Configuration Manager"> <action name="Execute">
+					<execute>obconf</execute>
+				</action> </item>
+				<item label="Panel tint2"> <action name="Execute">
+					<execute>tint2conf</execute>
+				</action> </item>
+				<item label="Preferred Applications"> <action name="Execute">
+					<execute>libfm-pref-apps</execute>
+				</action> </item>
+			</menu>
+			<item label="guname"> <action name="Execute">
+				<execute>guname</execute>
+			</action> </item>
+			<item label="Htop"> <action name="Execute">
+				<execute>xterm -e htop</execute>
+			</action> </item>
+			<item label="Task Manager"> <action name="Execute">
+				<execute>lxtask</execute>
+			</action> </item>
+			<item label="Top"> <action name="Execute">
+				<execute>xterm -e top</execute>
+			</action> </item>
+			<item label="Wireshark"> <action name="Execute">
+				<execute>sudo wireshark</execute>
+			</action> </item>
+		</menu>
+		<menu id="38" label="Utilities">
+			<item label="Info"> <action name="Execute">
+				<execute>xterm -e info</execute>
+			</action> </item>
+			<item label="Units"> <action name="Execute">
+				<execute>xterm -e units</execute>
+			</action> </item>
+		</menu>
+		<separator/>
+		<menu id="40" label="OpenBox">
+			<menu id="client-list-menu"/>
+			<item label="Reconfigure"> <action name="Reconfigure"/> </item>
+			<separator/>
+			<item label="Exit"> <action name="Exit"/> </item>
+		</menu>
+	</menu>
+</openbox_menu>

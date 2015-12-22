@@ -1,0 +1,23 @@
+mkdir -p /jail/debian
+kldload fdescfs linprocfs linsysfs tmpfs
+debootstrap squeeze /jail/debian http://cdn.debian.net/debian
+umount /jail/debian/sys
+umount /jail/debian/dev/fd /jail/debian/dev
+umount /jail/debian/proc
+mount -t linprocfs linprocfs /jail/debian/proc
+mount -t linsysfs linsysfs /jail/debian/sys
+mount -t tmpfs tmpfs /jail/debian/lib/init/rw
+  echo 'jail_enable="YES" jail_list="debian"' >> /etc/rc.conf
+  echo ' jail_list="debian"' >> /etc/rc.conf
+  echo ' jail_set_hostname_allow="YES"' >> /etc/rc.conf
+  echo 'jail_debian_rootdir="/jail/debian"' >> /etc/rc.conf
+  echo 'jail_debian_hostname="debian.freebsd"' >> /etc/rc.conf
+  echo 'jail_debian_ip="198.162.1.6"' >> /etc/rc.conf
+  echo 'jail_debian_devfs_enable="YES"' >> /etc/rc.conf
+  echo 'jail_debian_procfs_enable="YES"' >> /etc/rc.conf
+  echo 'jail_debian_exec_start="/bin/sh  /etc/init.d/rc 3 "' >> /etc/rc.conf
+  echo 'jail_debian_flags="-l -U root"' >> /etc/rc.conf
+  cp /etc/resolv.conf /jail/debian/etc/resolv.conf
+  cp /etc/master.passwd /jail/debian/etc/master.passwd
+  /usr/sbin/pwd_mkdb -d /jail/debian/etc -p /jail/debian/etc/master.passwd
+  /etc/rc.d/jail start debian

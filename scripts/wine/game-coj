@@ -1,0 +1,6 @@
+#!/usr/local/bin/bash
+
+cd /home/definitly/wine/coj/drive_c/Program\ Files/R.G.\ Catalyst/Call\ of\ Juarez
+
+
+env WINEPREFIX=/home/definitly/wine/coj wine CoJ.exe

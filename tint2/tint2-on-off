@@ -1,0 +1,17 @@
+#!/bin/sh
+proc=tint2
+
+  
+          
+   
+         
+          
+          if ! [ -z $(pgrep $proc) ]
+                then
+                   killall -9 tint2
+                   killall -9 xxkb
+                else
+                    tint2 &
+                    xxkb &
+        fi
+           

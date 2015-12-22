@@ -1,0 +1,20 @@
+#!/bin/sh
+#eurosport 2
+
+
+
+app="liverepeater"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://static.surk.tv/player.swf"
+tcUrl="rtmp://173.193.205.95:443/liverepeater"
+pageUrl="http://cdn.kingofplayers.com/stream8.html"
+play="stream8"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -
+
+
+

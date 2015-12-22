@@ -1,0 +1,31 @@
+xterm*background: black 
+xterm*foreground: white 
+xterm*geometry: 90x30
+xterm*metaSendsEscape: true 
+xterm*fullCursor: true 
+xterm*saveLines: 2000 
+xterm*cursorColor: lightgreen 
+xterm*cursorColor2: lightblue 
+xterm*ScrollBar: true
+xterm*termName: xterm-256color
+xterm*ScrollBar*width:         26 
+xterm*scrollbar.background:    black 
+xterm*scrollbar.foreground:    lightgreen 
+XTerm*faceName: DejaVu Sans Mono 
+XTerm*faceSize: 11
+
+
+aterm*font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-koi8-r
+aterm*transparent:true
+
+
+yeahconsole*toggleKey:    Control+q
+yeahconsole*font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-koi8-r
+
+yeahconsole*keyFull:               Control+F11
+yeahconsole*background:black
+
+yeahconsole*consoleHeight:25
+yeahconsole*cursorColor:#5A7B2C
+
+yeahconsole*transparent:true

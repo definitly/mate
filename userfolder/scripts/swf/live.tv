@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+# http://p.jwpcdn.com/6/12/jwplayer.flash.swf  securetoken %Zrey(nKa@#Z
+
+
+play="atracessa"
+rtmp="rtmp://93.158.217.202:80/live/"
+swfurl="http://p.jwpcdn.com/6/12/jwplayer.flash.swf"
+pageurl="http://reytv.co/embedu.php?live=atracessa&vw=620&vh=490"
+secure="%Zrey(nKa@#Z"
+
+livestreamer --rtmp-rtmpdump  rtmpdump   "$rtmp  playpath=$play swfUrl=$swfurl pageUrl=$pageurl token=$secure" best 

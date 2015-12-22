@@ -1,0 +1,15 @@
+#!/bin/sh
+
+app="xarlive/_definst_"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://s.s-ports.ru/sites/all/libraries/spb_movie/_spbver908_/player.swf"
+tcUrl="rtmp://sportbox-video.cdn.ngenix.net:1935/xarlive/_definst_"
+pageUrl="http://news.sportbox.ru/vdl/player?nid=459184&playeri=2"
+play="services/ngenix_validator?id=20140603164646_fifachempionatmira14finala_1/MTQwNDQ4OTY4OC8zOWZhMThlOWUxLzhmZDA1OTc5N2ViNGEyZmI3Yjc3MjlkM2Q2YWZlMmNhMTY4NmVmYWE="
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -
+

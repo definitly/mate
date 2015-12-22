@@ -1,0 +1,7 @@
+#!/usr/local/bin/bash
+
+cd /home/definitly/wine/kf/drive_c/Games/Counter-Strike\ 1.6\ NoSteam\ Original
+
+
+
+env WINEPREFIX=/home/definitly/wine/cs wine RUN_KF.exe  

@@ -1,0 +1,53 @@
+#!/bin/sh
+# Vars
+dev=ada0
+pool_name=rpool
+swap_size=4G
+umount /dev/md1
+mdmfs -s 512M md1 /tmp
+sysctl kern.geom.debugflags=0x10
+# gpart
+gpart destroy -F $dev
+gpart create -s GPT $dev
+gpart add -s 64K -t freebsd-boot $dev
+gpart add -s $swap_size -t freebsd-swap -l swap0 $dev
+gpart add -t freebsd-zfs -l disk0 $dev
+gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 $dev
+# install ZFS
+kldload /boot/kernel/opensolaris.ko
+kldload /boot/kernel/zfs.ko
+mkdir /boot/zfs
+# Óreate ZFS pool
+zpool create -f $pool_name /dev/gpt/disk0
+zfs set mountpoint=/mnt $pool_name
+zpool set bootfs=$pool_name $pool_name
+zfs create $pool_name/usr
+zfs create $pool_name/usr/home
+zfs create $pool_name/var
+zfs create $pool_name/tmp
+zpool export $pool_name
+zpool import -o cachefile=/tmp/zpool.cache $pool_name
+chmod 1777 /mnt/tmp
+cd /mnt ; ln -s usr/home home
+mkdir /mnt/var/tmp
+chmod 1777 /mnt/var/tmp
+cd /usr/freebsd-dist
+export DESTDIR=/mnt
+for file in base.txz lib32.txz kernel.txz src.txz ;
+do (cat $file | tar --unlink -xpJf - -C ${DESTDIR:-/}); done
+cp /tmp/zpool.cache /mnt/boot/zfs/zpool.cache
+echo 'zfs_enable="YES"' >> /mnt/etc/rc.conf
+echo 'zfs_load="YES"' >> /mnt/boot/loader.conf
+echo 'opensolaris_load="YES"' >> /mnt/boot/loader.conf
+echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
+cat << EOF > /mnt/etc/fstab
+# Device Mountpoint FStype Options Dump Pass#
+/dev/gpt/swap0 none swap sw 0 0
+EOF
+zfs set readonly=on $pool_name/var/empty
+zfs umount -a
+zfs set mountpoint=legacy $pool_name
+zfs set mountpoint=/tmp $pool_name/tmp
+zfs set mountpoint=/usr $pool_name/usr
+zfs set mountpoint=/var $pool_name/var
+echo "Finished"

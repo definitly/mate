@@ -1,0 +1,23 @@
+#!/bin/sh
+#eurosport 2
+
+
+
+app="sstreams/"
+
+flashVer="LNX 11,2,202,327"
+swfUrl="http://lds.megom.tv/jwplayer.flash.swf"
+tcUrl="rtmp://95.211.196.4/sstreams/"
+pageUrl="http://distro.megom.tv/player-inside.php?id=fwefwefwef33fcs&width=700&height=480"
+play="fwefwefwef33fcs?keys=k0wamDpGds_-Dvt12K-1Og&keyt=1397343282"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -
+
+Property 'swfUrl' String 'http://www.eucast.tv/player5.9.swf'
+Property 'tcUrl' String 'rtmp://31.220.0.82:1935/live'
+Property 'pageUrl' String 'http://www.eucast.tv/embed.php?live=euro2x&vw=620&vh=490'
+euro2x
+

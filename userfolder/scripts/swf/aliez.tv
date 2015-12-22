@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+
+app="live/"
+
+flashVer="LNX 11,2,202,341"
+swfUrl="http://cdnx.livetv.sx/tmp/player.swf?7"
+tcUrl="rtmp://play.aliez.tv/live/"
+pageUrl="http://emb.aliez.tv/player/live.php?id=4707&w=700&h=480"
+play="streama4707?token=7e800e030b4bc5e7b4ad8701fc95b486"
+
+
+
+
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mplayer -cache 2048 -really-quiet -

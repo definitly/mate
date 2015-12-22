@@ -1,0 +1,13 @@
+out_to_console yes
+gap_y -540
+out_to_x no
+update_interval 2
+total_run_times 0
+use_spacer none
+
+TEXT
+tHDD:${color}${execi 30  sudo smartctl -a /dev/ada0 | grep Temp | awk -F " " '{print $10}' | awk 'NR == 1'} \
+tGPU:${color}${execi 30 nvidia-settings -tq "[gpu:0]/GPUCoreTemp"} \
+tCPU:${color}${execi 30 sysctl -n dev.cpu.0.temperature | cut -c 1-2}    \
+fGHz:${color}$freq_g GHz      cpu1:${cpu cpu0}%   cpu2:${cpu cpu1}%    \
+${top name 1}${top cpu 1} \
