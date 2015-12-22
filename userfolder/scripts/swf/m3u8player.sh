@@ -15,7 +15,7 @@ echo $host
 echo $GET
 echo $url 
 
-mpv $url
+mpv $url  > /dev/null 2>&1
 
 done
 
