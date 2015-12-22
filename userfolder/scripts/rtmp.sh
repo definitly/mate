@@ -19,13 +19,12 @@ sudo ${FwCMD} add 40 fwd 127.0.0.1, 1935 tcp from any to any 1935 not uid proxy
 #sudo ${FwCMD} add 40 fwd 127.0.0.1, 1935 tcp from any to any 443 not uid proxy
 sudo ${FwCMD} add allow ip from any to any via ale0
 
- rtmpsrv >  /tmp/rtmp1
+ xterm -e  "rtmpsrv >  /tmp/rtmp1  &"  
 
 
 while   [ -z "$rt" ]  ; do
 
  rt=$(cat /tmp/rtmp1 | grep rtmp://)
-echo $rt
  sleep 1;
 
 done 
