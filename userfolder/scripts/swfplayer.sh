@@ -31,7 +31,7 @@ done
 sudo killall -9 tcpdump
 
 
-if   [ "$m3u8"] ; then
+if   ! [   -z "$m3u8"] ; then
 
 
 array=( m3u8 m3u8? )
