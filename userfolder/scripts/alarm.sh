@@ -29,7 +29,7 @@ if [ $masa = $alarm ];then
  echo ringggggggg
 
 while true ; do
- mpv $mp3  &
+ mpv $mp3  
 
 done
 fi
