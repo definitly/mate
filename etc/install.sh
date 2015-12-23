@@ -41,7 +41,7 @@ login=definitly
 #                    tar -xf $CURRENTDIRECTORY/sp-sc-auth.tar.gz -C        /usr/local/bin
 
 #copy sopcast
-#                    cp $CURRENTDIRECTORY/sopcast                          /usr/local/bin
+                   cp $CURRENTDIRECTORY/sopcast                          /usr/local/bin
 
 #copy winetricks
 #                    cp $CURRENTDIRECTORY/winetricks /usr/local/bin
