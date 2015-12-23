@@ -11,8 +11,7 @@ while   [ -z "$rt" ]  ; do
 
 done 
 
-
-
+sudo killall -9 tcpdump
 
 array=( m3u8 m3u8? )
 
