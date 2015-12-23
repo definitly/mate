@@ -27,6 +27,10 @@ done
 echo $masa
 if [ $masa = $alarm ];then
  echo ringggggggg
- mplayer $mp3  &
+
+while true ; do
+ mpv $mp3  &
+
+done
 fi
 exit
