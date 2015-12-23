@@ -18,10 +18,10 @@ sudo ${FwCMD} add allow ip from any to any via ale0
                sudo  tcpdump -w file.tcpdump -s 0 -i ale0 &      
 
 
-while  ! [  "$rt" -o  "$rt2" ]  ; do
+while  ! [  "$m3u8" -o  "$rtmp2" ]  ; do
 
- rt=$(tshark -r file.tcpdump -T fields -e http.host -e tcp.port -e http.request.uri "http&&http.request.uri"  | grep m3u8)
- rt2=$(cat /tmp/rtmp1 | grep rtmp://)
+ m3u8=$(tshark -r file.tcpdump -T fields -e http.host -e tcp.port -e http.request.uri "http&&http.request.uri"  | grep m3u8)
+ rtmp2=$(cat /tmp/rtmp1 | grep rtmp://)
  
  sleep 1;
 
@@ -29,6 +29,10 @@ done
 
      killall -9 rtmpsrv
 sudo killall -9 tcpdump
+
+
+if   [ "$m3u8"] ; then
+
 
 array=( m3u8 m3u8? )
 
@@ -47,7 +51,7 @@ mpv $url  > /dev/null 2>&1
 
 done
 
-
+fi
 
 sudo  kldunload ipfw
 sed -r 's/-o.+//' /tmp/rtmp1 >  /tmp/rtmp2
