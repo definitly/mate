@@ -50,6 +50,13 @@
 			<item label="SM"> <action name="Execute">
 				<execute>mpv http://localhost:8908/tv.asf</execute>
 			</action> </item> 
+                  
+             <item label="mpvvm"> <action name="Execute">
+				<execute>~/scripts/mpvvm.sh</execute>
+			</action> </item> 
+
+
+
 </menu>
 		<menu id="5" label="Network">
                          
