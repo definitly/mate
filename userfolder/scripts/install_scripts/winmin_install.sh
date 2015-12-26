@@ -27,11 +27,8 @@ echo $l
 
 
 cd /tmp
-# fetch  https://dl.dropboxusercontent.com/u/$l/virtualbox/winxpmini-firefox.ova
-#ydcmd get  winxpmini-firefox.ova
-fetch https://rocld.com/m224
-mv m224 m224.ova
-VBoxManage import m224.ova
+gdrive gdrive download -i 0Bz5rjpkCwREsek5TNVh1X3NTakk
+VBoxManage import  winxpacestream.ova
 
  if ! [ -d ~/share/portable ]; then
 echo 'No directory'
