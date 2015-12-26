@@ -55,6 +55,7 @@ fi
                      sudo mount /dev/md0.eli /mnt
                           tar -xf   /mnt/skype.tar.gz -C       /home/$login/
                           tar -xf  /mnt/firefox.tar.gz -C     /home/$login/.mozilla
+                          tar -xf  /mnt/gdrive.tar.gz  -C     /home/$login/
                           cp /mnt/.dropbox_uploader     /home/$login/
                           cp /mnt/.ydcmd.cfg                 /home/$login/
                      sudo cp /mnt/.dropbox_uploader     /root
