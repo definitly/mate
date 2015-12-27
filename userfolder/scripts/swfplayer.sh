@@ -16,7 +16,7 @@ sudo ${FwCMD} add allow ip from any to any via ale0
 
                      rtmpsrv >  /tmp/rtmp1  2>&0  &
 
-               sudo  tcpdump -w file.tcpdump -s 0 -i ale0 &      
+               sudo  tcpdump -w file.tcpdump -s 0 -i ale0   > /dev/null 2>&1   &      
 
 
 while  ! [  "$m3u8" -o  "$rtmp2" ]  ; do
@@ -58,7 +58,7 @@ sudo  kldunload ipfw
 sed -r 's/-o.+//' /tmp/rtmp1 >  /tmp/rtmp2
 rtmp=$(head -n 2 /tmp/rtmp2 | tail -n 1 | sed  's/$/ | mpv --cache=2048  -   /')
 echo $rtmp'> /dev/null'
-sudo rm *.flv
+ rm *.flv
 echo $rtmp'> /dev/null 2>&1'    
 
 eval "$rtmp > /dev/null 2>&1"
