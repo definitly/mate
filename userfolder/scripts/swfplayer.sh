@@ -59,8 +59,6 @@ sed -r 's/-o.+//' /tmp/rtmp1 >  /tmp/rtmp2
 rtmp=$(head -n 2 /tmp/rtmp2 | tail -n 1 | sed  's/$/ | mpv --cache=2048  -   /')
 echo $rtmp'> /dev/null'
 sudo rm *.flv
-echo '#!/bin/sh' >> runrtmp.sh
-echo $rtmp'> /dev/null 2>&1'     >>  runrtmp.sh
-chmod +x runrtmp.sh
-./runrtmp.sh
-rm runrtmp.sh
+echo $rtmp'> /dev/null 2>&1'    
+
+eval "$rtmp > /dev/null 2>&1"
