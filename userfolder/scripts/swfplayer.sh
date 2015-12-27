@@ -32,7 +32,7 @@ done
 sudo killall -9 tcpdump
 
 
-if   ! [   -z "$m3u8"] ; then
+if   ! [   -z "$m3u8" ] ; then
 
 
 
