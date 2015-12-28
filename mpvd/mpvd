@@ -586,7 +586,7 @@ while [ $# -gt 0 ]; do
 
 	'seek' )
 		if [ "$2" ]; then
-			MATCH=0
+			MATCH=exact
 			[ "$3" = 'abs' -o "$3" = 'absolute' ] && MATCH=2
 			[ "$3" = '%' -o "$3" = 'percent' ] && MATCH=1
 			playd_put 'seek' "`playd_time2s $2`" $MATCH
