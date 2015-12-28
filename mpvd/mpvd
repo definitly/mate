@@ -131,7 +131,7 @@ playd_start() {	# {{{1
 			&& local MPLAYER_RUN_CMD="$MPLAYER_CMD" \
 			|| local MPLAYER_RUN_CMD="$MPLAYER_SND_ONLY_CMD"
 #  > /dev/null 2> /dev/null 
-		{ exec $MPLAYER_RUN_CMD  > /dev/null 2> /dev/null   & } \
+		{ exec $MPLAYER_RUN_CMD  >  2>&0   & } \
 			|| playd_die 'Failed to start mplayer'
 		cd - 
 	}
