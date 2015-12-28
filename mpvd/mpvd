@@ -131,7 +131,7 @@ playd_start() {	# {{{1
 			&& local MPLAYER_RUN_CMD="$MPLAYER_CMD" \
 			|| local MPLAYER_RUN_CMD="$MPLAYER_SND_ONLY_CMD"
 #  > /dev/null 2> /dev/null 
-		{ exec $MPLAYER_RUN_CMD  & } \
+		{ exec $MPLAYER_RUN_CMD  > /dev/null 2> /dev/null   & } \
 			|| playd_die 'Failed to start mplayer'
 		cd - 
 	}
@@ -445,7 +445,7 @@ NOPLAY=0
 [ $# -eq 0 ] && $PLAYD_HELP
 while [ $# -gt 0 ]; do
 	case "$1" in
-	'again' )							playd_put 'seek' 0 1 ;;
+	'again' )							playd_put 'seek' 0 absolute ;;
 	'append' )							playd_warn "$1 should be 1st argument. Ignoring" ;;
 	'cat' )								playd_cat_playlist ;;
 	'cat-favourites' | 'catfav' )		cat "$PLAYD_FAV_PLAYLIST" ;;
