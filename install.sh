@@ -38,9 +38,9 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/monitoring
           ./install.sh
           cd ..
-         # cd $CURRENTDIRECTORY/squid
-         # ./squid.sh
-         # cd ..
+          cd $CURRENTDIRECTORY/mpvd
+          ./install.sh
+          cd ..
           cd $CURRENTDIRECTORY/tor
           ./install.sh 
           cd .. 
