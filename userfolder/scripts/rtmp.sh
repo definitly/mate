@@ -36,6 +36,8 @@ sed -r 's/-o.+//' /tmp/rtmp1 >  /tmp/rtmp2
 rtmp=$(head -n 2 /tmp/rtmp2 | tail -n 1 | sed  's/$/ | mpv --cache=2048  -   /')
 
  rm *.flv
+ rm /tmp/rtmp1
+ rm /tmp/rtmp2
 
 echo $rtmp'> /dev/null 2>&1' 
 eval "$rtmp > /dev/null 2>&1"
