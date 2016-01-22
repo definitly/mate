@@ -10,6 +10,15 @@
        mkdir -p  $HOME/.steam/sdk32/
        sudo chmod 1777 /compat/linux/tmp
 
+  
+      if ! [ -f $HOME/.steam/steam/ubuntu12_32/steamwebhelper ]; then
+
+           cp    $HOME/steamwebhelper      $HOME/.steam/steam/ubuntu12_32/
+
+       fi
+
+
+
        if ! [ -f $HOME/.steam/sdk32/steamclient.so ]; then
 
            ln -s    $HOME/.steam/steam/linux32/steamclient.so       $HOME/.steam/sdk32/steamclient.so
