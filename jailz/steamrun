@@ -5,6 +5,8 @@
        export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
        sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
        sudo mount -t linprocfs linproc /compat/linux/proc
+       sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
+       sudo chmod 1777 /compat/linux/dev/shm
        mkdir -p  $HOME/.steam/sdk32/
        sudo chmod 1777 /compat/linux/tmp
 
@@ -17,4 +19,5 @@
        
        $HOME/.local/share/Steam/ubuntu12_32/steam
        sudo umount /compat/linux/proc
+       sudo umount /compat/linux/dev/shm
        sudo umount /compat/linux/
