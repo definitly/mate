@@ -2,10 +2,40 @@
 #!/bin/sh
 
 
+
+   m1=$(mount | grep "/compat/linux/" )
+   m2=$(mount | grep "/compat/linux/proc" )
+   m3=$(mount | grep "/compat/linux/dev/shm" )
+
+
+
+
+
        export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
+      
+
+    if  [ -z "$m1" ]; then 
+       echo 'не смонтировано'
        sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
+
+         fi
+
+   if  [ -z "$m2" ]; then 
+       echo 'не смонтировано'
        sudo mount -t linprocfs linproc /compat/linux/proc
-       sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
+
+         fi
+
+        if  [ -z  "$m3" ]; then
+                       echo 'не смонтировано'
+                        
+                 sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
+                       
+              fi
+
+
+
+       
        sudo chmod 1777 /compat/linux/dev/shm
        mkdir -p  $HOME/.steam/sdk32/
        sudo chmod 1777 /compat/linux/tmp
@@ -26,7 +56,7 @@
        fi
 
        
-       $HOME/.local/share/Steam/ubuntu12_32/steam &
+       $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
 
        sleep 2 
 
