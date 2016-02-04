@@ -14,26 +14,18 @@
        export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
      
 
-   if  [ -z "$m2" ]; then 
-       echo 'не смонтировано go away'
-
-       else 
-   echo "размонтируем"
-       sudo umount  /compat/linux/proc
-
-         fi
-
+  
 
  
 
-    if ! [ -z "$m1" ]; then 
+    if  [ -z "$m1" ]; then 
        echo 'не смонтировано1'
        sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
 
     fi
 
 
-   if ! [ -z "$m2" ]; then 
+   if  [ -z "$m2" ]; then 
        echo 'не смонтировано2'
        sudo mount -t linprocfs linproc /compat/linux/proc
 
@@ -42,7 +34,7 @@
 
        
 
-   if  [ -z  "$m3" ]; then
+   if  [ -z "$m3" ]; then
                        echo 'не смонтировано3'
                         
                  sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
@@ -90,7 +82,13 @@
 
 
 
-       sudo umount /compat/linux/proc
-       sudo umount /compat/linux/dev/shm
-       sudo umount /compat/linux/
-       sudo mount -t linprocfs linproc /compat/linux/proc
+       sudo umount -f /compat/linux/proc
+       sudo umount -f  /compat/linux/dev/shm
+       sudo umount -f  /compat/linux
+
+      if  [  -z "$(mount | grep linprocfs )" ]; then
+        sudo mount -t linprocfs linproc /compat/linux/proc
+        fi
+
+
+       
