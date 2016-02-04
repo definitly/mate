@@ -11,21 +11,31 @@
 
 
 
-       export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
+       
      
 
   
+  
+ 
+        
+   
+  sudo umount /compat/linux/proc
+
+        
+
+
+
 
  
 
-    if  [ -z "$m1" ]; then 
+    if  [ -z "$(mount | grep nullfs )" ]; then 
        echo 'не смонтировано1'
        sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
 
     fi
 
 
-   if  [ -z "$m2" ]; then 
+   if  [ -z "$(mount | grep linprocfs)" ]; then 
        echo 'не смонтировано2'
        sudo mount -t linprocfs linproc /compat/linux/proc
 
@@ -63,8 +73,9 @@
 
        fi
 
+              export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
        
-       $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
+              $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
 
        sleep 2 
 
