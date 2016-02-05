@@ -1,27 +1,19 @@
-
 #!/bin/sh
 
 
 
-   m1=$(mount | grep "/compat/linux/" )
-   m2=$(mount | grep "/compat/linux/proc" )
-   m3=$(mount | grep "/compat/linux/dev/shm" )
-
-
-
-
-
+  #unmount  /compat/linux/proc if mount
        
-     
+      
 
-  
-  
- 
-        
-   
-  sudo umount /compat/linux/proc
+      if  [ -z "$(mount | grep linprocfs)" ]; then 
+       echo 'не смонтировано2  go away '
 
-        
+       else
+       sudo   umount  /compat/linux/proc
+
+      fi
+                 
 
 
 
@@ -39,17 +31,15 @@
        echo 'не смонтировано2'
        sudo mount -t linprocfs linproc /compat/linux/proc
 
-    
-         fi
+    fi
 
        
 
    if  [ -z "$m3" ]; then
-                       echo 'не смонтировано3'
-                        
-                 sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
+       echo 'не смонтировано3'
+       sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
                        
-              fi
+   fi
 
 
 
@@ -98,8 +88,8 @@
        sudo umount -f  /compat/linux
 
       if  [  -z "$(mount | grep linprocfs )" ]; then
-        sudo mount -t linprocfs linproc /compat/linux/proc
-        fi
+          sudo mount -t linprocfs linproc /compat/linux/proc
+      fi
 
 
        
