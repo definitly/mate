@@ -55,6 +55,10 @@
 				<execute>~/scripts/mpvvm.sh</execute>
 			</action> </item> 
 
+                 <item label="swfplayer"> <action name="Execute">
+				<execute>~/scripts/swfplayer.sh</execute>
+			</action> </item> 
+
 
 
 </menu>
