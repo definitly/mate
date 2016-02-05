@@ -2,7 +2,7 @@
 
 
 
-  #unmount  /compat/linux/proc if mount
+  #unmount  /compat/linux/proc if mounted
        
       
 
