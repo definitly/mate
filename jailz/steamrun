@@ -43,6 +43,14 @@
 
 
 
+    if  [ -z "$(mount | grep linsysfs)" ]; then
+       echo 'не смонтировано4'
+       sudo mount -t linsysfs linsys /compat/linux/sys
+                       
+   fi
+
+
+
        
        sudo chmod 1777 /compat/linux/dev/shm
        mkdir -p  $HOME/.steam/sdk32/
@@ -65,7 +73,7 @@
 
               export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
        
-      STEAM_RUNTIME=1        $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
+              $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
 
        sleep 2 
 
@@ -85,6 +93,7 @@
 
        sudo umount -f /compat/linux/proc
        sudo umount -f  /compat/linux/dev/shm
+       sudo umount -f  /compat/linux/sys
        sudo umount -f  /compat/linux
 
       if  [  -z "$(mount | grep linprocfs )" ]; then
