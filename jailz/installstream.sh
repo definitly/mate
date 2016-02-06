@@ -1,10 +1,10 @@
 #!/bin/sh
 
-fetch https://dl.dropboxusercontent.com/u/74640315/steam/steam.tar.gz
+fetch http://repo.steampowered.com/steam/archive/precise/steam_latest.tar.gz
   
 
-  sudo tar -zxvf steam.tar.gz  -C /
+  tar -zxvf steam_latest.tar.gz
 
-  rm steam.tar.gz 
+  cd steam
 
- steam
+ ./steam
