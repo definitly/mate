@@ -35,7 +35,7 @@
 
        
 
-   if  [ -z "$m3" ]; then
+   if  [ -z "$(mount | grep tmpfs)" ]; then
        echo 'не смонтировано3'
        sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
                        
@@ -65,7 +65,7 @@
 
               export LD_LIBRARY_PATH=$HOME/.local/share/Steam/ubuntu12_32
        
-              $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
+      STEAM_RUNTIME=1        $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
 
        sleep 2 
 
