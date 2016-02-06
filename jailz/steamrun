@@ -72,9 +72,9 @@
       mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME 
 
 
-   while ! [  -z "$(ps aux | grep "[/]home/definitly/.local/share/Steam/ubuntu12_32/steam" | head -n 1 | awk '{ print $2 }')" ] 
-    do
- 
+   while ! [  -z "$(ps aux | grep "[/]home/definitly/.local/share/Steam/ubuntu12_32/steam")" ] 
+
+   do
    sleep 1.5
 
    done 
