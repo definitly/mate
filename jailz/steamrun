@@ -7,7 +7,7 @@
       
 
       if  [ -z "$(mount | grep linprocfs)" ]; then 
-       echo 'не смонтировано2  go away '
+       
 
        else
        sudo   umount  /compat/linux/proc
@@ -21,14 +21,14 @@
  
 
     if  [ -z "$(mount | grep nullfs )" ]; then 
-       echo 'не смонтировано1'
+       
        sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
 
     fi
 
 
    if  [ -z "$(mount | grep linprocfs)" ]; then 
-       echo 'не смонтировано2'
+       
        sudo mount -t linprocfs linproc /compat/linux/proc
 
     fi
@@ -36,7 +36,7 @@
        
 
    if  [ -z "$(mount | grep tmpfs)" ]; then
-       echo 'не смонтировано3'
+       
        sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
                        
    fi
@@ -44,7 +44,7 @@
 
 
     if  [ -z "$(mount | grep linsysfs)" ]; then
-       echo 'не смонтировано4'
+       
        sudo mount -t linsysfs linsys /compat/linux/sys
                        
    fi
@@ -53,8 +53,21 @@
 
        
        sudo chmod 1777 /compat/linux/dev/shm
-       mkdir -p  $HOME/.steam/sdk32/
        sudo chmod 1777 /compat/linux/tmp
+  
+
+
+
+    if ! [ -d  "$HOME/.steam/sdk32/"  ]; then
+
+   
+
+       mkdir -p  $HOME/.steam/sdk32/
+
+
+   fi
+
+       
 
   
       if ! [ -f $HOME/.steam/steam/ubuntu12_32/steamwebhelper ]; then
@@ -78,9 +91,10 @@
        sleep 2 
 
       mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME 
+ 
+    
 
-
-   while ! [  -z "$(ps aux | grep "[/]home/definitly/.local/share/Steam/ubuntu12_32/steam")" ] 
+   while ! [  -z "$(ps aux | grep "$HOME[/].local/share/Steam/ubuntu12_32/steam")" ] 
 
    do
    sleep 1.5
@@ -91,7 +105,7 @@
 
 
 
-       sudo umount -f /compat/linux/proc
+       sudo umount -f  /compat/linux/proc
        sudo umount -f  /compat/linux/dev/shm
        sudo umount -f  /compat/linux/sys
        sudo umount -f  /compat/linux
