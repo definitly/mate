@@ -9,6 +9,7 @@ chown  -R      $login:wheel    /home/$login/.scripts/mon
                     crontab -l                                               >  mycron
                     echo "*/1 * * * *    /home/$login/.scripts/mon"          >> mycron
                     echo "*/10 * * * *   /home/$login/.scripts/gr_create.sh" >> mycron
+                    echo "00 1 * * * /usr/sbin/ntpdate 1.ru.pool.ntp.org"    >> mycron 
                     crontab mycron
                     rm mycron
 
