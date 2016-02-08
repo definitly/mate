@@ -8,5 +8,7 @@ name=${1%.*}
 
 deb=$name.tar.gz
 deb2=$name.tar.lzma
-tar -zxvf  $deb
+deb3=$name.tar.xz
+tar -zxvf $deb
 tar -zxvf $deb2  
+tar -zxvf $deb3
