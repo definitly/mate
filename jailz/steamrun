@@ -5,6 +5,9 @@
   #unmount  /compat/linux/proc if mounted
        
       
+           if  ! [  -f "$HOME/.steam/steamrun.pid" ];then
+
+
 
       if  [ -z "$(mount | grep linprocfs)" ]; then 
        
@@ -14,7 +17,7 @@
 
       fi
                  
-
+           fi
 
 
 
@@ -27,13 +30,18 @@
     fi
 
 
-   if  [ -z "$(mount | grep linprocfs)" ]; then 
+    if  [ -z "$(mount | grep linprocfs)" ]; then 
        
        sudo mount -t linprocfs linproc /compat/linux/proc
 
     fi
 
-       
+      
+
+     
+
+
+ 
 
    if  [ -z "$(mount | grep tmpfs)" ]; then
        
@@ -88,9 +96,12 @@
        
               $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
 
-       sleep 2 
+              echo $! > $HOME/.steam/steamrun.pid
 
-      mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME 
+
+              sleep 2 
+
+              mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME 
  
     
 
@@ -101,12 +112,13 @@
 
    done 
  
-
+              rm $HOME/.steam/steamrun.pid
 
 
 
        sudo umount -f  /compat/linux/proc
        sudo umount -f  /compat/linux/dev/shm
+       
        sudo umount -f  /compat/linux/sys
        sudo umount -f  /compat/linux
 
