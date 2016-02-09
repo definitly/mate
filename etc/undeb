@@ -12,3 +12,6 @@ deb3=$name.tar.xz
 tar -zxvf $deb
 tar -zxvf $deb2  
 tar -zxvf $deb3
+rm deb
+rm deb2
+rm deb3
