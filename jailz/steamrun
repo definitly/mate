@@ -80,7 +80,7 @@
   
       if ! [ -f $HOME/.steam/steam/ubuntu12_32/steamwebhelper ]; then
 
-           cp    $HOME/steamwebhelper      $HOME/.steam/steam/ubuntu12_32/
+           mv     $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak     $HOME/.steam/steam/ubuntu12_32/steamwebhelper
 
        fi
 
@@ -101,7 +101,7 @@
 
               sleep 2 
 
-              mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME 
+              mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak
  
     
 
