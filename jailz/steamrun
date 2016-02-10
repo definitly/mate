@@ -113,7 +113,7 @@
    done 
  
               rm $HOME/.steam/steamrun.pid
-
+              mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak  $HOME/.steam/steam/ubuntu12_32/steamwebhelper
 
 
        sudo umount -f  /compat/linux/proc
