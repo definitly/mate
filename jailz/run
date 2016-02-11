@@ -1,0 +1,90 @@
+#!/bin/sh
+
+
+
+  #unmount  /compat/linux/proc if mounted
+       
+      
+         
+
+
+
+      if  [ -z "$(mount | grep linprocfs)" ]; then 
+       
+
+       else
+       sudo   umount  /compat/linux/proc
+
+      fi
+                 
+           
+
+
+
+ 
+
+    if  [ -z "$(mount | grep nullfs )" ]; then 
+       
+       sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
+
+    fi
+
+
+    if  [ -z "$(mount | grep linprocfs)" ]; then 
+       
+       sudo mount -t linprocfs linproc /compat/linux/proc
+
+    fi
+
+      
+    if  ! [ -z "/compat/linux/dev" ]; then 
+       
+       mount -t  devfs devfs /compat/linux/dev
+
+    fi
+     
+
+    
+
+
+
+ 
+
+   if  [ -z "$(mount | grep tmpfs)" ]; then
+       
+  
+     sudo mount -t tmpfs tmpfs /compat/linux/var/run/shm
+                       
+   fi
+
+
+
+    if  [ -z "$(mount | grep linsysfs)" ]; then
+       
+       sudo mount -t linsysfs linsys /compat/linux/sys
+                       
+   fi
+
+
+
+       
+       sudo chmod 1777 /compat/linux/var/run/shm
+       sudo chmod 1777 /compat/linux/tmp
+  
+
+
+          ./KingdomRush.x86
+   
+
+       sudo umount -f  /compat/linux/proc
+       sudo umount -f  /compat/linux/var/run/shm
+       sudo umount -f  /compat/linux/dev 
+       sudo umount -f  /compat/linux/sys
+       sudo umount -f  /compat/linux
+
+      if  [  -z "$(mount | grep linprocfs )" ]; then
+          sudo mount -t linprocfs linproc /compat/linux/proc
+      fi
+
+
+       
