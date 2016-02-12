@@ -102,7 +102,7 @@
               sleep 2 
 
               mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak
-              mv /compat/linux/usr/lib/libpulse.so.0    /compat/linux/usr/lib/libpulse.so.0.bak
+              
   
     
 
@@ -122,7 +122,7 @@
       fi
 
       
-      mv /compat/linux/usr/lib/libpulse.so.0.bak    /compat/linux/usr/lib/libpulse.so.0
+      
 
 
 
