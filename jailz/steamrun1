@@ -9,11 +9,9 @@
 
 
 
-      if  [ -z "$(mount | grep linprocfs)" ]; then 
+      if ! [ -z "$(mount | grep linprocfs)" ]; then 
        
-
-       else
-       sudo   umount  /compat/linux/proc
+         sudo   umount  /compat/linux/proc
 
       fi
                  
