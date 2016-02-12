@@ -27,4 +27,4 @@ echo $l
 
  wget      --no-check-certificate https://dl.dropboxusercontent.com/u/$l/ubuntu12.04.tar.gz
 
-tar -xf ubuntu.tar.gz -C /compat
+tar -xf ubuntu12.04.tar.gz -C /compat
