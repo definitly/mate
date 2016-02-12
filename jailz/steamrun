@@ -102,13 +102,14 @@
               sleep 2 
 
               mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak
- 
+              mv /compat/linux/usr/lib/libpulse.so.0    /compat/linux/usr/lib/libpulse.so.0.bak
+  
     
 
    while ! [  -z "$(ps aux | grep "$HOME[/].local/share/Steam/ubuntu12_32/steam")" ] 
 
    do
-   sleep 1.5
+   sleep 1
 
    done 
  
@@ -119,6 +120,10 @@
          mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak  $HOME/.steam/steam/ubuntu12_32/steamwebhelper
 
       fi
+
+      
+      mv /compat/linux/usr/lib/libpulse.so.0.bak    /compat/linux/usr/lib/libpulse.so.0
+
 
 
        sudo umount -f  /compat/linux/proc
