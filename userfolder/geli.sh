@@ -54,10 +54,11 @@ fi
                      sudo geli attach  -j /home/$login/passgeli /dev/md0
                      sudo mount /dev/md0.eli /mnt
                           tar -xf   /mnt/skype.tar.gz -C       /home/$login/
-                          tar -xf  /mnt/firefox.tar.gz -C     /home/$login/.mozilla
-                          tar -xf  /mnt/gdrive.tar.gz  -C     /home/$login/
-                          cp /mnt/.dropbox_uploader     /home/$login/
-                          cp /mnt/.ydcmd.cfg                 /home/$login/
+                          tar -xf  /mnt/firefox.tar.gz -C      /home/$login/.mozilla
+                          tar -xf  /mnt/gdrive.tar.gz  -C      /home/$login/
+                          cp /mnt/.dropbox_uploader            /home/$login/
+                          cp /mnt/.ydcmd.cfg                   /home/$login/
+                          cp /mnt/muttrc                       /home/$login/.mutt
                      sudo cp /mnt/.dropbox_uploader     /root
                           cp -R /mnt/.ssh   /home/$login/
                      sudo umount /dev/md0.eli
