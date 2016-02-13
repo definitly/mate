@@ -59,6 +59,8 @@ fi
                           cp /mnt/.dropbox_uploader            /home/$login/
                           cp /mnt/.ydcmd.cfg                   /home/$login/
                           cp /mnt/muttrc                       /home/$login/.mutt
+                          cp /mnt/xinitronixgmail                       /home/$login/.mutt
+                          cp /mnt/xinitronixyandex                      /home/$login/.mutt
                      sudo cp /mnt/.dropbox_uploader     /root
                           cp -R /mnt/.ssh   /home/$login/
                      sudo umount /dev/md0.eli
