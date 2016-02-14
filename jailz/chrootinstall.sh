@@ -22,6 +22,7 @@ tar -zxvf      $ubuntu_vesrsion        -C  ubuntu
 cp /etc/resolv.conf  ubuntu/etc
 cp ubuntu.sh   ubuntu/root
 cp libflashsupport.so ubuntu/usr/lib
+brandelf -t Linux ubuntu/lib/i386-linux-gnu/ld-2.15.so
 
    
 
