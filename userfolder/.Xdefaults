@@ -13,7 +13,7 @@ xterm*scrollbar.background:    black
 xterm*scrollbar.foreground:    lightgreen 
 XTerm*faceName: DejaVu Sans Mono 
 XTerm*faceSize: 11
-xterm*selectToClipboard: true
+#xterm*selectToClipboard: true
 
 
 aterm*font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-koi8-r
