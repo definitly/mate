@@ -39,7 +39,7 @@
       
     if  ! [ -z "/compat/linux/dev" ]; then 
        
-       mount -t  devfs devfs /compat/linux/dev
+  sudo     mount -t  devfs devfs /compat/linux/dev
 
     fi
      
