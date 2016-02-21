@@ -1,29 +1,21 @@
 #!/bin/sh
 CURRENTDIRECTORY=$(pwd)
-ubuntu_vesrsion=ubuntu-12.04-x86.tar.gz 
+ubuntu_vesrsion=ubuntu-14.04-x86-minimal.tar.gz
 
 
 
-#sudo mv /compat/linux /
 
-  
-      if ! [ -f  $ubuntu_vesrsion ]; then
-                  
-   fetch http://download.openvz.org/template/precreated/$ubuntu_vesrsion
-fi
-
-
-#sudo  ln -s /var/run/shm /dev/shm
-#sudo  chmod 1777 /dev/shm
 
 
 mkdir ubuntu
 tar -zxvf      $ubuntu_vesrsion        -C  ubuntu
 cp /etc/resolv.conf  ubuntu/etc
-cp ubuntu.sh   ubuntu/root
+
 cp libflashsupport.so ubuntu/usr/lib
 brandelf -t Linux ubuntu/lib/i386-linux-gnu/ld-2.15.so
-
+mkdir -p ubuntu/dev/shm
+rm ubuntu/var/run
+mkdir -p ubuntu/var/run/shm
    
 
 tar --unlink -xpJf /pkg/nvidia-driver-304-304.128.txz -C $CURRENTDIRECTORY
@@ -34,13 +26,9 @@ cp $CURRENTDIRECTORY/compat/linux/usr/lib/libnvidia-tls.so.304.128             $
 cd    $CURRENTDIRECTORY/ubuntu/usr/lib
 ln -s libGL.so.304.128   libGL.so.1
 cd   $CURRENTDIRECTORY
-cp  asoundrc  ~/.asoundrc
-
-sudo cp -R alsa-lib  ubuntu/usr/lib/i386-linux-gnu
 
 
-rm  ubuntu/var/run
-chmod 777 ubuntu/tmp
-#sudo sysctl compat.linux.osrelease=2.6.32
-sudo chroot ubuntu /root/ubuntu.sh
-sudo cp -R ubuntu /compat
+ cp -R alsa-lib  ubuntu/usr/lib/i386-linux-gnu
+
+
+
