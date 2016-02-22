@@ -55,23 +55,23 @@
                      echo 'MM_CHARSET=UTF-8; export MM_CHARSET'  >>             /etc/profile
  
 #/etc/csh.login
-                     echo 'setenv LANG ru_RU.UTF-8' >>                       /etc/csh.login
-                     echo 'setenv MM_CHARSET UTF-8' >>                       /etc/csh.login
+                     echo 'setenv LANG ru_RU.UTF-8' >>                           /etc/csh.login
+                     echo 'setenv MM_CHARSET UTF-8' >>                           /etc/csh.login
 
 #/etc/fstab
-                     echo 'linproc /compat/linux/proc linprocfs rw  0 0' >>   /etc/fstab
- #                    echo 'tmpfs        /tmp            tmpfs        rw 0' >>   /etc/fstab
-                     echo 'fdesc   /dev/fd            fdescfs   rw  0 0' >>   /etc/fstab
-                     echo 'proc    /proc               procfs   rw  0 0' >>   /etc/fstab
-                     echo '/dev/da0 /mnt             ufs      rw,noauto 0 0'        >> /etc/fstab
+                     echo 'linproc /compat/linux/proc linprocfs rw  0 0' >>       /etc/fstab
+ #                    echo 'tmpfs        /tmp            tmpfs        rw 0' >>    /etc/fstab
+                     echo 'fdesc   /dev/fd            fdescfs   rw  0 0' >>       /etc/fstab
+                     echo 'proc    /proc               procfs   rw  0 0' >>       /etc/fstab
+                     echo '/dev/da0 /mnt             ufs      rw,noauto 0 0' >>   /etc/fstab
 
-#                     echo 'linsys  /compat/linux/sys   linsysfs  rw 0 0' >>  /etc/fstab
+#                     echo 'linsys  /compat/linux/sys   linsysfs  rw 0 0' >>      /etc/fstab
 #/etc/sysctl.conf
-                     echo "compat.linux.osrelease=2.6.32" >>                  /etc/sysctl.conf
+                     echo "compat.linux.osrelease=2.6.32" >>                      /etc/sysctl.conf
                      echo "vfs.usermount=1" >> /etc/sysctl.conf
 
 #/usr/local/etc/sudoers
-                     echo " %wheel ALL=(ALL) NOPASSWD: ALL"  >>               /usr/local/etc/sudoers
+                     echo " %wheel ALL=(ALL) NOPASSWD: ALL"  >>                    /usr/local/etc/sudoers
 
 #root .cshrc
 
@@ -79,7 +79,7 @@
 
 #/etc/devfs.conf
             
-                    echo 'link /tmp shm'                             >>    /etc/devfs.conf
+                    echo 'link /tmp shm'                             >>             /etc/devfs.conf
 
 #/etc/devfs.rules
 
