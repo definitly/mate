@@ -51,15 +51,15 @@ echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
 echo 'ifconfig_ale0="DHCP"' >> /mnt/etc/rc.conf
 echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
 echo 'dumpdev="NO"' >> /mnt/etc/rc.conf
-sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
+#sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
 
-touch /mnt/root/1
-echo './1' >> /mnt/root/.login
-echo 'cd pkg' >> /mnt/root/1
-echo 'git clone git://github.com/definitly/mate.git' >> /mnt/root/1
-echo 'cd mate' >> /mnt/root/1
-echo './start.sh' >> /mnt/root/1
-chmod +x /mnt/root/1
+#touch /mnt/root/1
+#echo './1' >> /mnt/root/.login
+#echo 'cd pkg' >> /mnt/root/1
+#echo 'git clone git://github.com/definitly/mate.git' >> /mnt/root/1
+#echo 'cd mate' >> /mnt/root/1
+#echo './start.sh' >> /mnt/root/1
+#chmod +x /mnt/root/1
 
 
 
