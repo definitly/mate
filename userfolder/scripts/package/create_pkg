@@ -27,7 +27,7 @@ CURRENTDIRECTORY=$(pwd)
              echo 'kldload linux' >> pkg
              echo 'cd /pkg' >> pkg 
              echo 'tar -xf git-lite-2.7.2_1.txz /usr/local/bin/git' >>   pkg 
-             echo 'tar xf ./pkg-1.6.4.txz -s ",/.*/,,g" "*/pkg-static"' >> pkg
+             echo 'tar xf ./pkg-1.6.4_1.txz -s ",/.*/,,g" "*/pkg-static"' >> pkg
              echo 'tar xf ./indexinfo-0.2.4.txz -s ",/.*/,,g" "*/indexinfo"' >> pkg
              echo 'tar xf ./shared-mime-info-1.5.txz -s ",/.*/,,g" "*/update-mime-database"' >> pkg
              echo 'tar xf ./desktop-file-utils-0.22_3.txz  -s ",/.*/,,g" "*/update-desktop-database"' >> pkg
