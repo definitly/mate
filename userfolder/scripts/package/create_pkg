@@ -34,7 +34,7 @@ CURRENTDIRECTORY=$(pwd)
              echo 'cp indexinfo /bin' >> pkg
              echo 'cp update-mime-database /bin' >> pkg 
              echo 'cp update-desktop-database /bin' >> pkg
-             echo './pkg-static add ./pkg-1.6.4.txz' >> pkg
+             echo './pkg-static add ./pkg-1.6.4_1.txz' >> pkg
              echo '#for i in $(ls *txz); do' >> pkg
              echo 'for i in $(cat pkg_leaves); do' >> pkg
              echo 'date >> log' >> pkg
