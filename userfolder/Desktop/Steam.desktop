@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Steam
+Exec=env WINEPREFIX="/home/definitly/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/definitly/.wine/dosdevices/c:/users/Public/Desktop/Steam.lnk
+Type=Application
+StartupNotify=true
+Path=/home/definitly/.wine/dosdevices/c:/Program Files/Steam
+Icon=BAC4_steam.0
