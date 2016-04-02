@@ -100,11 +100,13 @@
               echo $! > $HOME/.steam/steamrun.pid
 
 
-              sleep 20
+              sleep 2
 
               mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak
               
-              sleep 30
+              sleep 3
+
+              ps aux
     
 
    while ! [  -z "$(ps aux | grep "$HOME[/].local/share/Steam/ubuntu12_32/steam")" ] 
