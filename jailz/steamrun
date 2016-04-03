@@ -97,7 +97,7 @@
        
               $HOME/.local/share/Steam/ubuntu12_32/steam  $1 &
 
-              sleep 5
+              
 
               
 
@@ -109,7 +109,7 @@
               mv $HOME/.steam/steam/ubuntu12_32/steamwebhelper $HOME/.steam/steam/ubuntu12_32/steamwebhelper.bak
               
               
-              sleep 10
+             
               
     
 
