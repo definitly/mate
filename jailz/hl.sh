@@ -15,7 +15,18 @@ cd "$GAMEROOT"
 
 
           export LD_LIBRARY_PATH=${GAMEROOT}:$LD_LIBRARY_PATH
-	 /usr/home/definitly/.local/share/Steam/steamapps/common/Half-Life/hl_linux -steam -game cstrike
+	 /usr/home/definitly/.local/share/Steam/steamapps/common/Half-Life/hl_linux -steam -game gearbox &
+
+
+                    echo $! > $HOME/.local/share/Steam/steamapps/common/Half-Life/hl.pid
+
+
+       while ! [  -z "$(ps aux | grep "$(cat $HOME/.local/share/Steam/steamapps/common/Half-Life/hl.pid)")" ] 
+
+   do
+   sleep 1
+
+   done 
 	
 
 
