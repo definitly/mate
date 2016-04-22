@@ -1,10 +1,9 @@
 #!/compat/linux/bin/bash
 
-# figure out the absolute path to the script being run a bit
-# non-obvious, the ${0%/*} pulls the path out of $0, cd's into the
-# specified directory, then uses $PWD to figure out where that
-# directory lives - and all this in a subshell, so we don't affect
-# $PWD
+counter strike = csrtike
+opposing force = gearbox
+
+
 
 GAMEROOT="/usr/home/definitly/.local/share/Steam/steamapps/common/Half-Life"
 
@@ -15,7 +14,7 @@ cd "$GAMEROOT"
 
 
           export LD_LIBRARY_PATH=${GAMEROOT}:$LD_LIBRARY_PATH
-	 /usr/home/definitly/.local/share/Steam/steamapps/common/Half-Life/hl_linux -steam -game gearbox &
+	 /usr/home/definitly/.local/share/Steam/steamapps/common/Half-Life/hl_linux -steam -game $1 &
 
 
                     echo $! > $HOME/.local/share/Steam/steamapps/common/Half-Life/hl.pid
