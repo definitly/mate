@@ -68,7 +68,7 @@ sudo /home/$login/.scripts/rrdcreate.sh
 
 
 
-~/scripts/fftor.sh &  sudo pkg install -y  tshark-lite  &   ~/scripts/rutorrent.sh &
+~/scripts/fftor.sh   &   ~/scripts/rutorrent.sh &
 
 git clone git://github.com/definitly/themes.git
 tar -xpJf ~/themes/themes.txz  -C ~/themes
