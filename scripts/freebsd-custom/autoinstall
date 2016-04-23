@@ -1,0 +1,3 @@
+export ZFSBOOT_DISKS=ada0
+export nonInteractive="YES"
+DISTRIBUTIONS="base.txz lib32.txz kernel.txz pkg.txz  "

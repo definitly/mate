@@ -1,5 +1,0 @@
-#!/bin/sh
-
-a="$(top | grep VBoxHeadless)"
-
-echo $a >> 1.out

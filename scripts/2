@@ -1,8 +1,0 @@
-#!/bin/sh
-
- a="$(top -SIt | grep idle)"
-       
- 
-   
-    
-   echo $a >> 2.out

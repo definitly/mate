@@ -47,4 +47,17 @@ export TERM
 
 
 cd /
-./zfs_install
+bsdinstall script autoinstall
+echo 'zfs_enable="YES"' >> /mnt/etc/rc.conf
+echo 'zfs_load="YES"' >> /mnt/boot/loader.conf
+echo 'autoboot_delay="0"' >> /mnt/boot/loader.conf
+echo  'loader_logo="none"'  >> /mnt/boot/loader.conf
+
+echo 'opensolaris_load="YES"' >> /mnt/boot/loader.conf
+echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
+echo 'ifconfig_ale0="DHCP"' >> /mnt/etc/rc.conf
+echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
+echo 'dumpdev="NO"' >> /mnt/etc/rc.conf
+cp /etc/resolv.conf /mnt/etc/
+
+chroot /mnt  /pkg/pkg
