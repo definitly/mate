@@ -68,3 +68,10 @@ sed -e "s/4.2.0.13/4.3.0.37/g" ./skype > ./skype_new
 xwininfo | grep -e Width -e Height -e Absolute
 wmctrl -r Kodi -e 0,0,0,1020,720
 
+
+pass=0UeEdEhG
+
+video_player=mpv --cache=4096
+
+audio_player=mpv --cache=128
+
