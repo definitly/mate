@@ -6,7 +6,13 @@ apt-get -y install libx11-6  libxext6 libXtst6 libXfixes3 libXrandr2 libgtk2.0-0
  libnss3 libdbus-glib-1-2 libstdc++5 libcurl3 libxt6 libcrystalhd3  libjson0  libspeexdsp1   \
 libXv1 libXss1  libxxf86vm1  libx11-xcb1 libunity9 libappindicator1
 
-
+apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+rm -Rf /etc/apache2
+apt-get remove samba samba-common
+apt-get remove sendmail sendmail-bin
+apt-get remove procmail
+apt-get remove sendmail-base m4 sendmail-cf libdb4.8
+apt-get purge sendmail sendmail-bin
 
 
 
