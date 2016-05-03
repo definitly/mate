@@ -18,7 +18,7 @@ pkg install devel/gsettings-desktop-schemas
 pkg install libao && pkg install devel/sdl20
 
 pkg install -y twm
-
+ln -s libkvm.so.7 libkvm.so.6
 
 mplayer -cache 1000 -cache-min 99 ffmpeg://http://149.5.6.6/hls/l275B_GUrwWt1N-IBpIO5A/1429447779/sport1ru/index.m3u8
 http.request.uri contains "m3u8"
