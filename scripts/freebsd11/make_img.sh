@@ -41,6 +41,7 @@ rm disc1/etc/resolv.conf
 cp resolv.conf disc1/etc
 rm disc1/etc/rc.local
 cp rc.local disc1/etc
+echo 'ifconfig_ale0="DHCP"' >> disc1/etc/rc.conf
 cp zfs_install disc1
 cp autoinstall disc1
 cp pid disc1
