@@ -1,6 +1,13 @@
 #!/bin/sh
 
 
+   if ! [ -f $HOME/.asoundrc ]; then
+
+         cp  asoundrc  $HOME/.asoundrc
+echo "fffff"
+
+      fi
+    
 
   
        
