@@ -3,7 +3,7 @@
 
    if ! [ -f $HOME/.asoundrc ]; then
 
-         cat <<EOF > $HOME/.asondrc
+         cat <<EOF > $HOME/.asoundrc
 pcm.!default
  {
    type oss
