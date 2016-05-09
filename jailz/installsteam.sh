@@ -3,7 +3,7 @@
 
  if ! [ -d /compat/ubuntu ]; then
 
-     gdrive download -i 0Bz5rjpkCwREsOGJzbUlmUVl2UGM
+     gdrive download -i 0Bz5rjpkCwREsYm9QbUwxS3owbjA
 
      sudo     tar -xf ubuntu12.04.tar.gz -C /compat
    
