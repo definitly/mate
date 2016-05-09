@@ -18,6 +18,7 @@ fetch http://repo.steampowered.com/steam/archive/precise/steam_latest.tar.gz
 
   tar -zxvf steam_latest.tar.gz
 
-  cd steam
+  
 
- ./steam
+ ./steam/steam
+ ./steamrun
