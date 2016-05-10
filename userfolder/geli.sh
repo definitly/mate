@@ -62,6 +62,7 @@ echo $k
                           cp /mnt/muttrc                       /home/$login/.mutt
                           cp /mnt/xinitronixgmail                       /home/$login/.mutt
                           cp /mnt/xinitronixyandex                      /home/$login/.mutt
+                          cp /mnt/mailcap                               /home/$login/.mutt
                      sudo cp /mnt/.dropbox_uploader     /root
                           cp -R /mnt/.ssh   /home/$login/
                      sudo umount /dev/md0.eli
