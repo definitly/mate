@@ -42,7 +42,8 @@ echo $k
 
    if ! [ -f  freebsd ]; then
                   
-   fetch  https://dl.dropboxusercontent.com/u/$l/$k
+   #fetch  https://dl.dropboxusercontent.com/u/$l/$k
+   fetch "https://drive.google.com/uc?id=0Bz5rjpkCwREsQkY3elhkbW4ycjg"
    
 
    fi
