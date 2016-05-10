@@ -100,6 +100,10 @@ cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 #/etc/libmap32.conf
                    echo '/usr/local/lib  /usr/local/lib32' >> /etc/libmap32.conf
 
+#lib
+ln -s /lib/libkvm.so.7 /lib/libkvm.so.6
+
+
 #6-u6hbv-rys4v-7ci39-4x89x-s4y2m
 # en pass k..........3 pass.png
 
