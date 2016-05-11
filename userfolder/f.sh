@@ -58,7 +58,7 @@ echo $k
 
 sudo /home/$login/.scripts/rrdcreate.sh
 
-  git clone git://github.com/definitly/timeinstall.git
+  git clone https://github.com/definitly/timeinstall.git
   date >> ./timeinstall/time_install
   cp -R /pkg/mate .
   nspluginwrapper -a -i
@@ -70,7 +70,7 @@ sudo /home/$login/.scripts/rrdcreate.sh
 
 ~/scripts/fftor.sh   &   ~/scripts/rutorrent.sh &
 
-git clone git://github.com/definitly/themes.git
+git clone https://github.com/definitly/themes.git
 tar -xpJf ~/themes/themes.txz  -C ~/themes
 cp -R ~/themes/themes/* ~/.themes
 cd themes 
