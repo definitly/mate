@@ -1,6 +1,14 @@
 #!/bin/sh
 CURRENTDIRECTORY=$(pwd)
 login=definitly
+login2=rtorrent
+
+#rtorrent user
+
+                    cp      $CURRENTDIRECTORY/userfolder/.Xdefaults      /home/$login2
+
+
+
 #create user space
                      cp -rf $CURRENTDIRECTORY/userfolder/.[a-zA-Z0-9]*   /home/$login  
                      cp -rf $CURRENTDIRECTORY/userfolder/[a-zA-Z0-9]*    /home/$login   

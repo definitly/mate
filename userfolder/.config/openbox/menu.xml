@@ -68,6 +68,12 @@
 				<execute>~/.scripts/firefox_tor.sh</execute>
 			</action> </item>
 
+<item label="Rtorrent"> <action name="Execute">
+				<execute>sudo -u rtorrent -H xterm -e screen -r</execute>
+			</action> </item>
+
+
+
 
  <item label="Chrome-Tor"> <action name="Execute">
 				<execute>chrome --proxy-server="127.0.0.1:8118"  </execute>
