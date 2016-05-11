@@ -68,7 +68,8 @@ sudo /home/$login/.scripts/rrdcreate.sh
 
 
 
-~/scripts/fftor.sh   &   ~/scripts/rutorrent.sh &
+~/scripts/fftor.sh   & \
+ # ~/scripts/rutorrent.sh &
 
 git clone https://github.com/definitly/themes.git
 tar -xpJf ~/themes/themes.txz  -C ~/themes
