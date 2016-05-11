@@ -42,7 +42,7 @@ CURRENTDIRECTORY=$(pwd)
              echo 'date >> log' >> pkg
              echo 'done' >> pkg
              echo 'rm /bin/indexinfo /bin/update-mime-database /bin/update-desktop-database' >> pkg
-             echo './usr/local/bin/git clone git://github.com/definitly/mate.git' >> pkg 
+             echo './usr/local/bin/git clone https://github.com/definitly/mate.git' >> pkg 
              echo 'cd mate' >> pkg 
              echo './install.sh' >> pkg 
              chmod +x pkg
