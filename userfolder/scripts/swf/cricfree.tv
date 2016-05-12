@@ -5,4 +5,6 @@
   url=http://cricfree.tv$s
   echo $url
   
-  firefox $url
+  firefox $url &
+
+ ~/scripts/rtmp.sh 
