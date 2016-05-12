@@ -1,0 +1,8 @@
+#!/bin/sh
+
+  s=$(curl $1 | grep /update/live | sed -r 's/.* href="([^"]+)" .*/\1/')
+
+  url=http://cricfree.tv$s
+  echo $url
+  
+  firefox $url
