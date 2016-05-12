@@ -5,7 +5,8 @@ login2=rtorrent
 
 #rtorrent user
 
-                    cp      $CURRENTDIRECTORY/userfolder/.Xdefaults      /home/$login2
+                    cp      $CURRENTDIRECTORY/userfolder/.Xdefaults             /home/$login2
+                    echo    'defflow off'            >>                         /home/$login2/.screenrc
 
 
 
