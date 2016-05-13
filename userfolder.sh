@@ -50,6 +50,7 @@ login2=rtorrent
                        echo 'alias cdd       cd  ~/downloads'                         >>            /home/$login/.cshrc 
                        echo 'alias cds       cd  ~/scripts'                           >>            /home/$login/.cshrc
                        echo 'alias rtmp          ~/scripts/rtmp.sh'                   >>            /home/$login/.cshrc
+                       echo 'alias krtmp     killall -9 rtmpsrv                       >>            /home/$login/.cshrc
                        echo 'alias m3u8          ~/scripts/swf/m3u8player.sh'         >>            /home/$login/.cshrc
                        echo 'setenv TERM xterm-256color'                              >>            /home/$login/.cshrc 
 
