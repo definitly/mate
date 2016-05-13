@@ -3,7 +3,7 @@
 proc=sp-sc-auth 
           if ! [ -z "$(pgrep $proc)" ]
                 then
-               ( echo "sp-sc-auth  already run" ; sleep 3 ) | dzen2 -bg green -fg darkred
+               ( echo "sp-sc-auth  already run" ; sleep 3 ) | dzen2  -h 15 -bg green -fg darkred
           
                 else
                    sp-sc-auth $1 3908 8908 > /dev/null &
