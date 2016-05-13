@@ -1,9 +1,9 @@
 #!/bin/sh
-
-  s=$(curl $1 | grep /update/live | sed -r 's/.* href="([^"]+)" .*/\1/' | sed -r 's/.* src="([^"]+)" .*/\1/'| head -n 1 | tail -1 )
+grep -E
+  s=$(curl $1 | grep /update/live   | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep -E "stream" )
   url=http://cricfree.tv$s
   echo $s
   
   firefox $url &
 
- #~/scripts/rtmp.sh 
+ ~/scripts/rtmp.sh 
