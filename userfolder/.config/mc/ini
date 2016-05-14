@@ -79,7 +79,7 @@ editor_backup_extension=~
 editor_filesize_threshold=64M
 mcview_eof=
 ignore_ftp_chattr_errors=true
-skin=xoria256
+skin=sand256
 
 editor_drop_selection_on_copy=1
 editor_stop_format_chars=-+*\\,.;:&>
