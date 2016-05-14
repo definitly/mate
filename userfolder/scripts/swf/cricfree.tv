@@ -1,5 +1,5 @@
 #!/bin/sh
-grep -E
+
   s=$(curl $1 | grep /update/live   | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | grep -E "stream" )
   url=http://cricfree.tv$s
   echo $s
