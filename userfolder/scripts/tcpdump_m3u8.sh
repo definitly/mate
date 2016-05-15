@@ -20,16 +20,16 @@ sudo killall -9 tcpdump
 
       array=( m3u8 m3u8? )
 
-              for i in "${array[@]}"
-      do
-#            host=$(tcpdump -nnr file.tcpdump | grep $i | awk ' {print $5} ' | sed 's/.$//'   | rev | sed -e 's/\([0-9]\)\./\1:/' | rev  )
-             GET=$(tcpdump -nnr file.tcpdump  | grep $i | awk ' {print $24} ')
+              for i in "${array[@]}" ;do
+
+#     host=$(tcpdump -nnr file.tcpdump | grep $i | awk ' {print $5} ' | sed 's/.$//'   | rev | sed -e 's/\([0-9]\)\./\1:/' | rev  )
+      GET=$(tcpdump -nnr file.tcpdump  | grep $i | awk ' {print $24} ')
   
-    if [ -z $GET ]
- then   
-        GET=$(tcpdump -A  -nnr file.tcpdump  | grep $i | awk ' {print $2} ')
+                  if [ -z $GET ] ;then   
+        
+             GET=$(tcpdump -A  -nnr file.tcpdump  | grep $i | awk ' {print $2} ')
             
-    fi
+                  fi
  
 url=http://$host$GET
 echo $host
@@ -38,7 +38,7 @@ echo $url
 
 mpv $url  > /dev/null 2>&1
 
-     done
+             done
 
 
 
