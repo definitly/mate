@@ -13,7 +13,7 @@ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
 
 sudo killall -9 tcpdump
 
-     host=$( tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'  |  egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host | tail -1 | awk ' {print $2} ' )
+     host=$(tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' | egrep --line-buffered "^........(GET |HTTP\/|POST \  |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host | awk '{print $2}'  | sed -r '/^[a-z]/d' | head -n 1)
 
       array=( m3u8 m3u8? )
 
