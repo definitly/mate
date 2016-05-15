@@ -36,7 +36,7 @@ echo $host
 echo $GET
 echo $url 
 
-mpv $url  > /dev/null 2>&1
+mpv --no-resume-playback $url  > /dev/null 2>&1
 
              done
 
