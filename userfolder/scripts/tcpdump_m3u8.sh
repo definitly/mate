@@ -39,12 +39,19 @@ sudo killall -9 tcpdump  &>/dev/null
 #     host=$(tcpdump -nnr file.tcpdump | grep $i | awk ' {print $5} ' | sed 's/.$//'   | rev | sed -e 's/\([0-9]\)\./\1:/' | rev  )
       GET=$(tcpdump -nnr file.tcpdump   2>&1 | grep $i | awk ' {print $24} ')
   
-                  if [ -z "$GET" ] ;then   
-        
-             GET=$(tcpdump -A  -nnr file.tcpdump  2>&1  | grep $i | awk ' {print $2} ')
-            
-                  fi
+#                  if [ -z "$GET" ] ;then 
+#  
+#                     GET=$(tcpdump -A  -nnr file.tcpdump  2>&1  | grep $i | awk ' {print $2} ')
+#
+#                  fi
  
+
+                 while [ -z "$GET" ] ;do  
+        
+             GET=$(tcpdump -A -nnr file.tcpdump   2>&1 | grep $i  | awk '{for (i=2;i<=4;i++)print $i}' | sed -n '/^.\{15\}/p')
+            
+                  done 
+
 url=http://$host$GET
 echo $host
 echo -e "$GET\n"
