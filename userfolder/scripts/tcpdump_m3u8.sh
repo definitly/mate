@@ -10,17 +10,18 @@ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
                         sleep 1;
 
               done 
+ 
+sudo pkillall -9 tcpdump  &>/dev/null 
 
-sudo killall -9 tcpdump 2>&1
-
-
+##########################################################################################################################################################
 # all aviable hosts 
-      echo "######################################################################################################"
-      echo "All aviable host"
-     tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'   2>&1 \
-     | egrep --line-buffered "^........(GET |HTTP\/|POST \  |HEAD )|^[A-Za-z0-9-]+: "\
-     | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host |  awk '{print $2}'  
 
+      echo -e "All aviable host:"
+      echo "######################################################################################################"
+      tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'   2>&1 \
+      | egrep --line-buffered "^........(GET |HTTP\/|POST \  |HEAD )|^[A-Za-z0-9-]+: "\
+      | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host |  awk '{print $2}'  
+      echo -e "######################################################################################################\n\n"
      
 
 
