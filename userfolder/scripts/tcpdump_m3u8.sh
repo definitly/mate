@@ -17,9 +17,9 @@ sudo killall -9 tcpdump
 #all all aviable hosts 
 
 
-     tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'\
+     tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'   2>&1 \
      | egrep --line-buffered "^........(GET |HTTP\/|POST \  |HEAD )|^[A-Za-z0-9-]+: "\
-     | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host |  awk '{print $2}' 
+     | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host |  awk '{print $2}'  
 
      
 
@@ -38,7 +38,7 @@ sudo killall -9 tcpdump
 #     host=$(tcpdump -nnr file.tcpdump | grep $i | awk ' {print $5} ' | sed 's/.$//'   | rev | sed -e 's/\([0-9]\)\./\1:/' | rev  )
       GET=$(tcpdump -nnr file.tcpdump  | grep $i | awk ' {print $24} ')
   
-                  if [ -z $GET ] ;then   
+                  if [ -z "$GET" ] ;then   
         
              GET=$(tcpdump -A  -nnr file.tcpdump  | grep $i | awk ' {print $2} ')
             
