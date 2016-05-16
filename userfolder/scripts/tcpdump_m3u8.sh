@@ -6,13 +6,26 @@ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
 
               while   [ -z "$rt" ]  ; do
 
-                        rt=$(  tcpdump  -A -nnr file.tcpdump |  grep m3u8  )
+                        rt=$(  tcpdump  -A -nnr file.tcpdump 2>&1 |  grep m3u8  )
                         sleep 1;
 
               done 
 
 sudo killall -9 tcpdump
 
+
+#all all aviable hosts 
+
+
+     tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'\
+     | egrep --line-buffered "^........(GET |HTTP\/|POST \  |HEAD )|^[A-Za-z0-9-]+: "\
+     | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host |  awk '{print $2}' 
+
+     
+
+
+#############################################################################################################################################################
+     
      host=$(tcpdump -A -nnr file.tcpdump '(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' \
      | egrep --line-buffered "^........(GET |HTTP\/|POST \  |HEAD )|^[A-Za-z0-9-]+: " \
      | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g' | grep Host | awk '{print $2}'\
