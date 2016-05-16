@@ -11,7 +11,7 @@ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
 
               done 
  
-sudo pkillall -9 tcpdump  &>/dev/null 
+sudo killall -9 tcpdump  &>/dev/null 
 
 ##########################################################################################################################################################
 # all aviable hosts 
