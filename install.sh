@@ -29,6 +29,9 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/rtorrent
           ./install.sh
           cd .. 
+          cd $CURRENTDIRECTORY/micro_httpd
+          ./install.sh
+          cd .. 
             
 
 

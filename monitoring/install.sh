@@ -16,5 +16,5 @@ chown  -R      $login:wheel    /home/$login/.scripts/mon
 #копирование cpuload
 
 cp $CURRENTDIRECTORY/cpuload             /usr/local/bin
-
+mkdir -p                                 /usr/local/www/nginx
 cp $CURRENTDIRECTORY/index.html          /usr/local/www/nginx
