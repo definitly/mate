@@ -40,19 +40,19 @@ login2=rtorrent
 
 #/home/$login/.cshrc
 
-                       echo 'set prompt="%{^[[40;33;1m%}[%T] %{^[[40;33;1m%} %/ %"'   >>            /home/$login/.cshrc
+#                       echo 'set prompt="%{^[[40;33;1m%}[%T] %{^[[40;33;1m%} %/ %"'   >>            /home/$login/.cshrc
 #                      echo 'set prompt="\n%{\033]0;%m:%c3^G%}[%{\033[1;36m%} %P %{\033[0m%} %{\033[0m%} ] (%{\033[1;33m%} %~ %{\033[0m%}) % \n%# "'           >>            /home/$login/.cshrc
-                       echo 'alias kn        killall -9  npviewer.bin'                >>            /home/$login/.cshrc
-                       echo 'alias ks        killall -9  sp-sc-auth'                  >>            /home/$login/.cshrc
-                       echo 'alias kw        killall -9  wine'                        >>            /home/$login/.cshrc
-                       echo 'alias sm        mpv http://localhost:8908/tv.asf'        >>            /home/$login/.cshrc
-                       echo 'alias kf        killall -9  firefox'                     >>            /home/$login/.cshrc
-                       echo 'alias cdd       cd  ~/downloads'                         >>            /home/$login/.cshrc 
-                       echo 'alias cds       cd  ~/scripts'                           >>            /home/$login/.cshrc
-                       echo 'alias rtmp          ~/scripts/rtmp.sh'                   >>            /home/$login/.cshrc
-                       echo 'alias krtmp     killall -9 rtmpsrv'                      >>            /home/$login/.cshrc
-                       echo 'alias m3u8          ~/scripts/tcpdump_m3u8.sh'           >>            /home/$login/.cshrc
-                       echo 'setenv TERM xterm-256color'                              >>            /home/$login/.cshrc 
+#                       echo 'alias kn        killall -9  npviewer.bin'                >>            /home/$login/.cshrc
+#                       echo 'alias ks        killall -9  sp-sc-auth'                  >>            /home/$login/.cshrc
+#                       echo 'alias kw        killall -9  wine'                        >>            /home/$login/.cshrc
+#                       echo 'alias sm        mpv http://localhost:8908/tv.asf'        >>            /home/$login/.cshrc
+#                       echo 'alias kf        killall -9  firefox'                     >>            /home/$login/.cshrc
+#                       echo 'alias cdd       cd  ~/downloads'                         >>            /home/$login/.cshrc 
+#                       echo 'alias cds       cd  ~/scripts'                           >>            /home/$login/.cshrc
+#                       echo 'alias rtmp          ~/scripts/rtmp.sh'                   >>            /home/$login/.cshrc
+#                       echo 'alias krtmp     killall -9 rtmpsrv'                      >>            /home/$login/.cshrc
+#                       echo 'alias m3u8          ~/scripts/tcpdump_m3u8.sh'           >>            /home/$login/.cshrc
+#                       echo 'setenv TERM xterm-256color'                              >>            /home/$login/.cshrc 
 
 
 #/home/$login/.login  
