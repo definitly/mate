@@ -1,6 +1,7 @@
 setenv  SSL_NO_VERIFY_PEER 1
 
 https://addons.mozilla.org/ru/firefox/addon/adblock-plus/
+http://userscripts-mirror.org/scripts/show/158054
 
 VBoxManage modifyvm win --accelerate3d off
 VBoxManage hostonlyif ipconfig vboxnet0 --ip 192.168.56.101
@@ -17,11 +18,9 @@ pkg install devel/gsettings-desktop-schemas
 
 pkg install libao && pkg install devel/sdl20
 
-pkg install -y twm
+
 ln -s libkvm.so.7 libkvm.so.6
 
-mplayer -cache 1000 -cache-min 99 ffmpeg://http://149.5.6.6/hls/l275B_GUrwWt1N-IBpIO5A/1429447779/sport1ru/index.m3u8
-http.request.uri contains "m3u8"
 
 pkg install autoconf automake findutils gmake cmake libtool gettext gsed gtar
 
