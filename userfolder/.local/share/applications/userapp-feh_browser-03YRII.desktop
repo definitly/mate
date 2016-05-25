@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=feh_browser
+Exec=feh_browser.sh  %f
+Categories=Other;
+NoDisplay=true
+MimeType=image/jpeg
