@@ -94,5 +94,7 @@ ln -s   /home/$login/.scripts/umountiso.sh  /usr/local/bin/umountiso
 
 cp  $CURRENTDIRECTORY/set_wallpaper.sh  /usr/local/bin/
 
+#feh_browser.sh
 
+cp    $CURRENTDIRECTORY/feh_browser.sh  /usr/local/bin/
                       
