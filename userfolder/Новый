@@ -70,6 +70,8 @@ FreeBSD freebsd 11.0-CURRENT FreeBSD 11.0-CURRENT #0 r286285: Tue Aug  4 15:12:5
 FreeBSD freebsd 11.0-CURRENT FreeBSD 11.0-CURRENT #0 r298721: Thu Apr 28 08:54:53 MSK 2016     definitly@freebsd:/usr/obj/usr/src/sys/GENERIC  amd64
 FreeBSD freebsd 11.0-CURRENT FreeBSD 11.0-CURRENT #0 r298755: Fri Apr 29 06:43:26 MSK 2016     definitly@freebsd:/usr/obj/usr/src/sys/GENERIC  amd64
 FreeBSD freebsd 11.0-CURRENT FreeBSD 11.0-CURRENT #0 r299215: Sat May  7 23:32:54 MSK 2016     definitly@freebsd:/usr/obj/usr/src/sys/GENERIC  amd64
+FreeBSD freebsd 11.0-CURRENT FreeBSD 11.0-CURRENT #0 r300621: Wed May 25 03:22:49 MSK 2016     definitly@freebsd:/usr/obj/usr/src/sys/GENERIC  amd64
+
 
 
 
