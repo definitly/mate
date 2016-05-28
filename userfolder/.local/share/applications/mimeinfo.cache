@@ -1,3 +1,13 @@
 [MIME Cache]
-application/x-ms-dos-executable=userapp-wine-0240AX.desktop;userapp-wine-PKS79W.desktop;
+application/x-compressed-tar=userapp-tarxf-ZVS3DX.desktop;
+application/x-deb=userapp-undeb-H0NJBX.desktop;
+application/x-gmc-link=userapp-leafpad-S85CCX.desktop;
+application/x-ms-dos-executable=userapp-wine-PKS79W.desktop;
+application/x-pdf=userapp-xpdf-01YRII.desktop;
+application/x-rpm=userapp-unrpm-ZEPGCX.desktop;
+image/jpeg=userapp-set_wallpaper-02YRII.desktop;userapp-feh_browser-03YRII.desktop;
+image/vnd.djvu=userapp-djvu-8DCGIX.desktop;userapp-djview-6J07HX.desktop;
+video/mp4=userapp-mplayer-APXHAX.desktop;
+video/x-flv=userapp-mplayer-7JZ7FX.desktop;
+video/x-matroska=userapp-mplayer-D41HCX.desktop;
 video/x-msvideo=userapp-mplayer-C2XB6W.desktop;
