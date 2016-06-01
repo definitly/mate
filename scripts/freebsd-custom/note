@@ -14,13 +14,16 @@ echo 'autoboot_delay="-1"' >> /usr/src/release/disc1/boot/defaults/loader.conf &
 echo 'ifconfig_ale0="DHCP"' >> /usr/src/release/disc1/etc/rc.conf
 sh /usr/src/release/amd64/make-memstick.sh disc1 1.img
 
-#в pkg.tar.gz  в файле pkg исправить cd /pkg вместо cd /root/pkg
+ chflags -R noschg disc1
+ rm -R disc1
 
 
 gzip -cd pkg.tar.gz | xz -c9 > pkg.txz
 
  
 dd if=$1  of=/dev/da0 bs=64k
+
+
 
 
 284245
