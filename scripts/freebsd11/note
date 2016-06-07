@@ -17,7 +17,7 @@ sh /usr/src/release/amd64/make-memstick.sh disc1 1.img
 
 
 gzip -cd pkg.tar.gz | xz -c9 > pkg.txz
-
+dd if=FreeBSD-$(uname -r)-$(uname -m)-$(uname -a | awk '{print $7}' | sed 's/.$//').img   of=/dev/da0 bs=64k
  
 
 

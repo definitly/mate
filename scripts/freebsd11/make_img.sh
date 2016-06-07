@@ -48,4 +48,4 @@ cp pid disc1
 cp pkg.txz disc1/usr/freebsd-dist
 
 
-sh ./make-memstick.sh disc1 1.img
+sh ./make-memstick.sh disc1 FreeBSD-$(uname -r)-$(uname -m)-$(uname -a | awk '{print $7}' | sed 's/.$//').img
