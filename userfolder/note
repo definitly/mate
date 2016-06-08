@@ -50,6 +50,7 @@ jexec name  csh
 
 # футбольные каналы
 http://www.ustream.tv/channel/radiotrance-54
+mpv "http://stream.ssh101.com:1935/live/zabd2/chunklist.m3u8"
 http://livetv.ninja/
 xhost localhost
 sudo -u ff -H firefox
