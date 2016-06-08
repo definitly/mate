@@ -23,7 +23,7 @@ EOF
 
 
 
-echo "fffff"
+
 
       fi
     
@@ -69,7 +69,7 @@ echo "fffff"
 
    if  [ -z "$(mount | grep tmpfs)" ]; then
        
-       sudo mount -t tmpfs tmpfs /compat/linux/dev/shm
+       sudo mount -t tmpfs tmpfs /compat/linux/var/run/shm
                        
    fi
 
@@ -84,7 +84,7 @@ echo "fffff"
 
 
        
-       sudo chmod 1777 /compat/linux/dev/shm
+       sudo chmod 1777 /compat/linux/var/run/shm
        sudo chmod 1777 /compat/linux/tmp
   
 
@@ -161,8 +161,7 @@ echo "fffff"
 
 
        sudo umount -f  /compat/linux/proc
-       sudo umount -f  /compat/linux/dev/shm
-       
+       sudo umount -f  /compat/linux/var/run/shm
        sudo umount -f  /compat/linux/sys
        sudo umount -f  /compat/linux
 
