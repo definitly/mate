@@ -76,7 +76,7 @@ EOF
                                 fi
 
                         sudo chmod 1777 /compat/linux/var/run/shm
-                        sudo chmod 1777 /compat/linux/tmp
+                        
 
                   fi
 
