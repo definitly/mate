@@ -1,12 +1,12 @@
 #!/bin/sh
 
 
- fetch http://repo.steampowered.com/steam/archive/precise/steam_latest.tar.gz
-  
+  if ! [ -f steam_latest.tar.gz ]; then 
 
-  tar -zxvf steam_latest.tar.gz
-
+      fetch http://repo.steampowered.com/steam/archive/precise/steam_latest.tar.gz
+      tar -zxvf steam_latest.tar.gz
   
+   fi  
 
  ./steam/steam
  ./steamrun
