@@ -35,19 +35,6 @@
     fi
 
       
-    if  ! [ -z "/compat/linux/dev" ]; then 
-       
- sudo      mount -t  devfs devfs /compat/linux/dev
-
-    fi
-     
-
-    
-
-
-
- 
-
    if  [ -z "$(mount | grep tmpfs)" ]; then
        
   
@@ -67,7 +54,7 @@
 
        
        sudo chmod 1777 /compat/linux/var/run/shm
-       sudo chmod 1777 /compat/linux/tmp
+
   
 
 
@@ -76,7 +63,6 @@
 
        sudo umount -f  /compat/linux/proc
        sudo umount -f  /compat/linux/var/run/shm
-       sudo umount -f  /compat/linux/dev 
        sudo umount -f  /compat/linux/sys
        sudo umount -f  /compat/linux
 
