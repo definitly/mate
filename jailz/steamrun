@@ -44,50 +44,41 @@ EOF
            fi
 
 
-
+               if [ -d /compat/ubuntu/ ] ; then  
  
 
-    if  [ -z "$(mount | grep nullfs )" ]; then 
+                           if  [ -z "$(mount | grep nullfs )" ]; then 
+    
+                               sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
+
+                            fi
+
+
+                            if  [ -z "$(mount | grep linprocfs)" ]; then 
        
-       sudo mount -t nullfs /compat/ubuntu/ /compat/linux/
-
-    fi
-
-
-    if  [ -z "$(mount | grep linprocfs)" ]; then 
-       
-       sudo mount -t linprocfs linproc /compat/linux/proc
-
-    fi
+                                sudo mount -t linprocfs linproc /compat/linux/proc
+                              
+                             fi
 
       
-
-     
-
-
- 
-
-   if  [ -z "$(mount | grep tmpfs)" ]; then
+                            if  [ -z "$(mount | grep tmpfs)" ]; then
        
-       sudo mount -t tmpfs tmpfs /compat/linux/var/run/shm
+                                 sudo mount -t tmpfs tmpfs /compat/linux/var/run/shm
                        
-   fi
+                             fi
 
 
 
-    if  [ -z "$(mount | grep linsysfs)" ]; then
+                              if  [ -z "$(mount | grep linsysfs)" ]; then
        
-       sudo mount -t linsysfs linsys /compat/linux/sys
+                                  sudo mount -t linsysfs linsys /compat/linux/sys
                        
-   fi
+                                fi
 
+                        sudo chmod 1777 /compat/linux/var/run/shm
+                        sudo chmod 1777 /compat/linux/tmp
 
-
-       
-       sudo chmod 1777 /compat/linux/var/run/shm
-       sudo chmod 1777 /compat/linux/tmp
-  
-
+                  fi
 
 
     if ! [ -d  "$HOME/.steam/sdk32/"  ]; then
@@ -159,14 +150,16 @@ EOF
       fi
 
       
-      
-
-
+   if [ -d /compat/ubuntu/ ] ; then  
+  
+   
 
        sudo umount -f  /compat/linux/proc
        sudo umount -f  /compat/linux/var/run/shm
        sudo umount -f  /compat/linux/sys
        sudo umount -f  /compat/linux
+
+   fi
 
       if  [  -z "$(mount | grep linprocfs )" ]; then
           sudo mount -t linprocfs linproc /compat/linux/proc
