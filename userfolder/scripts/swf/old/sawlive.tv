@@ -30,4 +30,8 @@ tcUrl=$(sed -n '2p' play_tcUrl)
 
 
 
+echo  "rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mpv -  > /dev/null 2>&1"
+
 rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mpv -  > /dev/null 2>&1
+
+
