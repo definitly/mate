@@ -1,17 +1,18 @@
 #!/bin/sh
 
 
+sudo tcpdump -w file.tcpdump -s 0 -i ale0
+tcpdump -A -nnr file.tcpdump  2>&1   |   grep -ao "play.\+.==" | sed 's|.*B||' > play_tcUrl
+tcpdump -A -nnr file.tcpdump  2>&1   |   grep -ao "rtmp://.\+.flash" |  sed 's/\.//' >> play_tcUrl
+
+ 
 
 app="flash"
-
 flashVer="LNX 11,2,202,460"
 swfUrl="http://static3.sawlive.tv/player.swf"
-#tcUrl=$2
 pageUrl="http://www3.sawlive.tv/embed/watch/diNWQzNTdhYzU1Y2M0NGMzOGZhMjI5Nw__/bGFnODRqYTo1Mjc4YzZlMzE3NGJhYmZlOGI3ZjJiNGQwNmE1YTQyNDpjMTdjNzA1ZT"
-#play=$1 
-
-        play=$(sed -n '1p' play_tcUrl) 
-        tcUrl=$(sed -n '2p' play_tcUrl)
+play=$(sed -n '1p' play_tcUrl) 
+tcUrl=$(sed -n '2p' play_tcUrl)
 
           
 
