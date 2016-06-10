@@ -6,7 +6,7 @@ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
 
              while   [ -z "$rt" ]  ; do
 
-                        rt=$(  tcpdump  -A -nnr file.tcpdump 2>&1 |  grep rtmp  )
+                        rt=$(  tcpdump  -A -nnr file.tcpdump 2>&1 |  grep play  )
                         sleep 1;
 
               done 
