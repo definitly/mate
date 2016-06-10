@@ -32,8 +32,12 @@ EOF
            sudo   umount  /compat/linux/proc
 
       fi
-                 
-           fi
+
+      else   
+ 
+               exit 1
+           
+             fi
 
 
                if [ -d /compat/ubuntu/ ] ; then  
@@ -133,7 +137,7 @@ EOF
       fi
 
       
-   if [ -d /compat/ubuntu/ ] ; then  
+   if ! [ -z  "$(mount | grep ubuntu)"  ] ; then  
   
        sudo umount -f  /compat/linux/proc
        sudo umount -f  /compat/linux/var/run/shm
