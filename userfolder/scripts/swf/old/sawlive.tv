@@ -17,4 +17,4 @@ pageUrl="http://www3.sawlive.tv/embed/watch/diNWQzNTdhYzU1Y2M0NGMzOGZhMjI5Nw__/b
 
 
 
-rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mpv - 
+rtmpdump -r $tcUrl -a $app -f $flashVer -W $swfUrl -p $pageUrl  -y  $play  | mpv -  > /dev/null 2>&1
