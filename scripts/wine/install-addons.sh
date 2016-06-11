@@ -90,7 +90,7 @@ install_gecko()
     if test ! -f $WINE_SHARE_PREFIX/gecko/wine_gecko-$GECKO_VERSION-$myarch$GECKO_SUFFIX
     then
         rm -f wine_gecko-$GECKO_VERSION-$myarch$GECKO_SUFFIX
-        wget http://downloads.sourceforge.net/wine/wine_gecko-$GECKO_VERSION-$myarch$GECKO_SUFFIX
+        fetch http://downloads.sourceforge.net/wine/wine_gecko-$GECKO_VERSION-$myarch$GECKO_SUFFIX
 
         gotsum=`sha1 < wine_gecko-$GECKO_VERSION-$myarch$GECKO_SUFFIX | sed 's/(stdin)= //;s/ .*//'`
         if [ "$gotsum"x != "$GECKO_SHA1SUM"x ]
@@ -115,7 +115,7 @@ install_mono()
     if test ! -f $WINE_SHARE_PREFIX/mono/wine-mono-$1.msi
     then
         rm -f wine-mono-$1.msi
-        wget http://downloads.sourceforge.net/wine/wine-mono-$1.msi
+        fetch  http://downloads.sourceforge.net/wine/wine-mono-$1.msi
 
         gotsum=`sha1 < wine-mono-$1.msi | sed 's/(stdin)= //;s/ .*//'`
         if [ "$gotsum"x != "$MONO_SHA1SUM"x ]

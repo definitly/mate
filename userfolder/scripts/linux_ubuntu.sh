@@ -27,7 +27,7 @@ echo $l
 
    if ! [ -f ubuntu12.04.tar.gz ]; then
 
-      wget      --no-check-certificate https://dl.dropboxusercontent.com/u/$l/ubuntu12.04.tar.gz
+      fetch https://dl.dropboxusercontent.com/u/$l/ubuntu12.04.tar.gz
    
    fi 
 
