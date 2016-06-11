@@ -19,8 +19,8 @@ login2=rtorrent
                        chown  -R      $login:wheel                        /home/$login/downloads
 #create VirtualBox VMs folder
 
-                       mkdir  /home/$login/VirtualBox\ VMs 
-                       chown  -R      $login:wheel                         /home/$login/VirtualBox\ VMs 
+#                       mkdir  /home/$login/VirtualBox\ VMs 
+#                       chown  -R      $login:wheel                         /home/$login/VirtualBox\ VMs 
 
 #create .icons and themes .folder
                        mkdir  /home/$login/.icons
@@ -29,8 +29,8 @@ login2=rtorrent
 #                      chown  -R      $login:wheel                       /home/$login/.themes    
 
 #create pic folder      
-                       mkdir  /home/$login/pic
-                       chown  -R      $login:wheel                      /home/$login/pic
+#                       mkdir  /home/$login/pic
+#                       chown  -R      $login:wheel                      /home/$login/pic
 
 #create share folder for virtualbox
                        mkdir  /home/$login/share
