@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
  sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
 
