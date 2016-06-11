@@ -12,6 +12,12 @@ display: none !important;
 }
 
 
+.b-bets {
+    margin-bottom: 25px;
+   display: none !important;
+}
+
+
 
 /* Запретить Flash */
 embed[type="application/x-shockwave-flash"] {
