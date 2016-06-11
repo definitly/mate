@@ -7,7 +7,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 pkg_version=$(pkg info pkg | grep Version | awk '{print $3}')
-
+git_version=$(pkg info git-lite | grep Version | awk '{print $3}')
 
 CURRENTDIRECTORY=$(pwd)
 
@@ -26,7 +26,7 @@ CURRENTDIRECTORY=$(pwd)
              echo '#!/bin/sh' >> pkg 
              echo 'kldload linux' >> pkg
              echo 'cd /pkg' >> pkg 
-             echo 'tar -xf git-lite-2.8.1.txz /usr/local/bin/git' >>   pkg 
+             echo "tar xf git-lite-$git_version.txz /usr/local/bin/git" >>   pkg 
              echo "tar xf ./pkg-$pkg_version.txz -s ",/.*/,,g" "*/pkg-static"" >> pkg
              echo 'tar xf ./indexinfo-0.2.4.txz -s ",/.*/,,g" "*/indexinfo"' >> pkg
              echo 'tar xf ./shared-mime-info-1.5.txz -s ",/.*/,,g" "*/update-mime-database"' >> pkg
