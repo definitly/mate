@@ -7,9 +7,11 @@ sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
              while   [ -z "$rt" ]  ; do
 
                         rt=$(  tcpdump  -A -nnr file.tcpdump 2>&1 |  grep play  )
-                        sleep 1;
+                        sleep 1
 
               done 
+
+                       sleep 2
  
 sudo killall -9 tcpdump  &>/dev/null 
 
