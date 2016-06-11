@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 
 /home/definitly/.scripts/killpid.sh
