@@ -1,8 +1,8 @@
 #!/bin/sh
 
-file.tcpdump=/tmp/sawlive.tcpdump
+filetcpdump=/tmp/sawlive.tcpdump
 
-sudo rm $file.tcpdump
+sudo rm $filetcpdump
 sudo tcpdump -w $file.tcpdump -s 0 -i ale0 &
 
 
