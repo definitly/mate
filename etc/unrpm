@@ -1,8 +1,4 @@
-#!/usr/local/bin/bash
-
-cd ~/downloads
+#!/bin/sh
 mkdir  "${1%.*}"
 cd "${1%.*}"
-
-
- rpm2cpio.pl $1 | cpio -idmv
+rpm2cpio.pl $1 | cpio -idmv

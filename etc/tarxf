@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 CURRENTDIRECTORY=$(pwd)
 DIRNAME=`dirname $1`
 mkdir  "${1%.*}"

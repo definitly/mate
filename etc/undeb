@@ -1,17 +1,8 @@
-#!/usr/local/bin/bash
-cd ~/downloads
+#!/bin/sh
 mkdir  "${1%.*}"
 cd "${1%.*}"
 deb2targz $1 
-
 name=${1%.*}
-
-deb=$name.tar.gz
-deb2=$name.tar.lzma
-deb3=$name.tar.xz
-tar -zxvf $deb
-tar -zxvf $deb2  
-tar -zxvf $deb3
+deb=$name.tar.*
+tar xf $deb
 rm $deb
-rm $deb2
-rm $deb3
