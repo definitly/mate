@@ -3,12 +3,12 @@
 filetcpdump=/tmp/sawlive.tcpdump
 
 sudo rm $filetcpdump
-sudo tcpdump -w $file.tcpdump -s 0 -i ale0 &
+sudo tcpdump -w $filetcpdump -s 0 -i ale0 &
 
 
              while   [ -z "$rt" ]  ; do
 
-                        rt=$(  tcpdump  -A -nnr $file.tcpdump 2>&1 |  grep play  )
+                        rt=$(  tcpdump  -A -nnr $filetcpdump 2>&1 |  grep play  )
                         sleep 1
 
               done 
@@ -18,8 +18,8 @@ sudo tcpdump -w $file.tcpdump -s 0 -i ale0 &
 sudo killall -9 tcpdump  &>/dev/null 
 
 
-tcpdump -A -nnr $file.tcpdump  2>&1   |   grep -ao "play.\+.==" | sed "s/[^B]*\B//"          > play_tcUrl
-tcpdump -A -nnr $file.tcpdump  2>&1   |   grep -ao "rtmp://.\+.flash" |  sed 's/\.//'   >> play_tcUrl
+tcpdump -A -nnr $filetcpdump  2>&1   |   grep -ao "play.\+.==" | sed "s/[^B]*\B//"          > play_tcUrl
+tcpdump -A -nnr $filetcpdump  2>&1   |   grep -ao "rtmp://.\+.flash" |  sed 's/\.//'   >> play_tcUrl
 
  
 
