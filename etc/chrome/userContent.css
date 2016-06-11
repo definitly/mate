@@ -4,6 +4,15 @@
 
 
 
+.bets-online {
+display: none !important;
+    position: relative;
+    font-size: 13px;
+    color: #000;
+}
+
+
+
 /* Запретить Flash */
 embed[type="application/x-shockwave-flash"] {
 display: none !important;
@@ -14,6 +23,54 @@ display: none !important;
 display: none !important; 
 
 }
+
+
+.user-tags__edit-panel-elements {
+    padding: 10px 0px;
+display: none !important;
+}
+
+
+
+.search-block__button {
+display: none !important; 
+    display: none;
+    outline: medium none;
+    z-index: 3;
+    border: 0px none;
+    position: absolute;
+    background: transparent none repeat scroll 0px 0px;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    width: 26px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+
+
+
+
+.search-block__input {
+   display: none !important; 
+    color: #222;
+    z-index: 2;
+    position: relative;
+    border: 1px solid #D8D8D8;
+    font-size: 12px;
+    text-indent: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 0px 22px 0px 0px;
+    box-sizing: border-box;
+    outline: medium none;
+    line-height: 14px;
+}
+
+
 
 
 .sports-apps-promo {
@@ -137,6 +194,10 @@ display: none !important;
 
 }
 
+.mB20  {
+display: none !important; 
+
+}
 
 .rec-block {
     overflow: hidden;
