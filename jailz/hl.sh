@@ -1,4 +1,4 @@
-#!/compat/linux/bin/bash
+#!/bin/sh
 
 counter strike = csrtike
 opposing force = gearbox

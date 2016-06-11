@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 login=definitly
 login2=ff
 

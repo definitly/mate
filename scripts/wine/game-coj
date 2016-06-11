@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 cd /home/definitly/wine/coj/drive_c/Program\ Files/R.G.\ Catalyst/Call\ of\ Juarez
 

@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 cd /home/definitly/wine/l4d/drive_c/Program\ Files/Left\ 4\ Dead\ 2
 

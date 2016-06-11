@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 
 sysctl compat.linux.osrelease=2.6.32

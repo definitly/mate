@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 cd /home/definitly/wine/cs/drive_c/Games/Counter-Strike\ 1.6\ NoSteam\ Original
 
