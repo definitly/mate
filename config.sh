@@ -102,6 +102,7 @@ cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 #lib
 ln -s /lib/libkvm.so.7 /lib/libkvm.so.6
+ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
 
 #6-u6hbv-rys4v-7ci39-4x89x-s4y2m
