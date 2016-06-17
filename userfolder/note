@@ -20,7 +20,7 @@ pkg install libao && pkg install devel/sdl20
 
 
 ln -s libkvm.so.7 libkvm.so.6
-
+fetch "https://svnweb.freebsd.org/base/head/sys/compat/linux/linux_socket.c?revision=300416&view=co" && cat "linux_socket.c?revision=300416&view=co" >>  linux_socket.c
 
 pkg install autoconf automake findutils gmake cmake libtool gettext gsed gtar
 
