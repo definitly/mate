@@ -3,6 +3,31 @@
 
 
 
+.accordion__handle {
+
+display: none !important;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #222;
+    border-radius: 3px;
+    background-color: #f3f3ef;
+    padding: 3px;
+}
+
+
+
+  .euro2016-SALES-882-teaser {
+
+
+display: none !important;
+
+   
+}
+
+
+
+
 
 .bets-online {
 display: none !important;
