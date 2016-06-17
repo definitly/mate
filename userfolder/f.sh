@@ -64,7 +64,7 @@ sudo /home/$login/.scripts/rrdcreate.sh
   nspluginwrapper -a -i
 
 
-./geli.sh &        
+~/scripts/geli.sh &        
 
 
 
