@@ -69,4 +69,4 @@ echo $k
                      sudo geli detach md0.eli
                      sudo mdconfig -d -u 0 
                           rm /home/$login/passgeli
-                    cp -R /home/$login/mate/etc/chrome    /home/$login/.mozilla/firefox/lswszqu5.default
+                    cp -R /home/$login/mate/etc/chrome    /home/$login/.mozilla/firefox/k7yk4883.default
