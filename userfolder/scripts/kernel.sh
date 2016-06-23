@@ -1,6 +1,15 @@
 #!/bin/sh
 
 
+          if [ -f MYKERNEL ]; then
+       
+      cp MYKERNEL  /usr/src/sys/amd64/conf
+
+              else
+ 
+        exit 1
+                   fi 
+
 
 cp MYKERNEL  /usr/src/sys/amd64/conf
 rm /usr/src/sys/compat/linux/linux_socket.c
