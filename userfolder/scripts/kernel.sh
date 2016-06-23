@@ -21,5 +21,5 @@ make -j4 installkernel KERNCONF=MYKERNEL
 cd
 mkdir boot
 cp  -R /boot/kernel boot
-tar zcf krenel.txz boot
+tar zcf kernel.txz boot
 
