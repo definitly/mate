@@ -9,9 +9,10 @@ read file
 
                         sudo mdconfig -at vnode -f $file
                         sudo geli attach /dev/md0
-                        sudo mount /dev/md0.eli /mnt
+                        sudo mkdir /mnt/geli
+                        sudo mount /dev/md0.eli /mnt/geli
 
-                              read -r -p "файл примонтирован в /mnt после завершения нажмите любую клавишу" AMSURE 
+                              read -r -p "файл примонтирован в /mnt/geli после завершения нажмите любую клавишу" AMSURE 
                                echo "" 1>&2 
                    
                     while true; do
@@ -23,7 +24,7 @@ read file
                             
                             break
                         else           
-                            read -r -p "устройство занято отмонтируйте  /mnt и  нажмите любую клавишу" AMSURE 
+                            read -r -p "устройство занято отмонтируйте  /mnt/geli и  нажмите любую клавишу" AMSURE 
                         fi
  done
 
