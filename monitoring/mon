@@ -38,7 +38,7 @@ free="$(/usr/local/bin/free | grep Free | awk ' {print $5} ' | sed 's/.$//' | se
 
  
 echo -en  "VBoxHeadless:$a     $b:$b2     $core0    $f     $idle     $e\n"      >>  /tmp/monitoring.log
-cat /tmp/monitoring.log | column -c 3 -t |  sudo tee -a  /usr/local/www/nginx/monitoring.log
+cat /tmp/monitoring.log | column -c 3 -t |  sudo tee   /usr/local/www/nginx/monitoring.log
  
 
 
