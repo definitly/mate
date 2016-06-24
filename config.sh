@@ -19,7 +19,7 @@
 #                    echo 'font8x14=cp866-8x14'          >>                   /etc/rc.conf
 #                    echo 'font8x8=cp866-8x8'            >>                   /etc/rc.conf
                      echo 'asterisk_enable="YES"'        >>                   /etc/rc.conf
-                     echo 'mysql_enable="YES" '          >>                   /etc/rc.conf
+                     echo 'devfs_system_ruleset="localrules"'          >>                   /etc/rc.conf
                      echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
                      echo 'powerd_enable="yes"'          >>                   /etc/rc.conf
                      echo 'powerd_flags="-a adp -p 100 -r 90"'   >>           /etc/rc.conf
@@ -80,12 +80,13 @@
 #/etc/devfs.conf
             
                     echo 'link /tmp shm'                             >>             /etc/devfs.conf
-
+                    echo 'perm    da0     0666'                      >>             /etc/devfs.conf
+                    echp ' own    da0     root:operator'             >>             /etc/devfs.conf
 #/etc/devfs.rules
 
                     echo '[localrules=10]'                            >>   /etc/devfs.rules
                     echo 'add path 'usb/*' mode 0666 group operator'  >>   /etc/devfs.rules
-
+                    echo 'add path 'da*' mode 0666 group operator'    >>   /etc/devfs.rules
 
 #/etc/sysctl.conf   
                    echo 'kern.coredump=0'                 >>           /etc/sysctl.conf 
