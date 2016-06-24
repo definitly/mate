@@ -37,11 +37,11 @@ CURRENTDIRECTORY=$(pwd)
              echo "./pkg-static add ./pkg-$pkg_version.txz" >> pkg
              echo '#for i in $(ls *txz); do' >> pkg
              echo 'for i in $(cat pkg_leaves); do' >> pkg
-             echo 'date >> log' >> pkg
              echo 'pkg   add $i.txz >> log' >> pkg
-             echo 'date >> log' >> pkg
              echo 'done' >> pkg
              echo 'rm /bin/indexinfo /bin/update-mime-database /bin/update-desktop-database' >> pkg
+             echo 'rm indexinfo update-mime-database update-desktop-database' >> pkg
+             echo 'rm -R usr ' >> pkg
              echo './usr/local/bin/git clone https://github.com/definitly/mate.git' >> pkg 
              echo 'cd mate' >> pkg 
              echo './install.sh' >> pkg 
