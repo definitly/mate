@@ -59,4 +59,7 @@ login2=rtorrent
                   
 #                     echo './f.sh'                                                  >>            /home/$login/.login 
 
+
+chown  -R      $login:wheel   /mnt
+
                         
