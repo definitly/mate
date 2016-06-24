@@ -41,10 +41,10 @@ CURRENTDIRECTORY=$(pwd)
              echo 'done' >> pkg
              echo 'rm /bin/indexinfo /bin/update-mime-database /bin/update-desktop-database' >> pkg
              echo 'rm indexinfo update-mime-database update-desktop-database' >> pkg
-             echo 'rm -R usr ' >> pkg
              echo './usr/local/bin/git clone https://github.com/definitly/mate.git' >> pkg 
              echo 'cd mate' >> pkg 
-             echo './install.sh' >> pkg 
+             echo './install.sh' >> pkg
+             echo 'rm -R usr ' >> pkg
              chmod +x pkg
              cd ..
              tar -czf pkg.txz pkg
