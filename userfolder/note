@@ -1,7 +1,8 @@
-setenv  SSL_NO_VERIFY_PEER 1
+
 
 https://addons.mozilla.org/ru/firefox/addon/adblock-plus/
 http://userscripts-mirror.org/scripts/show/158054
+https://addons.mozilla.org/ru/firefox/addon/hds-link-detector/?src=api
 
 VBoxManage modifyvm win --accelerate3d off
 VBoxManage hostonlyif ipconfig vboxnet0 --ip 192.168.56.101
@@ -10,11 +11,11 @@ VBoxManage hostonlyif ipconfig vboxnet0 --ip 192.168.56.101
 #video_player=cvlc -vvv input_stream --sout '#standard{access=http,mux=ts,dst=192.168.1.4:8902/tv.asf}'
 xset s off & xset -dpms &
 doas cp ~/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
-pkg delete -y leafpad && pkg install -y leafpad
+
 VBoxManage  modifyvm android44  --mouse usbtablet
-doas update-mime-database /usr/local/share/mime
-mount /dev/ada1s1a /mnt
-pkg install devel/gsettings-desktop-schemas
+
+
+
 
 pkg install libao && pkg install devel/sdl20
 
