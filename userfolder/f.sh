@@ -56,7 +56,7 @@ k=`echo 1$k$k | awk '{ printf("%c", $0); }'`
 k=$a$c$d$d$j$g$k
 echo $k
 
-daos /home/$login/.scripts/rrdcreate.sh
+doas /home/$login/.scripts/rrdcreate.sh
 
   git clone https://github.com/definitly/timeinstall.git
   date >> ./timeinstall/time_install

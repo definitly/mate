@@ -51,9 +51,9 @@ echo $k
 
 
 
-                     daos mdconfig -at vnode -f $k
-                     daos geli attach  -j /home/$login/passgeli /dev/md0
-                     daos mount /dev/md0.eli /mnt
+                     doas mdconfig -at vnode -f $k
+                     doas geli attach  -j /home/$login/passgeli /dev/md0
+                     doas mount /dev/md0.eli /mnt
                           tar -xf   /mnt/skype.tar.gz -C       /home/$login/
                           tar -xf  /mnt/firefox.tar.gz -C      /home/$login/.mozilla
                           tar -xf  /mnt/gdrive.tar.gz  -C      /home/$login/
@@ -63,10 +63,10 @@ echo $k
                           cp /mnt/xinitronixgmail                       /home/$login/.mutt
                           cp /mnt/xinitronixyandex                      /home/$login/.mutt
                           cp /mnt/mailcap                               /home/$login/.mutt
-                     daos cp /mnt/.dropbox_uploader     /root
+                     doas cp /mnt/.dropbox_uploader     /root
                           cp -R /mnt/.ssh   /home/$login/
-                     daos umount /dev/md0.eli
-                     daos geli detach md0.eli
-                     daos mdconfig -d -u 0 
+                     doas umount /dev/md0.eli
+                     doas geli detach md0.eli
+                     doas mdconfig -d -u 0 
                           rm /home/$login/passgeli
                     cp -R /home/$login/mate/etc/chrome    /home/$login/.mozilla/firefox/k7yk4883.default

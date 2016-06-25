@@ -86,11 +86,11 @@
 
 
 
-#"daos ~/.scripts/orglinux.sh"
+#"doas ~/.scripts/orglinux.sh"
 #    m:0xc + c:46
 #    Control+Alt + l
 
-#"daos ~/.scripts/mount.sh"
+#"doas ~/.scripts/mount.sh"
 #    m:0xc + c:30
 #    Control+Alt + u
 

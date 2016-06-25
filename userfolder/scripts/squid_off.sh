@@ -1,4 +1,4 @@
 #!/bin/sh
 
-daos service ipwf stop
-daos service squid stop
+doas service ipwf stop
+doas service squid stop

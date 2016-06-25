@@ -11,7 +11,7 @@ fi
   
 if ! [ -f /usr/local/etc/pkg/repos/freebsd.conf ]; then
 
-daos cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
+doas cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
 
 fi
 
@@ -23,8 +23,8 @@ pkg install -r FreeBSD -Uy tigervnc
 
 pw groupmod vboxusers -m definitly
 pw groupmod operator  -m definitly
-daos chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
-daos chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
+doas chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
+doas chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
      kldload   vboxdrv.ko
      kldload   vboxnetadp.ko
-daos rm        /usr/local/etc/pkg/repos/freebsd.conf
+doas rm        /usr/local/etc/pkg/repos/freebsd.conf

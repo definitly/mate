@@ -69,7 +69,7 @@
 			</action> </item>
 
 <item label="Rtorrent"> <action name="Execute">
-				<execute>daos -u rtorrent -H xterm -e screen -r</execute>
+				<execute>doas -u rtorrent -H xterm -e screen -r</execute>
 			</action> </item>
 
 
@@ -179,7 +179,7 @@
 				<execute>xterm -e top</execute>
 			</action> </item>
 			<item label="Wireshark"> <action name="Execute">
-				<execute>daos wireshark</execute>
+				<execute>doas wireshark</execute>
 			</action> </item>
 		</menu>
 		<menu id="38" label="Utilities">

@@ -29,7 +29,7 @@ EOF
 
       if ! [ -z "$(mount | grep linprocfs)" ]; then 
        
-           daos   umount  /compat/linux/proc
+           doas   umount  /compat/linux/proc
 
       fi
 
@@ -45,21 +45,21 @@ EOF
 
                            if  [ -z "$(mount | grep nullfs )" ]; then 
     
-                               daos mount -t nullfs /compat/ubuntu/ /compat/linux/
+                               doas mount -t nullfs /compat/ubuntu/ /compat/linux/
 
                             fi
 
 
                             if  [ -z "$(mount | grep linprocfs)" ]; then 
        
-                                daos mount -t linprocfs linproc /compat/linux/proc
+                                doas mount -t linprocfs linproc /compat/linux/proc
                               
                              fi
 
       
                             if  [ -z "$(mount | grep tmpfs)" ]; then
        
-                                 daos mount -t tmpfs tmpfs /compat/linux/var/run/shm
+                                 doas mount -t tmpfs tmpfs /compat/linux/var/run/shm
                        
                              fi
 
@@ -67,11 +67,11 @@ EOF
 
                               if  [ -z "$(mount | grep linsysfs)" ]; then
        
-                                  daos mount -t linsysfs linsys /compat/linux/sys
+                                  doas mount -t linsysfs linsys /compat/linux/sys
                        
                                fi
 
-                        daos chmod 1777 /compat/linux/var/run/shm
+                        doas chmod 1777 /compat/linux/var/run/shm
                         
 
                   fi
@@ -139,16 +139,16 @@ EOF
       
    if ! [ -z  "$(mount | grep ubuntu)"  ] ; then  
   
-       daos umount -f  /compat/linux/proc
-       daos umount -f  /compat/linux/var/run/shm
-       daos umount -f  /compat/linux/sys
-       daos umount -f  /compat/linux
+       doas umount -f  /compat/linux/proc
+       doas umount -f  /compat/linux/var/run/shm
+       doas umount -f  /compat/linux/sys
+       doas umount -f  /compat/linux
 
    fi
 
       if  [  -z "$(mount | grep linprocfs )" ]; then
 
-          daos mount -t linprocfs linproc /compat/linux/proc
+          doas mount -t linprocfs linproc /compat/linux/proc
       
       fi
 

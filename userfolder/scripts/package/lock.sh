@@ -5,7 +5,7 @@
   for i in $(cat lockpkg); do
 
 
- daos   pkg lock  -y $i 
+ doas   pkg lock  -y $i 
 
 
    done

@@ -1,8 +1,8 @@
 #!/bin/sh
 
-daos ifconfig ale0 down
+doas ifconfig ale0 down
 
-daos ifconfig ale0 192.168.1.33 netmask 255.255.255.0 up
-daos service tor start && daos service polipo start
-daos service tor stop && daos service tor start
-daos service polipo stop && daos service polipo start
+doas ifconfig ale0 192.168.1.33 netmask 255.255.255.0 up
+doas service tor start && doas service polipo start
+doas service tor stop && doas service tor start
+doas service polipo stop && doas service polipo start

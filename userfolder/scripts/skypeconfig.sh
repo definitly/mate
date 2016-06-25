@@ -52,15 +52,15 @@ echo $k
 login=definitly
 
             fetch  http://dl.dropbox.com/u/$l/skypeconfig
-            daos mdconfig -at vnode -f skypeconfig
-            daos geli attach  -j /tmp/passgeli /dev/md0
-            daos mount /dev/md0.eli /mnt
+            doas mdconfig -at vnode -f skypeconfig
+            doas geli attach  -j /tmp/passgeli /dev/md0
+            doas mount /dev/md0.eli /mnt
 
             tar -xf   /mnt/skype.tar.gz -C       /home/$login/
             
-            daos umount /dev/md0.eli
-                     daos geli detach md0.eli
-                     daos mdconfig -d -u 0 
+            doas umount /dev/md0.eli
+                     doas geli detach md0.eli
+                     doas mdconfig -d -u 0 
 
             rm /tmp/passgeli
 

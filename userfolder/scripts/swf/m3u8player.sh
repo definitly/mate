@@ -1,6 +1,6 @@
 #!/bin/sh
 
- daos tcpdump -w file.tcpdump -s 0 -i ale0 &
+ doas tcpdump -w file.tcpdump -s 0 -i ale0 &
 
 
               while   [ -z "$rt" ]  ; do
@@ -10,7 +10,7 @@
 
               done 
 
-                 daos killall -9 tcpdump
+                 doas killall -9 tcpdump
 
                array=( m3u8 m3u8? )
 
