@@ -9,10 +9,10 @@ VBoxManage hostonlyif ipconfig vboxnet0 --ip 192.168.56.101
 занести в конфиг mlbviewer
 #video_player=cvlc -vvv input_stream --sout '#standard{access=http,mux=ts,dst=192.168.1.4:8902/tv.asf}'
 xset s off & xset -dpms &
-sudo cp ~/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
+daos cp ~/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
 pkg delete -y leafpad && pkg install -y leafpad
 VBoxManage  modifyvm android44  --mouse usbtablet
-sudo update-mime-database /usr/local/share/mime
+daos update-mime-database /usr/local/share/mime
 mount /dev/ada1s1a /mnt
 pkg install devel/gsettings-desktop-schemas
 
@@ -24,7 +24,7 @@ fetch "https://svnweb.freebsd.org/base/head/sys/compat/linux/linux_socket.c?revi
 
 pkg install autoconf automake findutils gmake cmake libtool gettext gsed gtar
 
-sudo ntpdate 1.ru.pool.ntp.org
+daos ntpdate 1.ru.pool.ntp.org
 команды 
 
 cdd     перейти в каталог downloads
@@ -53,7 +53,7 @@ http://www.ustream.tv/channel/radiotrance-54
 mpv "http://stream.ssh101.com:1935/live/zabd2/chunklist.m3u8"
 http://livetv.ninja/
 xhost localhost
-sudo -u ff -H firefox
+daos -u ff -H firefox
 echo 639639 | pw useradd ff -m -g wheel -s /bin/csh -h 0
 
 

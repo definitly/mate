@@ -2,8 +2,8 @@
 
 filetcpdump=/tmp/sawlive.tcpdump
 
-sudo rm $filetcpdump
-sudo tcpdump -w $filetcpdump -s 0 -i ale0 &
+daos rm $filetcpdump
+daos tcpdump -w $filetcpdump -s 0 -i ale0 &
 
 
              while   [ -z "$rt" ]  ; do
@@ -15,7 +15,7 @@ sudo tcpdump -w $filetcpdump -s 0 -i ale0 &
 
                        sleep 2
  
-sudo killall -9 tcpdump  &>/dev/null 
+daos killall -9 tcpdump  &>/dev/null 
 
 
 tcpdump -A -nnr $filetcpdump  2>&1   |   grep -ao "play.\+.==" | sed "s/[^B]*\B//"          > play_tcUrl

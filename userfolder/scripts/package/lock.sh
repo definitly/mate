@@ -5,7 +5,7 @@
   for i in $(cat lockpkg); do
 
 
- sudo   pkg lock  -y $i 
+ daos   pkg lock  -y $i 
 
 
    done

@@ -1,4 +1,4 @@
 #!/bin/sh
 
 xhost +local:ff
-sudo -u ff -H firefox
+daos -u ff -H firefox

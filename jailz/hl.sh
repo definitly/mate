@@ -7,7 +7,7 @@ opposing force = gearbox
 
 GAMEROOT="/usr/home/definitly/.local/share/Steam/steamapps/common/Half-Life"
 
- sudo   mv /compat/linux/usr/lib/libpulse.so.0  /compat/linux/usr/lib/libpulse.so.0.bak
+ daos   mv /compat/linux/usr/lib/libpulse.so.0  /compat/linux/usr/lib/libpulse.so.0.bak
 
 # and launch the game
 cd "$GAMEROOT"
@@ -30,5 +30,5 @@ cd "$GAMEROOT"
 
 
 
-sudo mv /compat/linux/usr/lib/libpulse.so.0.bak   /compat/linux/usr/lib/libpulse.so.0
+daos mv /compat/linux/usr/lib/libpulse.so.0.bak   /compat/linux/usr/lib/libpulse.so.0
 

@@ -1,5 +1,0 @@
-sysctl compat.linux.osrelease=2.6.32
-mkdir ubuntu 
-kldload fdescfs linprocfs linsysfs tmpfs
-#debootstrap --arch=i386  precise  ./ubuntu/ http://mirror.yandex.ru/ubuntu
-debootstrap squeeze ./ubuntu  http://cdn.debian.net/debian

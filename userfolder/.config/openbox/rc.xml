@@ -222,12 +222,12 @@
     </keybind>
     <keybind key="C-A-l">
       <action name="Execute">
-        <command>sudo ~/.scripts/orglinux.sh</command>
+        <command>daos ~/.scripts/orglinux.sh</command>
       </action>
     </keybind>
     <keybind key="C-A-u">
       <action name="Execute">
-        <command>sudo ~/.scripts/mount.sh</command>
+        <command>daos ~/.scripts/mount.sh</command>
       </action>
     </keybind>
     <keybind key="C-A-Down">

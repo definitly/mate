@@ -11,7 +11,7 @@ fi
   
 if ! [ -f /usr/local/etc/pkg/repos/freebsd.conf ]; then
 
-sudo cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
+daos cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
 
 
 fi
@@ -25,4 +25,4 @@ pkg install -r TDE -Uy tdelibs-trinity
 pkg install -r TDE -Uy iceauth
 pkg install -r TDE -Uy libpqtypes
 
-sudo rm        /usr/local/etc/pkg/repos/freebsd.conf
+daos rm        /usr/local/etc/pkg/repos/freebsd.conf

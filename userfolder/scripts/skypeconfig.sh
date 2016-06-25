@@ -52,15 +52,15 @@ echo $k
 login=definitly
 
             fetch  http://dl.dropbox.com/u/$l/skypeconfig
-            sudo mdconfig -at vnode -f skypeconfig
-            sudo geli attach  -j /tmp/passgeli /dev/md0
-            sudo mount /dev/md0.eli /mnt
+            daos mdconfig -at vnode -f skypeconfig
+            daos geli attach  -j /tmp/passgeli /dev/md0
+            daos mount /dev/md0.eli /mnt
 
             tar -xf   /mnt/skype.tar.gz -C       /home/$login/
             
-            sudo umount /dev/md0.eli
-                     sudo geli detach md0.eli
-                     sudo mdconfig -d -u 0 
+            daos umount /dev/md0.eli
+                     daos geli detach md0.eli
+                     daos mdconfig -d -u 0 
 
             rm /tmp/passgeli
 

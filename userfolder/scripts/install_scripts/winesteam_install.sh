@@ -16,11 +16,11 @@ fi
 
   echo $1 > /tmp/winegeli
 
-sudo mdconfig -at vnode -f winesteam 
-sudo geli attach  -j /tmp/winegeli   /dev/md0
-sudo mount /dev/md0.eli /mnt
+daos mdconfig -at vnode -f winesteam 
+daos geli attach  -j /tmp/winegeli   /dev/md0
+daos mount /dev/md0.eli /mnt
 
 tar xf /mnt/wine.txz  -C  ~/
-sudo umount /dev/md0.eli
-sudo geli detach md0.eli
-sudo mdconfig -d -u 0 
+daos umount /dev/md0.eli
+daos geli detach md0.eli
+daos mdconfig -d -u 0 

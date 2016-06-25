@@ -70,8 +70,7 @@
                      echo "compat.linux.osrelease=2.6.32" >>                      /etc/sysctl.conf
                      echo "vfs.usermount=1" >> /etc/sysctl.conf
 
-#/usr/local/etc/sudoers
-                     echo " %wheel ALL=(ALL) NOPASSWD: ALL"  >>                    /usr/local/etc/sudoers
+
 
 #root .cshrc
 

@@ -7,17 +7,17 @@ echo "введите имя файла"
 read file
 
 
-                        sudo mdconfig -at vnode -f $file
-                        sudo geli attach /dev/md0
-                        sudo mkdir /mnt/geli
-                        sudo mount /dev/md0.eli /mnt/geli
+                        daos mdconfig -at vnode -f $file
+                        daos geli attach /dev/md0
+                        daos mkdir /mnt/geli
+                        daos mount /dev/md0.eli /mnt/geli
 
                               read -r -p "файл примонтирован в /mnt/geli после завершения нажмите любую клавишу" AMSURE 
                                echo "" 1>&2 
                    
                     while true; do
                     
-                    sudo umount /dev/md0.eli
+                    daos umount /dev/md0.eli
                     m1=$(mount | grep "/dev/md0.eli" )
                         if  [ -z "$m1" ]; then 
                          
@@ -28,5 +28,5 @@ read file
                         fi
  done
 
-sudo geli detach md0.eli
-sudo mdconfig -d -u 0
+daos geli detach md0.eli
+daos mdconfig -d -u 0

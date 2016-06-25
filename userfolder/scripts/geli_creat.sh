@@ -4,9 +4,9 @@ read file
 echo "введите размер файла в мегабайтах"
 read size
 dd if=/dev/zero of=$file  bs=1m count=$size
-sudo mdconfig -at vnode -f $file
-sudo geli init /dev/md0
-sudo geli attach /dev/md0
-sudo newfs -U -m 0 /dev/md0.eli
-sudo geli detach md0.eli
-sudo mdconfig -d -u 0 
+daos mdconfig -at vnode -f $file
+daos geli init /dev/md0
+daos geli attach /dev/md0
+daos newfs -U -m 0 /dev/md0.eli
+daos geli detach md0.eli
+daos mdconfig -d -u 0 

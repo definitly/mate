@@ -1,8 +1,8 @@
 #!/bin/sh
 
 filetcpdump=/tmp/1.tcpdump
-sudo rm $filetcpdump
-sudo tcpdump -w $filetcpdump -s 0 -i ale0 &
+daos rm $filetcpdump
+daos tcpdump -w $filetcpdump -s 0 -i ale0 &
 
               while   [ -z "$rt" ]  ; do
 
@@ -11,7 +11,7 @@ sudo tcpdump -w $filetcpdump -s 0 -i ale0 &
 
               done 
  
-sudo killall -9 tcpdump  &>/dev/null 
+daos killall -9 tcpdump  &>/dev/null 
 
 ##########################################################################################################################################################
 # all aviable hosts 

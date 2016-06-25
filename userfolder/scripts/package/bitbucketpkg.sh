@@ -11,22 +11,22 @@ read pkg
         cd     $pkg
        pkg info -d $pkg >> dep.log
   for i in `cat  dep.log` ; do 
-     sudo   pkg create -n $i
+     daos   pkg create -n $i
      done
 
-   sudo  pkg create -n $pkg
-   sudo  pkg create  libgcrypt
-   sudo  pkg create   libgpg-error
-   sudo  pkg create  qt4-corelib
-   sudo  pkg create  qt4-opengl
-   sudo  pkg create  qt4-network
-   sudo  pkg create  xprop
-   sudo  pkg create  xdg-utils 
-   sudo  pkg create  libvncserver
+   daos  pkg create -n $pkg
+   daos  pkg create  libgcrypt
+   daos  pkg create   libgpg-error
+   daos  pkg create  qt4-corelib
+   daos  pkg create  qt4-opengl
+   daos  pkg create  qt4-network
+   daos  pkg create  xprop
+   daos  pkg create  xdg-utils 
+   daos  pkg create  libvncserver
    rm dep.log
    cd ..
-   sudo pkg repo $pkg
-   sudo chown  -R      $login:wheel   $pkg/*
+   daos pkg repo $pkg
+   daos chown  -R      $login:wheel   $pkg/*
    cd $pkg
    git init
    git remote add origin git@bitbucket.org:vcore/$pkg.git

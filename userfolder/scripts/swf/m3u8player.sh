@@ -1,6 +1,6 @@
 #!/bin/sh
 
- sudo tcpdump -w file.tcpdump -s 0 -i ale0 &
+ daos tcpdump -w file.tcpdump -s 0 -i ale0 &
 
 
               while   [ -z "$rt" ]  ; do
@@ -10,7 +10,7 @@
 
               done 
 
-                 sudo killall -9 tcpdump
+                 daos killall -9 tcpdump
 
                array=( m3u8 m3u8? )
 
