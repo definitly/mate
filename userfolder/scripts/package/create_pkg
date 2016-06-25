@@ -41,6 +41,7 @@ CURRENTDIRECTORY=$(pwd)
              echo 'done' >> pkg
              echo './usr/local/bin/git clone https://github.com/definitly/mate.git' >> pkg
              echo 'rm -R usr ' >> pkg
+             echo 'rm  pkg-static ' >> pkg
              echo 'cd mate' >> pkg 
              echo './install.sh' >> pkg
              chmod +x pkg
