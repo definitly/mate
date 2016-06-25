@@ -70,6 +70,9 @@
                      echo "compat.linux.osrelease=2.6.32" >>                      /etc/sysctl.conf
                      echo "vfs.usermount=1" >> /etc/sysctl.conf
 
+#/usr/local/ect/daos.conf
+
+                    echo -e "permit nopass keepenv definitly\n"            >>    /usr/local/ect/daos.conf
 
 
 #root .cshrc
