@@ -111,3 +111,19 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 #6-u6hbv-rys4v-7ci39-4x89x-s4y2m
 # en pass k..........3 pass.png
 
+## fftor settings for ff user
+
+                      echo 'setenv DISPLAY :0'       >> /home/ff/.cshrc
+
+
+
+
+
+
+
+
+
+
+
+
+
