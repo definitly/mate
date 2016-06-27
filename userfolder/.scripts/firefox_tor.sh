@@ -1,4 +1,4 @@
 #!/bin/sh
 
 xhost +local:ff
-doas -u ff -H firefox
+doas su -l ff -c  firefox
