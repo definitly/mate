@@ -7,7 +7,7 @@ button joy_id: 0, button: 5, key: 27
 button joy_id: 0, button: 6, key: 82
 button joy_id: 0, button: 7, key: 86
 button joy_id: 0, button: 8, key: 9
-button joy_id: 0, button: 9, key: 65
+button joy_id: 0, button: 9, key: 105
 button joy_id: 0, button: 10, key: 52
 button joy_id: 0, button: 11, key: 55
 axis joy_id: 0, axis_id: 0, axis: x, min: -1, max: 1, threshold: 10000, keylow: 100, keyhigh: 102
