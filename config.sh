@@ -25,7 +25,7 @@
                      echo 'powerd_flags="-a adp -p 100 -r 90"'   >>           /etc/rc.conf
                      echo 'nginx_enable="YES"'           >>                   /etc/rc.conf
                      echo 'php_fpm_enable="YES"'         >>                   /etc/rc.conf
-                     
+                     echo 'kld_list="radeonkms"'         >>                   /etc/rc.conf
                      echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
 #/boot/defaults/loader.conf 
