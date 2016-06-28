@@ -69,7 +69,7 @@
 			</action> </item>
 
 <item label="Rtorrent"> <action name="Execute">
-				<execute>doas -u rtorrent -H xterm -e screen -r</execute>
+				<execute>doas su -l  rtorrent -c  'xterm -e screen -r'</execute>
 			</action> </item>
 
 

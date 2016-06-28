@@ -115,7 +115,10 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
                       echo 'setenv DISPLAY :0'       >> /home/ff/.cshrc
 
+##rtorrent settings for rtorrent user
 
+
+                      echo 'setenv DISPLAY :0'       >> /home/rtorrent/.cshrc
 
 
 
