@@ -8,7 +8,7 @@ login=definitly
 
 #copy   xorg.conf
 # проверяем какая карта ati или nvidia  
-и копируем нужный xorg.conf
+#и копируем нужный xorg.conf
 
 
 
