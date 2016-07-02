@@ -83,7 +83,7 @@
             
                     echo 'link /tmp shm'                             >>             /etc/devfs.conf
                     echo 'perm    da0     0666'                      >>             /etc/devfs.conf
-                    echp ' own    da0     root:operator'             >>             /etc/devfs.conf
+                    echo 'own     da0     root:operator'             >>             /etc/devfs.conf
 #/etc/devfs.rules
 
                     echo '[localrules=10]'                            >>   /etc/devfs.rules
