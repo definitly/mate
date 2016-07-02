@@ -77,7 +77,7 @@
 
 #root .cshrc
 
-                    echo  "set prompt="%{^[[40;31;1m%} %{^[[40;31;1m%} %N@%m:%~ %# "" >> /root/.cshrc
+                    echo  'set prompt="%{^[[40;31;1m%} %{^[[40;31;1m%} %N@%m:%~ %# "' >> /root/.cshrc
 
 #/etc/devfs.conf
             
