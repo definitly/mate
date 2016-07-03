@@ -88,7 +88,7 @@
 
                     echo '[localrules=10]'                            >>   /etc/devfs.rules
                     echo 'add path 'usb/*' mode 0666 group operator'  >>   /etc/devfs.rules
-                    echo 'add path 'da*' mode 0666 group operator'    >>   /etc/devfs.rules
+                    echo 'add path 'da*'   mode 0666 group operator'  >>   /etc/devfs.rules
 
 #/etc/sysctl.conf   
                    echo 'kern.coredump=0'                 >>           /etc/sysctl.conf 
