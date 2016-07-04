@@ -13,5 +13,5 @@ login2=rtorrent
               echo $passwd  | pw useradd $login  -m -g wheel -s /bin/csh -h 0
               echo $passwd2 | pw useradd $login2 -m -g wheel -s /bin/csh -h 0
 
-              pw usermod  $login  -G operator
-              pw usermod  $login  -G video
+              pw groupmod video    -m $login
+              pw groupmod operator -m $login
