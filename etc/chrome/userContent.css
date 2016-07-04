@@ -16,6 +16,23 @@ display: none !important;
 }
 
 
+.adidas-supertop-SALES-963_video {
+  display: none !important;
+    width: 712px;
+    float: left;
+}
+
+.super-top {
+    display: none !important;
+    width: 1050px;
+    height: 400px;
+    margin-top: 30px;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+
 .news-item__social-share {
     float: right;
 display: none !important;
