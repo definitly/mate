@@ -46,7 +46,15 @@ CURRENTDIRECTORY=$(pwd)
              echo './install.sh' >> pkg
              chmod +x pkg
              cd ..
-             tar -czf pkg.txz pkg
+             if ! [ -z "$(dmesg | grep radeon)" ] ; then 
              
+                       tar -czf pkg_ati.txz pkg
+             
+                   else
+
+                       tar  -czf pkg_nvidia.txz pkg
+
+                     fi 
+
              
              
