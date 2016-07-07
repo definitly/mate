@@ -1,15 +1,12 @@
 #!/bin/sh
 
+#ubuntu=ubuntu
+ubuntu=ubuntu_x86_64
 
 
-  #unmount  /compat/linux/proc if mounted
        
       
-         
-
-
-
-      if ! [ -z "$(mount | grep linprocfs)" ]; then 
+       if ! [ -z "$(mount | grep linprocfs)" ]; then 
        
            doas   umount  /compat/linux/proc
 
@@ -23,7 +20,7 @@
 
     if  [ -z "$(mount | grep nullfs )" ]; then 
        
-       doas mount -t nullfs /compat/ubuntu/ /compat/linux/
+       doas mount -t nullfs /compat/$ubuntu/ /compat/linux/
 
     fi
 
@@ -58,7 +55,7 @@
   
 
 
-          ./KingdomRush.x86
+          ./GrowHome.x86
    
 
        doas umount -f  /compat/linux/proc
