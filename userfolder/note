@@ -1,3 +1,16 @@
+gfdfhhffh@gdgdgdd.gddgg
+dgdgdgdgdg@fsfssggsg.ru
+R5CoHj5N
+hubic.com
+R5CoHj5N@
+
+sof BEB7-MAB4-JUZ2-FAJ3-5837
+MR4FL-FQIQG-K9ZE9
+REBHH-CQ6V0-G3667
+BN800-BAB55-FEV3T
+KD93I-YI0VY-WL497
+
+
 
 
 https://addons.mozilla.org/ru/firefox/addon/adblock-plus/
@@ -10,18 +23,8 @@ VBoxManage hostonlyif ipconfig vboxnet0 --ip 192.168.56.101
 занести в конфиг mlbviewer
 #video_player=cvlc -vvv input_stream --sout '#standard{access=http,mux=ts,dst=192.168.1.4:8902/tv.asf}'
 xset s off & xset -dpms &
-doas cp ~/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
 
 VBoxManage  modifyvm android44  --mouse usbtablet
-
-
-
-
-pkg install libao && pkg install devel/sdl20
-
-
-ln -s libkvm.so.7 libkvm.so.6
-fetch "https://svnweb.freebsd.org/base/head/sys/compat/linux/linux_socket.c?revision=300416&view=co" && cat "linux_socket.c?revision=300416&view=co" >>  linux_socket.c
 
 pkg install autoconf automake findutils gmake cmake libtool gettext gsed gtar
 
@@ -35,8 +38,6 @@ WIN+d   спрятать показать dzen
 WIN+t   спрятать показать tint
 
 cсоздание jail с помощью ezjail
-
-
 
 ezjail-admin install -pm
 ezjail-admin create name ip
@@ -53,19 +54,7 @@ jexec name  csh
 http://www.ustream.tv/channel/radiotrance-54
 mpv "http://stream.ssh101.com:1935/live/zabd2/chunklist.m3u8"
 http://livetv.ninja/
-xhost localhost
-doas -u ff -H firefox
-echo 639639 | pw useradd ff -m -g wheel -s /bin/csh -h 0
 
-
-
-liberation-fonts-ttf
-
-
-
-
-sed -e "s/4.2.0.13/4.3.0.37/g" ./skype > ./skype_new
-  
 xwininfo | grep -e Width -e Height -e Absolute
 wmctrl -r Kodi -e 0,0,0,1020,720
 
