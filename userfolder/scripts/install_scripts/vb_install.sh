@@ -11,20 +11,20 @@ fi
   
 if ! [ -f /usr/local/etc/pkg/repos/freebsd.conf ]; then
 
-doas cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
+ cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
 
 fi
 
 
 pkg update
-pkg install -r virtualbox -Uy virtualbox-ose 
-pkg install -r virtualbox -Uy qt4-corelib 
+pkg install -r virtualbox11 -Uy virtualbox-ose 
+pkg install -r virtualbox11 -Uy qt4-corelib 
 pkg install -r FreeBSD -Uy tigervnc
 
 pw groupmod vboxusers -m definitly
 pw groupmod operator  -m definitly
-doas chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
-doas chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
+ chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
+ chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
      kldload   vboxdrv.ko
      kldload   vboxnetadp.ko
-doas rm        /usr/local/etc/pkg/repos/freebsd.conf
+ rm        /usr/local/etc/pkg/repos/freebsd.conf
