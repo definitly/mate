@@ -1,10 +1,7 @@
 #!/bin/sh
 
 
-if ! [ "$(id -u)" != "0" ]; then
-   echo "This script must be run as user" 1>&2
-   exit 1
-fi
+
 
 pkg_version=$(pkg info pkg | grep Version | awk '{print $3}')
 git_version=$(pkg info git-lite | grep Version | awk '{print $3}')
@@ -20,7 +17,7 @@ CURRENTDIRECTORY=$(pwd)
              echo "${path%-*}" >> allpkg
              done
                   for i in $(cat allpkg); do
-             doas  pkg create $i
+             pkg create $i
              done
              touch pkg
              echo '#!/bin/sh' >> pkg 
