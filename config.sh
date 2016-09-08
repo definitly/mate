@@ -44,11 +44,11 @@
 
 
 #/etc/make.conf
-                     echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
-                     echo 'BATCH=y'                       >>                   /etc/make.conf
-                     echo 'WITH_PKGNG=yes'                >>                   /etc/make.conf
-                     echo 'OVERRIDE_LINUX_BASE_PORT=c6'          >>            /etc/make.conf 
-                     echo 'OVERRIDE_LINUX_NONBASE_PORTS=c6'      >>            /etc/make.conf
+                      echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
+                      echo 'BATCH=y'                       >>                   /etc/make.conf
+#                     echo 'WITH_PKGNG=yes'                >>                   /etc/make.conf
+#                     echo 'OVERRIDE_LINUX_BASE_PORT=c6'          >>            /etc/make.conf 
+#                     echo 'OVERRIDE_LINUX_NONBASE_PORTS=c6'      >>            /etc/make.conf
                      
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
