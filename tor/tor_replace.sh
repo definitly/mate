@@ -7,6 +7,11 @@
 fi
 
 
+lastip=$(ifconfig | grep broadcast | awk ' {print $2} ' | cut -d. -f4-)
+
+echo $lastip
+
+
 if [ -z "$1" ]
 then
   echo "Порядок использования: `basename $0` число  "
