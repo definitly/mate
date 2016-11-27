@@ -12,18 +12,16 @@ login=definitly
 
 
 
+    if ! [ -z "$(dmesg | grep radeon)" ] ; then 
+             
+                       cp  $CURRENTDIRECTORY/xorg.conf.ati  /etc/X11/xorg.conf 
+             
+                   else
 
-#a=$(cat /root/pid  |grep  nvidia)
+                       cp  $CURRENTDIRECTORY/xorg.conf.nvidia  /etc/X11/xorg.conf 
 
+                     fi 
 
- #   if ! [ -z $a ] ; 
-  #     then  
-            cp  $CURRENTDIRECTORY/xorg.conf  /etc/X11 ; 
-            kldload  nvidia ;
-   #   else 
-   #        cp  $CURRENTDIRECTORY/xorg.conf.ati   /etc/X11/xorg.conf ;
-                   
-   # fi
 
 
 #tarxf             
