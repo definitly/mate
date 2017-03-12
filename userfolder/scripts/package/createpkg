@@ -1,0 +1,59 @@
+#!/bin/sh
+
+
+
+
+pkg_version=$(pkg info pkg | grep Version | awk '{print $3}')
+git_version=$(pkg info git-lite | grep Version | awk '{print $3}')
+
+CURRENTDIRECTORY=$(pwd)
+
+             mkdir pkg
+             cd pkg
+             pkg_cutleaves -l >> pkg_leaves
+             pkg info > /tmp/allpkg
+             awk '{ print $1  }' /tmp/allpkg > /tmp/allpkg2
+                 for path in $(cat /tmp/allpkg2); do
+             echo "${path%-*}" >> allpkg
+             done
+                  for i in $(cat allpkg); do
+             pkg create $i
+             done
+             touch pkg
+             echo '#!/bin/sh' >> pkg 
+             echo 'kldload linux' >> pkg
+             echo 'cd /pkg' >> pkg 
+             echo "tar xf git-lite-$git_version.txz /usr/local/bin/git" >>   pkg 
+             echo "tar xf ./pkg-$pkg_version.txz -s ",/.*/,,g" "*/pkg-static"" >> pkg
+             echo 'tar xf ./indexinfo-0.2.6.txz -s ",/.*/,,g" "*/indexinfo"' >> pkg
+             echo 'tar xf ./shared-mime-info-1.5.txz -s ",/.*/,,g" "*/update-mime-database"' >> pkg
+             echo 'tar xf ./desktop-file-utils-0.22_4.txz  -s ",/.*/,,g" "*/update-desktop-database"' >> pkg
+             echo 'mv indexinfo /bin' >> pkg
+             echo 'mv update-mime-database /bin' >> pkg 
+             echo 'mv update-desktop-database /bin' >> pkg
+             echo "./pkg-static add ./pkg-$pkg_version.txz" >> pkg
+             echo '#for i in $(ls *txz); do' >> pkg
+             echo 'pkg   add libEGL-11.2.2.txz' >> pkg
+             echo 'for i in $(cat pkg_leaves); do' >> pkg
+             echo 'pkg   add $i.txz ' >> pkg
+             echo 'done' >> pkg
+             echo 'pkg   add nvidia-driver-375.26_1.txz' >> pkg
+             echo './usr/local/bin/git clone https://github.com/definitly/mate.git' >> pkg
+             echo 'rm -R usr ' >> pkg
+             echo 'rm  pkg-static ' >> pkg
+             echo 'cd mate' >> pkg 
+             echo './install.sh' >> pkg
+             chmod +x pkg
+             cd ..
+             if ! [ -z "$(dmesg | grep radeon)" ] ; then 
+             
+                       tar -czf pkg_ati.txz pkg
+             
+                   else
+
+                       tar  -czf pkg_nvidia.txz pkg
+
+                     fi 
+
+             
+             
