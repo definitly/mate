@@ -42,12 +42,11 @@ echo $k
 
    if ! [ -f  freebsd ]; then
 
- #  fetch  https://dl.dropboxusercontent.com/u/$l/$k
-    fetch https://dl.dropboxusercontent.com/u/74640315/gdrivetoken.tar.gz.aec
-    openssl aes-256-cbc -d -k $(cat /home/$login/passgeli) -salt -in   gdrivetoken.tar.gz.aec| tar -xz -f -
+ 
+    fetch "https://www.dropbox.com/s/xk6wvlca2g70h4z/gdrivetoken.tar.gz.aec?dl=1"
+    openssl aes-256-cbc -d -k $(cat /home/$login/passgeli) -salt -in   gdrivetoken.tar.gz.aec?dl=1| tar -xz -f -
     gdrive download  0Bz5rjpkCwREscWFvS3RUQlAxNDA
-    rm gdrivetoken.tar.gz.aec
-
+    rm gdrivetoken.tar.gz.aec?dl=1
    fi
 
 
