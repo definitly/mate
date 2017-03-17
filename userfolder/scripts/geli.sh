@@ -43,7 +43,7 @@ echo $k
    if ! [ -f  freebsd ]; then
 
  #  fetch  https://dl.dropboxusercontent.com/u/$l/$k
-    fetch https://dl.dropboxusercontent.com/u/$l/gdrivetoken.tar.gz.aec
+    fetch https://dl.dropboxusercontent.com/u/74640315/gdrivetoken.tar.gz.aec
     openssl aes-256-cbc -d -k $(cat /home/$login/passgeli) -salt -in   gdrivetoken.tar.gz.aec| tar -xz -f -
     gdrive download  0Bz5rjpkCwREscWFvS3RUQlAxNDA
     rm gdrivetoken.tar.gz.aec
@@ -53,7 +53,7 @@ echo $k
 
 
 
-                     doas mdconfig -at vnode -f $k
+                     doas mdconfig -at vnode -f freebsd
                      doas geli attach  -j /home/$login/passgeli /dev/md0
                      doas mount /dev/md0.eli /mnt
                           tar -xf   /mnt/skype.tar.gz -C       /home/$login/
