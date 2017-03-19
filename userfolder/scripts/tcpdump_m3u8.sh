@@ -2,7 +2,7 @@
 
 filetcpdump=/tmp/1.tcpdump
 doas rm $filetcpdump
-doas tcpdump -w $filetcpdump -s 0 -i ale0 &
+doas tcpdump -w $filetcpdump -s 0 -i em0 &
 
               while   [ -z "$rt" ]  ; do
 
