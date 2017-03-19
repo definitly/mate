@@ -34,10 +34,10 @@ CURRENTDIRECTORY=$(pwd)
              echo "./pkg-static add ./pkg-$pkg_version.txz" >> pkg
              echo '#for i in $(ls *txz); do' >> pkg
              echo 'pkg   add libEGL-11.2.2.txz' >> pkg
+             echo 'pkg   add dri-11.2.2,2.txz' >> pkg
              echo 'for i in $(cat pkg_leaves); do' >> pkg
              echo 'pkg   add $i.txz ' >> pkg
              echo 'done' >> pkg
-             echo 'pkg   add nvidia-driver-375.26_1.txz' >> pkg
              echo './usr/local/bin/git clone https://github.com/definitly/mate.git' >> pkg
              echo 'rm -R usr ' >> pkg
              echo 'rm  pkg-static ' >> pkg
