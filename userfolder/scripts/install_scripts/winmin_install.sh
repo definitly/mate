@@ -27,7 +27,7 @@ echo $l
 
 
 cd /tmp
- gdrive download -i 0Bz5rjpkCwREsek5TNVh1X3NTakk
+ gdrive download  0Bz5rjpkCwREsek5TNVh1X3NTakk
 VBoxManage import  winxpacestream.ova
 
  if ! [ -d ~/share/portable ]; then
