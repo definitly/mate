@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-if ! [ -f pkg.txz ]; then
+if ! [ -f pkg_nvidia.txz ]; then
    echo 'No file  pkg.txz'
    exit 1
 
@@ -45,7 +45,7 @@ echo 'ifconfig_em0="DHCP"' >> disc1/etc/rc.conf
 cp zfs_install disc1
 cp autoinstall disc1
 cp pid disc1
-cp pkg.txz disc1/usr/freebsd-dist
+cp pkg_nvidia.txz disc1/usr/freebsd-dist
 
 
 sh ./make-memstick.sh disc1 FreeBSD-$(uname -r)-$(uname -m)-$(uname -a | awk '{print $7}' | sed 's/.$//').img
