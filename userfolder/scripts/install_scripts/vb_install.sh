@@ -9,22 +9,14 @@ fi
 
  
   
-if ! [ -f /usr/local/etc/pkg/repos/freebsd.conf ]; then
-
- cp /home/definitly/mate/etc/freebsd.conf /usr/local/etc/pkg/repos
-
-fi
 
 
-pkg update
-pkg install -r virtualbox11 -Uy virtualbox-ose 
-pkg install -r virtualbox11 -Uy qt4-corelib 
-pkg install -r FreeBSD -Uy tigervnc
+
+pkg install -y virtualbox-ose 
 
 pw groupmod vboxusers -m definitly
 pw groupmod operator  -m definitly
- chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
- chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
+     chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
+     chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
      kldload   vboxdrv.ko
      kldload   vboxnetadp.ko
- rm        /usr/local/etc/pkg/repos/freebsd.conf
