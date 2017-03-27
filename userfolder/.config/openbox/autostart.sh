@@ -7,6 +7,6 @@ setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" -variant "
 xset m 0 & 
 xxkb &
 firefox &
-
+~/scripts/x2.sh &
 
 xterm -e screen &
