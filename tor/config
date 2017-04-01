@@ -15,7 +15,7 @@
 # connect:
 
 # proxyAddress = "::0"        # both IPv4 and IPv6
- proxyAddress = "192.168.1.33"    # IPv4 only
+ proxyAddress = "192.168.1.119"    # IPv4 only
 proxyPort = 8118
 # If you do that, you'll want to restrict the set of hosts allowed to
 # connect:
@@ -38,7 +38,7 @@ proxyPort = 8118
 
 # Uncomment this if you want to use a parent SOCKS proxy:
 
- socksParentProxy = "192.168.1.33:9050"
+ socksParentProxy = "192.168.1.119:9050"
  socksProxyType = socks5
 
 # Uncomment this if you want to scrub private information from the log:
