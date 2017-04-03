@@ -5,6 +5,7 @@
 
 pkg_version=$(pkg info pkg | grep Version | awk '{print $3}')
 git_version=$(pkg info git-lite | grep Version | awk '{print $3}')
+desktop-file-utils_version=$(pkg info desktop-file-utils  | grep Version | awk '{print $3}')
 
 CURRENTDIRECTORY=$(pwd)
 
@@ -27,7 +28,7 @@ CURRENTDIRECTORY=$(pwd)
              echo "tar xf ./pkg-$pkg_version.txz -s ",/.*/,,g" "*/pkg-static"" >> pkg
              echo 'tar xf ./indexinfo-0.2.6.txz -s ",/.*/,,g" "*/indexinfo"' >> pkg
              echo 'tar xf ./shared-mime-info-1.5.txz -s ",/.*/,,g" "*/update-mime-database"' >> pkg
-             echo 'tar xf ./desktop-file-utils-0.22_4.txz  -s ",/.*/,,g" "*/update-desktop-database"' >> pkg
+             echo 'tar xf ./desktop-file-utils-desktop-file-utils_version.txz  -s ",/.*/,,g" "*/update-desktop-database"' >> pkg
              echo 'mv indexinfo /bin' >> pkg
              echo 'mv update-mime-database /bin' >> pkg 
              echo 'mv update-desktop-database /bin' >> pkg
