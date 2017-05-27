@@ -84,6 +84,11 @@
 				<execute>linux-tor-browser</execute>
 			</action> </item>
 
+  
+                       <item label="Seamonkey"> <action name="Execute">
+				<execute>seamonkey</execute>
+			</action> </item>
+
 
 
 
