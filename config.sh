@@ -13,8 +13,8 @@
                      echo 'linux_enable="YES"'           >>                   /etc/rc.conf
                      
                      echo 'dahdi_enable="YES"'           >>                   /etc/rc.conf
-#                    echo 'keymap=ru.koi8-r'             >>                   /etc/rc.conf
-#                    echo 'scrnmap=koi8-r2cp866'         >>                   /etc/rc.conf
+                     echo 'wlans_urtwn0="wlan0"'         >>                   /etc/rc.conf
+                     echo 'ifconfig_wlan0="WPA DHCP"'    >>                   /etc/rc.conf
 #                    echo 'font8x16=cp866b-8x16'         >>                   /etc/rc.conf
 #                    echo 'font8x14=cp866-8x14'          >>                   /etc/rc.conf
 #                    echo 'font8x8=cp866-8x8'            >>                   /etc/rc.conf
@@ -39,7 +39,7 @@
                      echo  'kern.vty=vt'                  >>                   /boot/defaults/loader.conf
 #/boot/loader.conf
 
-                    echo  'rsu-rtl8712fw_load="YES"'      >>                   /boot/loader.conf
+                    echo  'if_urtwn_load="YES"'           >>                   /boot/loader.conf
                     echo  'legal.realtek.license_ack=1'   >>                   /boot/loader.conf
 
 
@@ -121,10 +121,13 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
                       echo 'setenv DISPLAY :0'       >> /home/rtorrent/.cshrc
 
+#wpa_supplicant.conf
 
 
-
-
+                     echo 'network={'            >>   /etc/wpa_supplicant.conf
+                     echo 'ssid="1ghfghf"'       >>   /etc/wpa_supplicant.conf
+                     echo 'psk=3fb85bd2dec160ecba1cdf1004bec112938775d49f2b2666491410f76796377d'  >>   /etc/wpa_supplicant.conf
+                     echo '}' >> /etc/wpa_supplicant.conf
 
 
 
