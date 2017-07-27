@@ -42,6 +42,9 @@ echo 'zfs_enable="YES"' >> /mnt/etc/rc.conf
 echo 'zfs_load="YES"' >> /mnt/boot/loader.conf
 echo 'autoboot_delay="0"' >> /mnt/boot/loader.conf
 echo  'loader_logo="none"'  >> /mnt/boot/loader.conf
+echo  'if_urtwn_load="YES"'           >>                  /mnt/boot/loader.conf
+echo  'legal.realtek.license_ack=1'   >>                  /mnt/boot/loader.conf
+
 
 echo 'opensolaris_load="YES"' >> /mnt/boot/loader.conf
 echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
@@ -49,6 +52,8 @@ echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
 echo "# enable networking"
 echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
 echo 'ifconfig_em0="DHCP"' >> /mnt/etc/rc.conf
+echo 'wlans_urtwn0="wlan0"'         >>                   /mnt/etc/rc.conf
+echo 'ifconfig_wlan0="WPA DHCP"'    >>                   /mnt/etc/rc.conf
 echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
 echo 'dumpdev="NO"' >> /mnt/etc/rc.conf
 #sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
