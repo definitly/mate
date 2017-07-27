@@ -49,6 +49,16 @@ echo  'legal.realtek.license_ack=1'   >>                  /mnt/boot/loader.conf
 echo 'opensolaris_load="YES"' >> /mnt/boot/loader.conf
 echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
 
+#wpa_supplicant.conf
+
+
+                     echo 'network={'            >>   /mnt/etc/wpa_supplicant.conf
+                     echo 'ssid="1ghfghf"'       >>   /mnt/etc/wpa_supplicant.conf
+                     echo 'psk=3fb85bd2dec160ecba1cdf1004bec112938775d49f2b2666491410f76796377d'  >>   /mnt/etc/wpa_supplicant.conf
+                     echo '}' >> /mnt/etc/wpa_supplicant.conf
+
+
+
 echo "# enable networking"
 echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
 echo 'ifconfig_em0="DHCP"' >> /mnt/etc/rc.conf
