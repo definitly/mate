@@ -50,6 +50,9 @@ echo 'network={'            >>   disc1/etc/wpa_supplicant.conf
                      echo '}' >> disc1/etc/wpa_supplicant.conf      
 cp zfs_install disc1
 cp autoinstall disc1
+cp loader.conf disc1
+cp rc.conf     disc1
+cp wpa_supplicant.conf disc1
 cp pid disc1
 cp pkg_nvidia.txz disc1/usr/freebsd-dist
 
