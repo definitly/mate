@@ -37,6 +37,8 @@ mdconfig -d -u 0
 
 
 echo 'autoboot_delay="-1"' >> disc1/boot/defaults/loader.conf
+echo 'if_urtwn_load="YES"' >> disc1/boot/loader.conf
+echo 'legal.realtek.license_ack=1'  >> disc1/boot/loader.conf
 rm disc1/etc/resolv.conf 
 cp resolv.conf disc1/etc
 rm disc1/etc/rc.local
