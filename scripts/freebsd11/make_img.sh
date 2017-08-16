@@ -47,7 +47,7 @@ echo 'ifconfig_em0="DHCP"' >> disc1/etc/rc.conf
 echo 'wlans_urtwn0="wlan0"'         >>        disc1/etc/rc.conf           
 echo 'ifconfig_wlan0="WPA DHCP"'    >>        disc1/etc/rc.conf
 echo 'network={'            >>   disc1/etc/wpa_supplicant.conf
-                     echo 'ssid="1ghfghf"'       >>   discc1/etc/wpa_supplicant.conf
+                     echo 'ssid="1ghfghf"'       >>   disc1/etc/wpa_supplicant.conf
                      echo 'psk=3fb85bd2dec160ecba1cdf1004bec112938775d49f2b2666491410f76796377d'  >>   disc1/etc/wpa_supplicant.conf
                      echo '}' >> disc1/etc/wpa_supplicant.conf      
 cp zfs_install disc1
