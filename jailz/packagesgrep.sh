@@ -2,10 +2,10 @@
 #precise 12.04
 #trusty  14.04
 #xenial  16.04
-#zesty   17.04
+
 #arch=i386
 arch=amd64
-ubuntuversion=zesty
+ubuntuversion=artfu
 UBUNTU=17.04
 
 
@@ -13,8 +13,8 @@ UBUNTU=17.04
   for i in $(cat listpackages_14.04); do
           packages=$(echo $i | sed "s/_.*//" |  rev | sed -r 's/\/.+//' | rev)
 
-  href=$(curl   http://packages.ubuntu.com/$ubuntuversion/$arch/$packages/download | grep "de.archive.ubuntu.com" | grep -Eo 'href="[^"]*' | cut -d\" -f2- | tail -n 1 | sed 's,http://de.archive.ubuntu.com/ubuntu/,,g')
-  href2=$(curl   http://packages.ubuntu.com/$ubuntuversion/$arch/$packages/download | grep "security.ubuntu.com" | grep -Eo 'href="[^"]*' | cut -d\" -f2- | tail -n 1 | sed 's,http://security.ubuntu.com/ubuntu/,,g')
+  href=$(curl   https://packages.ubuntu.com/$ubuntuversion/$arch/$packages/download | grep "de.archive.ubuntu.com" | grep -Eo 'href="[^"]*' | cut -d\" -f2- | tail -n 1 | sed 's,http://de.archive.ubuntu.com/ubuntu/,,g')
+  href2=$(curl   https://packages.ubuntu.com/$ubuntuversion/$arch/$packages/download | grep "security.ubuntu.com" | grep -Eo 'href="[^"]*' | cut -d\" -f2- | tail -n 1 | sed 's,http://security.ubuntu.com/ubuntu/,,g')
   
    if [ "$arch" == "i386" ]; then
  
