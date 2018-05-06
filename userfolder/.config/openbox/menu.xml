@@ -135,6 +135,11 @@
 			<item label="GIT"> <action name="Execute">
 				<execute>xterm -e git</execute>
 			</action> </item>
+
+                        <item label="android-file-transfer"> <action name="Execute">
+				<execute>android-file-transfer</execute>
+			</action> </item>
+
 			<item label="MC"> <action name="Execute">
 				<execute>xterm -e mc</execute>
 			</action> </item>
