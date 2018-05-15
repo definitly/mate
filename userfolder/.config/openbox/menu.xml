@@ -153,6 +153,23 @@
 				<execute>uxterm</execute>
 			</action> </item>
 		</menu>
+
+              <menu id="20" label="Mount">
+			
+                     <item label="mount"> <action name="Execute">
+					<execute>~/.scripts/mount</execute>
+				</action> </item>
+
+                 <item label="umount"> <action name="Execute">
+					<execute>~/.scripts/umount</execute>
+				</action> </item>
+
+
+
+		</menu>
+
+
+
 		<menu id="37" label="System">
 			<menu id="36" label="Settings">
 				<menu id="21" label="GNOME">

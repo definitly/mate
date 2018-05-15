@@ -1,0 +1,10 @@
+#!/bin/sh
+
+       doas umount -f  /compat/linux/proc
+       doas umount -f  /compat/linux/var/run/shm
+       doas umount -f  /compat/linux/sys
+       doas umount -f  /compat/linux
+
+      if  [  -z "$(mount | grep linprocfs )" ]; then
+          doas mount -t linprocfs linproc /compat/linux/proc
+      fi
