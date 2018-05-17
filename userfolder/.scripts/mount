@@ -2,7 +2,7 @@
 
 
 
-
+doas sysctl compat.linux.osrelease=3.6.38
 
   #unmount  /compat/linux/proc if mounted
        
