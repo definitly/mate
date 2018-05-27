@@ -32,7 +32,7 @@
                      echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
                      echo  'vboxdrv_load="YES"'           >>                   /boot/defaults/loader.conf
                      echo  'coretemp_load="YES" '         >>                   /boot/defaults/loader.conf
-                     echo  'nvidia-modeset_load="YES" '         >>                   /boot/defaults/loader.conf
+                     echo  'nvidia-modeset_load="YES" '         >>             /boot/defaults/loader.conf
                      echo  'cpufreq_load="yes"'           >>                   /boot/defaults/loader.conf
                      echo  'vfs.zfs.prefetch_disable="0"' >>                   /boot/defaults/loader.conf
                      echo  'machdep.disable_mtrrs=1'      >>                   /boot/defaults/loader.conf
@@ -114,7 +114,7 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
 ## fftor settings for ff user
 
-                      echo 'setenv DISPLAY :0'       >> /home/ff/.cshrc
+                      echo 'setenv DISPLAY :0.1'       >> /home/ff/.cshrc
 
 ##rtorrent settings for rtorrent user
 
