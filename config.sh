@@ -114,7 +114,7 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
 ## fftor settings for ff user
 
-                      echo 'setenv DISPLAY :0.1'       >> /home/ff/.cshrc
+                      echo 'setenv DISPLAY :0.0'       >> /home/ff/.cshrc
 
 ##rtorrent settings for rtorrent user
 
