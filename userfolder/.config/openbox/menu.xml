@@ -89,7 +89,9 @@
 				<execute>seamonkey</execute>
 			</action> </item>
 
-
+<item label="GQRX"> <action name="Execute">
+				<execute>gqrx</execute>
+			</action> </item>
 
 
 			<item label="FireFox"> <action name="Execute">
