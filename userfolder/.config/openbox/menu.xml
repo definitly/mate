@@ -80,6 +80,13 @@
 			</action> </item>
 
 
+ <item label="FileZilla"> <action name="Execute">
+				<execute>filezilla  </execute>
+			</action> </item>
+
+
+
+
                           <item label="Tor Browser Bundle"> <action name="Execute">
 				<execute>linux-tor-browser</execute>
 			</action> </item>
