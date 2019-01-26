@@ -2,6 +2,7 @@
 Untagged            ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+    45258200; луцк,барановка           ; Narrow FM           ;      10000; Untagged
    118100500; Шереметьево Круг         ; AM                  ;      10000; Untagged
    118300600; Внуково Посадка          ; AM                  ;      10000; Untagged
    118600500; Домодедово-Посадка       ; AM                  ;      10000; Untagged
@@ -26,11 +27,13 @@ Untagged            ; #c0c0c0
    440262500; мчс                      ; Narrow FM           ;      10000; Untagged
    442432800; мчс                      ; Narrow FM           ;      10000; Untagged
    443238500; мчс                      ; Narrow FM           ;      10000; Untagged
-   451038000; ap25                     ; Narrow FM           ;      10000; Untagged
-   451361800; ap25                     ; Narrow FM           ;      10000; Untagged
-   451950800; ap25                     ; Narrow FM           ;      10000; Untagged
-   452275600; ap25                     ; Narrow FM           ;      10000; Untagged
-   452426100; ap25                     ; Narrow FM           ;      10000; Untagged
-   452650300; ap25                     ; Narrow FM           ;      10000; Untagged
+   451356500; южная                    ; Narrow FM           ;      10000; Untagged
+   451360800; id 504 ap25              ; Narrow FM           ;      10000; Untagged
+   451558100; нагорная                 ; Narrow FM           ;      10000; Untagged
+   451781900; казань                   ; Narrow FM           ;      10000; Untagged
+   451856700; орехово-борисово         ; Narrow FM           ;      10000; Untagged
+   452307300; калязино                 ; Narrow FM           ;      10000; Untagged
+   452419400; большая никитская        ; Narrow FM           ;      10000; Untagged
+   452582000; кузьминки                ; Narrow FM           ;      10000; Untagged
    452662500; ДПС ЮАО                  ; Narrow FM           ;      10000; Untagged
-   453164200; ap25                     ; Narrow FM           ;      10000; Untagged
+   452844400; орехово-борисово         ; Narrow FM           ;      10000; Untagged
