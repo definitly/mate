@@ -74,3 +74,4 @@ audio_player=mpv --cache=128
 08.05.2018 батарейки ааа поставлены в клавиатуру
 
 doas mount_smbfs   -E koi8-r:cp866  -I 192.168.1.45 //user@host/share /mnt/
+http://192.168.1.40:6878/webui/app/ReplaceMe/server#proxy-server-playlist
