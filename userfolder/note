@@ -17,6 +17,7 @@ D7QF4-K2PHF-3LI9G
 serzh.gdgdgdgdgdgdg.ivanov@mail.ru
 
 sfsfs-1982@mail.ru
+sisisi79@mail.ru
 
 https://addons.mozilla.org/ru/firefox/addon/adblock-plus/
 http://userscripts-mirror.org/scripts/show/158054
@@ -73,3 +74,4 @@ audio_player=mpv --cache=128
 08.05.2018 батарейки ааа поставлены в клавиатуру
 
 doas mount_smbfs   -E koi8-r:cp866  -I 192.168.1.45 //user@host/share /mnt/
+http://192.168.1.40:6878/webui/app/ReplaceMe/server#proxy-server-playlist
