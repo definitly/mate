@@ -39,6 +39,11 @@
 			<item label="Snes9x"> <action name="Execute">
 				<execute>snes9x-gtk</execute>
 			</action> </item>
+<item label="Antimicro"> <action name="Execute">
+				<execute>antimicro</execute>
+			</action> </item>
+
+
 		</menu>
 		<menu id="6" label="Graphics">
 			<item label="Feh"> <action name="Execute">
@@ -83,6 +88,14 @@
  <item label="FileZilla"> <action name="Execute">
 				<execute>filezilla  </execute>
 			</action> </item>
+
+
+
+ <item label="QuickSynergy"> <action name="Execute">
+				<execute> quicksynergy </execute>
+			</action> </item>
+
+
 
 
 
